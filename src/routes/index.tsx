@@ -34,9 +34,6 @@ function Index() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <h1 className="sr-only">
-          PPDB SMK Madinatulquran Tahun Ajaran 2027/2028
-        </h1>
         <Hero />
         <Proof />
         <Programs />
