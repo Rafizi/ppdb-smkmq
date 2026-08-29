@@ -1,28 +1,32 @@
-# Madina Quran Digital
+# Website PPDB SMK Madinatulquran
 
-create a website for `PPDB SMK Madinatulquran`.
+Website resmi Penerimaan Peserta Didik Baru (PPDB) **SMK Madinatulquran** Tahun Ajaran 2027/2028.
 
-gunakan color palette yang saya kirimkan di file.md!
+## 🎯 Fitur & Keunggulan
+- **Program Keahlian Unggulan**: Teknik Jaringan Komputer & Telekomunikasi (TKJ) dan Rekayasa Perangkat Lunak (RPL).
+- **Kurikulum Industri & Tahfidz**: Terakreditasi dan bermitra dengan Cisco Networking Academy, MikroTik Academy, dan LSP Telematika, serta target tahfidz minimal 3 Juz & Hadits Arba'in.
+- **Transparansi Biaya & Alur Cepat**: Total biaya masuk awal transparan dengan skema cicilan 2x dan alur seleksi terpadu 1 hari.
+- **Desain Responsif & Cepat**: Dibangun dengan arsitektur TanStack Start, React 19, Tailwind CSS, SSR/Nitro, dan animasi ramah aksesibilitas (*prefers-reduced-motion*).
+- **Optimasi SEO Lengkap**: Dilengkapi Schema.org JSON-LD (EducationalOrganization, FAQPage, Course), OpenGraph, Twitter Cards, Sitemap, dan Robots.txt.
 
-This project was built with [Lovable](https://lovable.dev).
+## 🛠️ Tech Stack
+- **Framework**: TanStack Start / React 19 / TypeScript
+- **Styling**: Tailwind CSS & CSS Custom Design System (Teal & Cream Palette)
+- **Icons**: Lucide React
+- **UI Components**: Radix UI Primitives & Embla Carousel
 
-**Live app**: https://ppdb-smkmq.lovable.app
+## 🚀 Menjalankan Secara Lokal
 
-## Build with Lovable
+```bash
+# Install dependencies
+npm install
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f6ce63c5-e433-4765-9035-a70b281d8964).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+# Jalankan server development
 npm run dev
+
+# Build production
+npm run build
+
+# Preview build production
+npm run preview
 ```

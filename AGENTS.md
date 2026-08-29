@@ -1,10 +1,8 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+# Pedoman Proyek — PPDB SMK Madinatulquran
+
+Dokumentasi dan pedoman kerja untuk pengembang dan asisten AI:
+
+- **Tujuan Proyek**: Website landing page & portal informasi Penerimaan Peserta Didik Baru (PPDB) SMK Madinatulquran.
+- **Standar Desain**: Menggunakan tema warna resmi (Teal, Krem/Netral, Aksen Terracotta, dan Hijau WhatsApp untuk kontak CS).
+- **Aksesibilitas & Animasi**: Semua animasi harus ringan berbasis CSS / Vanilla JS dan menghormati `@media (prefers-reduced-motion: no-preference)`.
+- **Formulir Pendaftaran**: Mengarah ke formulir online resmi (`https://bit.ly/PMBSMKMQ2728`), sedangkan WhatsApp digunakan sebagai jalur konsultasi/CS.
