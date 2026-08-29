@@ -148,6 +148,180 @@
   background-size: 22px 22px;
 }
 
+/* Base hover utility */
+.hover-lift {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* Animation and transition styles protected for prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* Scroll reveal utility */
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .reveal-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delay helpers via CSS variable --i */
+  [style*="--i"] {
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .stagger-fast[style*="--i"] {
+    transition-delay: calc(var(--i, 0) * 60ms);
+  }
+  .stagger-slow[style*="--i"] {
+    transition-delay: calc(var(--i, 0) * 150ms);
+  }
+
+  /* Hover lift effect */
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px oklch(0.318 0.06 233.3 / 0.18);
+  }
+
+  /* Keyframe definitions */
+  @keyframes slowzoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes pulseBadge {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes breathe {
+    0%, 100% {
+      opacity: 0.92;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  /* Animation class triggers */
+  .animate-slowzoom {
+    animation: slowzoom 24s ease-in-out infinite alternate;
+  }
+
+  .animate-pulse-badge {
+    animation: pulseBadge 2s ease-in-out infinite;
+  }
+
+  .animate-breathe {
+    animation: breathe 2.5s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: floatSlow 4s ease-in-out infinite;
+  }
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+.animate-accordion-down {
+  animation: accordion-down 0.25s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Reduced motion fallbacks */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hover-lift:hover {
+    transform: none !important;
+  }
+  .animate-slowzoom,
+  .animate-pulse-badge,
+  .animate-breathe,
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-float,
+  .animate-accordion-down,
+  .animate-accordion-up {
+    animation: none !important;
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

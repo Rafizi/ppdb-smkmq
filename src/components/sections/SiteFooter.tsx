@@ -51,7 +51,7 @@ export function SiteFooter() {
             </li>
           </ul>
 
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             {[
               { href: SCHOOL.instagram, Icon: Instagram, label: "Instagram" },
               { href: SCHOOL.youtube, Icon: Youtube, label: "YouTube" },
@@ -68,6 +68,25 @@ export function SiteFooter() {
                 <Icon className="size-4" aria-hidden="true" />
               </a>
             ))}
+          </div>
+
+          <div className="mt-6 pt-5 border-t border-navy-foreground/15 flex flex-wrap items-center gap-3">
+            <a
+              href={SCHOOL.formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2 text-xs font-bold text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Isi Formulir PPDB Online
+            </a>
+            <a
+              href={`https://wa.me/${SCHOOL.waAdmin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-navy-foreground/10 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-whatsapp hover:text-whatsapp-foreground"
+            >
+              Chat Admin PMB
+            </a>
           </div>
         </div>
 

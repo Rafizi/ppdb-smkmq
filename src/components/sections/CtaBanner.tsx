@@ -1,34 +1,51 @@
+import React from "react";
 import { Phone } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
-import { WhatsAppButton } from "./shared";
+import { FormButton, WhatsAppButton } from "./shared";
 
 export function CtaBanner() {
   return (
     <section className="bg-background pb-16 sm:pb-20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-14 text-center text-primary-foreground">
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12 sm:py-16">
           <div
             className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/20"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="font-display text-3xl font-extrabold text-balance sm:text-4xl">
-              Kuota PPDB {SCHOOL.year} Terbatas
+              Amankan Kursi Putra/Putri Anda di {SCHOOL.name}
             </h2>
-            <p className="mt-4 text-primary-foreground/85">
-              Amankan kursi putra/putri Anda sekarang. Tim Admin PMB siap membantu
-              proses pendaftaran dari awal sampai pengumuman.
+            <p className="mt-4 text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
+              Mulai langkah awal menuju masa depan Qurani dan technopreneur. Tim Admin PMB siap mendampingi proses pendaftaran Anda dari awal sampai tuntas.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <WhatsAppButton />
+            <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+              <FormButton
+                size="lg"
+                variant="accent"
+                className="animate-breathe hover-lift hover:scale-[1.02]"
+              >
+                Isi Formulir Pendaftaran (5 Menit)
+              </FormButton>
+              <WhatsAppButton
+                size="lg"
+                variant="outline"
+                className="hover-lift"
+                message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
+              >
+                Konsultasi via WhatsApp
+              </WhatsAppButton>
+            </div>
+
+            <p className="mt-6 text-xs text-primary-foreground/75">
+              Butuh respon telepon cepat? Hubungi Hotline:{" "}
               <a
                 href={SCHOOL.hotlineHref}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary-foreground/50 px-7 py-4 text-base font-semibold transition-colors hover:bg-primary-foreground/10"
+                className="font-bold text-white underline underline-offset-4 hover:text-accent"
               >
-                <Phone className="size-4" aria-hidden="true" />
-                Hotline {SCHOOL.hotline}
+                {SCHOOL.hotline}
               </a>
-            </div>
+            </p>
           </div>
         </div>
       </div>
