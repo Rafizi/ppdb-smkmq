@@ -29,24 +29,34 @@ export function Hero() {
             </span>
           </div>
 
-          <h1
-            className="reveal-up mt-6 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
+          {/* Eyebrow Tagline */}
+          <p
+            className="reveal-up mt-4 font-display text-sm font-semibold tracking-wide text-accent sm:text-base"
             style={{ "--i": 1 } as React.CSSProperties}
           >
             {SCHOOL.tagline}
-          </h1>
+          </p>
 
-          <p
-            className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
+          {/* H1 Aksi Utama */}
+          <h1
+            className="reveal-up mt-2.5 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
+            Daftarkan Putra/Putri Anda ke {SCHOOL.name}
+          </h1>
+
+          {/* Subtext dengan ajakan pengisian form */}
+          <p
+            className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
+            style={{ "--i": 3 } as React.CSSProperties}
+          >
             Sekolah kejuruan berbasis Al-Qur'an &amp; teknologi — mencetak generasi
-            Qurani, technopreneur, dan siap kerja global.
+            Qurani, technopreneur, dan siap kerja global. Isi formulir pendaftaran, prosesnya cuma 5 menit.
           </p>
 
           <div
             className="reveal-up mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
-            style={{ "--i": 3 } as React.CSSProperties}
+            style={{ "--i": 4 } as React.CSSProperties}
           >
             <FormButton
               size="lg"
@@ -67,7 +77,7 @@ export function Hero() {
 
           <div
             className="reveal-up mt-10 grid max-w-xl grid-cols-3 gap-3 border-t border-primary-foreground/20 pt-6"
-            style={{ "--i": 4 } as React.CSSProperties}
+            style={{ "--i": 5 } as React.CSSProperties}
           >
             <div className="flex flex-col">
               <span className="font-display text-2xl sm:text-3xl font-extrabold text-accent">

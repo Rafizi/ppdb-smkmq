@@ -7,7 +7,8 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
+import { initClarity } from "@/lib/clarity";
 
 import appCss from "../styles.css?url";
 
@@ -132,6 +133,10 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    initClarity();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
