@@ -9,12 +9,12 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div
-        className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
+        // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
         aria-hidden="true"
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div>
-          {/* Badge dengan pulsing live indicator dot */}
+          {/* Badge dengan pulsing live indicator dot
           <div
             className="reveal-up"
             style={{ "--i": 0 } as React.CSSProperties}
@@ -27,7 +27,7 @@ export function Hero() {
               <Sparkles className="size-3.5" aria-hidden="true" />
               PPDB {SCHOOL.year} Dibuka
             </span>
-          </div>
+          </div> */}
 
           {/* Eyebrow Tagline */}
           <p

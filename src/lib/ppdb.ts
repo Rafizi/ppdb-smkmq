@@ -136,7 +136,7 @@ export const STEPS = [
   {
     step: 3,
     title: "Tes & Wawancara",
-    desc: "Tes potensi akademik, minat bakat IT, baca Al-Qur'an & wawancara orang tua dilaksanakan di hari yang sama.",
+    desc: "Tes potensi akademik, minat bakat IT, baca Al-Qur'an & wawancara orang tua dilaksanakan di hari yang sama (tanpa dua jadwal terpisah).",
     estimate: "Dilaksanakan 1 hari",
   },
   {
@@ -158,11 +158,13 @@ export const PROGRAM_FEES = [
     totalInitial: "Rp8.950.000",
     totalInitialBreakdown: "Rp450.000 (Registrasi) + Rp8.500.000 (Uang Masuk)",
     entryIncludes: "Uang Pangkal, Seragam Lengkap (3 Set), dan Jas Almamater",
-    installmentText: "Bisa dicicil 2x: 50% setelah dinyatakan lulus, 50% saat hari-H masuk sekolah",
+    installmentText: "Bisa dicicil 2x. 70% saat dinyatakan lulus, 30% sebelum Juni 2027",
     installmentStages: [
-      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp4.250.000", desc: "50% dari Uang Masuk" },
-      { label: "Tahap 2 (Hari-H Masuk)", amount: "Rp4.250.000", desc: "50% pelunasan saat kedatangan" },
+      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp5.950.000", desc: "70% dari Uang Masuk saat dinyatakan lulus tes" },
+      { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp2.550.000", desc: "30% pelunasan sebelum bulan Juni 2027" },
     ],
+    reRegistration: "Rp3.500.000",
+    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat santri naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp1.000.000",
     monthlyNote: "Termasuk SPP akademik & makan siang santri",
     featured: false,
@@ -175,11 +177,13 @@ export const PROGRAM_FEES = [
     totalInitial: "Rp14.950.000",
     totalInitialBreakdown: "Rp450.000 (Registrasi) + Rp14.500.000 (Uang Masuk)",
     entryIncludes: "Uang Pangkal, Kasur/Lemari Asrama, Seragam Lengkap, dan Jas Almamater",
-    installmentText: "Bisa dicicil 2x: 50% setelah dinyatakan lulus, 50% saat hari-H masuk sekolah",
+    installmentText: "Bisa dicicil 2x. Rp10.000.000 saat dinyatakan lulus, Rp4.500.000 sebelum Juni 2027",
     installmentStages: [
-      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp7.250.000", desc: "50% dari Uang Masuk" },
-      { label: "Tahap 2 (Hari-H Masuk)", amount: "Rp7.250.000", desc: "50% pelunasan saat kedatangan" },
+      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp10.000.000", desc: "±70% dibayarkan setelah dinyatakan lulus tes" },
+      { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp4.500.000", desc: "±30% pelunasan sebelum bulan Juni 2027" },
     ],
+    reRegistration: "Rp3.500.000",
+    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat santri naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp2.500.000",
     monthlyNote: "Termasuk asrama, pembinaan tahfidz, makan 3x & laundry",
     featured: true,
@@ -200,7 +204,12 @@ export const FAQS = [
   {
     question: "Apakah uang masuk PPDB dapat dicicil?",
     answer:
-      "Ya. SMK Madinatulquran menyediakan skema cicilan 2 kali untuk Uang Masuk: 50% dibayarkan setelah calon santri dinyatakan LULUS seleksi, dan 50% sisanya dibayarkan pada saat hari-H kedatangan santri di awal tahun ajaran baru.",
+      "Ya. SMK Madinatulquran menyediakan skema cicilan 2 kali untuk Uang Masuk: untuk Program Boarding dibayar Rp10.000.000 saat dinyatakan lulus seleksi dan pelunasan Rp4.500.000 sebelum Juni 2027. Untuk Program Fullday dibayar 70% (Rp5.950.000) saat dinyatakan lulus dan 30% (Rp2.550.000) sebelum Juni 2027.",
+  },
+  {
+    question: "Berapa biaya daftar ulang saat santri naik kelas?",
+    answer:
+      "Biaya daftar ulang untuk kenaikan kelas (naik ke kelas XI dan kelas XII) adalah sebesar Rp3.500.000 per tahun ajaran baru, berlaku untuk Program Fullday maupun Boarding. Biaya ini dialokasikan untuk pemeliharaan fasilitas dan perbaikan sarana prasarana belajar santri.",
   },
   {
     question: "Apa perbedaan antara Program Fullday dan Boarding?",

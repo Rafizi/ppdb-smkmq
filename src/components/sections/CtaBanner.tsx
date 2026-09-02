@@ -9,7 +9,7 @@ export function CtaBanner() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up relative overflow-hidden rounded-3xl bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12 sm:py-16">
           <div
-            className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/20"
+            // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/20"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-2xl">

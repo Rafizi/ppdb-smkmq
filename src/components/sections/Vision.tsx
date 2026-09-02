@@ -8,7 +8,7 @@ export function Vision() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up relative overflow-hidden rounded-3xl bg-primary-dark px-6 py-12 text-primary-foreground shadow-lift sm:px-12 sm:py-16">
           <div
-            className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/15"
+            // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/15"
             aria-hidden="true"
           />
           <div className="relative grid gap-10 lg:grid-cols-[1.15fr_0.85fr] items-center">

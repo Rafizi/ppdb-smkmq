@@ -7,7 +7,7 @@ import {
   CreditCard,
   FileText,
   Info,
-  QrCode,
+  RefreshCw,
   ShieldAlert,
   Sparkles,
 } from "lucide-react";
@@ -138,6 +138,34 @@ export function Fees() {
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Check className="size-3.5 text-primary" aria-hidden="true" />
                     {plan.monthlyNote}
+                  </p>
+                </div>
+
+                {/* Biaya Daftar Ulang Kenaikan Kelas */}
+                <div className="mt-5 rounded-2xl border border-dashed border-primary/30 bg-cream p-4">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="flex size-7 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                        <RefreshCw className="size-3.5" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <p className="text-xs font-bold text-navy">
+                          Daftar Ulang Kenaikan Kelas
+                        </p>
+                        <p className="text-[10px] font-semibold text-terracotta">
+                          Hanya saat naik kelas XI &amp; XII (Tahun ke-2 &amp; ke-3)
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="font-display text-base font-extrabold text-primary-dark">
+                        {plan.reRegistration}
+                      </p>
+                      <p className="text-[10px] text-muted-foreground">/ tahun ajaran baru</p>
+                    </div>
+                  </div>
+                  <p className="mt-2.5 pt-2 border-t border-border/60 text-[11px] leading-relaxed text-muted-foreground">
+                    {plan.reRegistrationNote}
                   </p>
                 </div>
               </div>
