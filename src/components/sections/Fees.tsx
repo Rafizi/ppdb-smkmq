@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { PROGRAM_FEES, REGISTRATION_FEE, SCHOOL } from "@/lib/ppdb";
-import { FormButton, SectionHeading, WhatsAppButton } from "./shared";
+import { FormButton, SectionHeading, WhatsAppButton, WhatsAppIcon } from "./shared";
 
 export function Fees() {
   return (
@@ -185,10 +185,6 @@ export function Fees() {
                   Transfer Bank BRI
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-cream border border-border px-3 py-1 text-navy">
-                  <QrCode className="size-3.5 text-primary" aria-hidden="true" />
-                  QRIS Resmi Sekolah
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-cream border border-border px-3 py-1 text-navy">
                   <Check className="size-3.5 text-primary" aria-hidden="true" />
                   Konfirmasi WA Resmi
                 </span>
@@ -212,13 +208,14 @@ export function Fees() {
                   </p>
                 </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-border text-[11px] text-muted-foreground">
-                Nomor Admin PMB:{" "}
+              <div className="mt-4 pt-3 border-t border-border flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                <WhatsAppIcon className="size-3.5 text-whatsapp shrink-0" aria-hidden="true" />
+                <span>Nomor Admin PMB (WA):</span>{" "}
                 <a
                   href={`https://wa.me/${SCHOOL.waAdmin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-navy hover:underline"
+                  className="font-bold text-navy hover:underline hover:text-whatsapp transition-colors"
                 >
                   {SCHOOL.waAdminLabel}
                 </a>

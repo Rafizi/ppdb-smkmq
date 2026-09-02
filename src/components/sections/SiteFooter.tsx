@@ -1,5 +1,6 @@
 import { Facebook, Globe, Instagram, MapPin, Phone, Youtube } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
+import { WhatsAppIcon } from "./shared";
 
 export function SiteFooter() {
   return (
@@ -17,19 +18,23 @@ export function SiteFooter() {
               <span className="text-navy-foreground/85">{SCHOOL.address}</span>
             </li>
             <li className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-primary-light" aria-hidden="true" />
+              <WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-primary-light" aria-hidden="true" />
               <span className="text-navy-foreground/85">
                 Admin PMB (WA):{" "}
                 <a
                   href={`https://wa.me/${SCHOOL.waAdmin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold underline-offset-4 hover:underline"
+                  className="font-semibold underline-offset-4 hover:underline hover:text-whatsapp transition-colors"
                 >
                   {SCHOOL.waAdminLabel}
                 </a>
-                <br />
-                Hotline:{" "}
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Phone className="mt-0.5 size-4 shrink-0 text-primary-light" aria-hidden="true" />
+              <span className="text-navy-foreground/85">
+                Hotline Telepon:{" "}
                 <a
                   href={SCHOOL.hotlineHref}
                   className="font-semibold underline-offset-4 hover:underline"
@@ -53,17 +58,20 @@ export function SiteFooter() {
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {[
-              { href: SCHOOL.instagram, Icon: Instagram, label: "Instagram" },
-              { href: SCHOOL.youtube, Icon: Youtube, label: "YouTube" },
-              { href: SCHOOL.facebook, Icon: Facebook, label: "Facebook" },
-            ].map(({ href, Icon, label }) => (
+              { href: `https://wa.me/${SCHOOL.waAdmin}`, Icon: WhatsAppIcon, label: "WhatsApp", isWA: true },
+              { href: SCHOOL.instagram, Icon: Instagram, label: "Instagram", isWA: false },
+              { href: SCHOOL.youtube, Icon: Youtube, label: "YouTube", isWA: false },
+              { href: SCHOOL.facebook, Icon: Facebook, label: "Facebook", isWA: false },
+            ].map(({ href, Icon, label, isWA }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex size-10 items-center justify-center rounded-xl bg-navy-foreground/10 transition-colors hover:bg-primary"
+                className={`flex size-10 items-center justify-center rounded-xl bg-navy-foreground/10 transition-colors ${
+                  isWA ? "hover:bg-whatsapp hover:text-whatsapp-foreground" : "hover:bg-primary"
+                }`}
               >
                 <Icon className="size-4" aria-hidden="true" />
               </a>
@@ -85,7 +93,8 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-navy-foreground/10 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-whatsapp hover:text-whatsapp-foreground"
             >
-              Chat Admin PMB
+              <WhatsAppIcon className="size-3.5 shrink-0" aria-hidden="true" />
+              <span>Chat Admin PMB</span>
             </a>
           </div>
         </div>

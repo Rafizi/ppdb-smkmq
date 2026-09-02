@@ -1,6 +1,9 @@
-import { ArrowRight, FileText, MessageCircle } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SCHOOL, waLink } from "@/lib/ppdb";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+
+export { WhatsAppIcon };
 
 export function FormButton({
   children = "Isi Formulir Pendaftaran (5 Menit)",
@@ -89,7 +92,7 @@ export function WhatsAppButton({
         className,
       )}
     >
-      <MessageCircle className="size-4.5 shrink-0" aria-hidden="true" />
+      <WhatsAppIcon className="size-4 shrink-0" aria-hidden="true" />
       <span>{children}</span>
     </a>
   );

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { GraduationCap, MessageCircle, Phone } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { SCHOOL, waLink } from "@/lib/ppdb";
-import { FormButton } from "./shared";
+import { FormButton, WhatsAppIcon } from "./shared";
 
 const NAV = [
   { href: "#jurusan", label: "Jurusan" },
@@ -51,7 +51,7 @@ export function SiteHeader() {
             title="Tanya Admin via WhatsApp"
             className="hidden items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-2 text-xs font-semibold text-navy transition-colors hover:border-whatsapp hover:bg-whatsapp/10 hover:text-whatsapp-foreground sm:inline-flex"
           >
-            <MessageCircle className="size-3.5 text-whatsapp" aria-hidden="true" />
+            <WhatsAppIcon className="size-3.5 text-whatsapp" aria-hidden="true" />
             <span>Tanya CS</span>
           </a>
 

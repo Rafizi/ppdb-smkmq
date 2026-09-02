@@ -1,5 +1,4 @@
 import React from "react";
-import { HelpCircle, MessageCircle } from "lucide-react";
 import { FAQS } from "@/lib/ppdb";
 import {
   Accordion,
