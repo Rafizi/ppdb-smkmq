@@ -1,8 +1,8 @@
 import React from "react";
-import { BadgeCheck, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-school.jpg";
+import { Sparkles } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
 import { StatCounter } from "@/components/ui/StatCounter";
+import AnimatedCardStack from "@/components/ui/card-stack-hero";
 import { FormButton, WhatsAppButton } from "./shared";
 
 export function Hero() {
@@ -12,7 +12,7 @@ export function Hero() {
         // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
         aria-hidden="true"
       />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:max-w-7xl lg:grid-cols-[1fr_1.15fr] lg:py-20 xl:max-w-[1400px] xl:gap-16">
         <div>
           {/* Badge dengan pulsing live indicator dot
           <div
@@ -117,26 +117,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-3 rounded-[2rem] bg-accent/25 blur-2xl" aria-hidden="true" />
-          <div className="overflow-hidden rounded-[1.75rem] border border-primary-foreground/20 shadow-lift">
-            <img
-              src={heroImage}
-              width={1280}
-              height={960}
-              alt="Santri SMK Madinatulquran belajar di laboratorium komputer dan jaringan"
-              className="animate-slowzoom w-full object-cover will-change-transform"
-            />
-          </div>
-          <div className="relative -mt-8 ml-4 inline-flex max-w-xs items-center gap-3 rounded-2xl bg-card px-4 py-3 text-card-foreground shadow-lift">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-accent/20 text-accent-foreground">
-              <BadgeCheck className="size-5 text-terracotta" aria-hidden="true" />
-            </span>
-            <p className="text-xs leading-snug font-medium text-navy">
-              Kurikulum berstandar industri &amp; bermitra dengan Cisco, MikroTik,
-              ITC, LSP Telematika.
-            </p>
-          </div>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute -inset-6 rounded-[3rem] bg-accent/25 blur-3xl" aria-hidden="true" />
+          <AnimatedCardStack />
         </div>
       </div>
     </section>
