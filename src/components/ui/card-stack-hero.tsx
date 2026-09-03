@@ -148,7 +148,7 @@ function AnimatedCard({
       }`}
     >
       <div
-        className={`h-full w-full overflow-hidden rounded-3xl border border-border bg-card p-2.5 sm:p-3 shadow-2xl ${
+        className={`h-full w-full overflow-hidden rounded-3xl border border-border bg-card p-2.5 sm:p-3 ${
           isTop ? "hover:border-primary/40" : ""
         }`}
       >

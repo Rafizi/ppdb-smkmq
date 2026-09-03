@@ -12,7 +12,7 @@ export function Hero() {
         // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
         aria-hidden="true"
       />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:max-w-7xl lg:grid-cols-[1fr_1.15fr] lg:py-20 xl:max-w-[1400px] xl:gap-16">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:max-w-7xl lg:grid-cols-[1fr_1.15fr] lg:py-20 xl:max-w-[1440px] xl:gap-16">
         <div>
           {/* Badge dengan pulsing live indicator dot
           <div
