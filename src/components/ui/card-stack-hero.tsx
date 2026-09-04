@@ -42,15 +42,15 @@ const initialCards: Card[] = [
   { id: 3, contentType: 3 },
 ];
 
-// Scaled 2x for a large, commanding hero centerpiece
+// Scaled and tuned for a commanding hero centerpiece with responsive clearance
 const positionStyles = [
-  { scale: 1, y: 25 },
-  { scale: 0.95, y: -35 },
-  { scale: 0.9, y: -85 },
+  { scale: 1, y: 20 },
+  { scale: 0.94, y: -25 },
+  { scale: 0.88, y: -65 },
 ];
 
-const exitAnimation = { y: 800, scale: 1, zIndex: 10 };
-const enterAnimation = { y: -35, scale: 0.9 };
+const exitAnimation = { y: 160, scale: 0.95, opacity: 0, zIndex: 10 };
+const enterAnimation = { y: -25, scale: 0.88, opacity: 0.7 };
 
 function CardContent({
   contentType,
@@ -61,9 +61,9 @@ function CardContent({
 }) {
   const data = cardData[contentType];
   return (
-    <div className="flex h-full w-full flex-col gap-3">
+    <div className="flex h-full w-full flex-col gap-2.5 sm:gap-3">
       <div
-        className="group relative flex h-[280px] sm:h-[400px] lg:h-[470px] xl:h-[510px] w-full items-center justify-center overflow-hidden rounded-2xl outline outline-black/10 transition-all dark:outline-white/10"
+        className="group relative flex flex-1 min-h-0 w-full items-center justify-center overflow-hidden rounded-2xl outline outline-black/10 transition-all dark:outline-white/10"
         onClick={(e) => {
           e.stopPropagation();
           onImageClick(data);
@@ -77,16 +77,16 @@ function CardContent({
           className="h-full w-full select-none object-cover rounded-[inherit] transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-        <div className="absolute top-3.5 right-3.5 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-xs font-semibold text-white shadow-md backdrop-blur-md transition-transform duration-200 group-hover:scale-105">
-          <Maximize2 className="size-3.5" aria-hidden="true" />
+        <div className="absolute top-3 right-3 sm:top-3.5 sm:right-3.5 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 sm:px-3 sm:py-1.5 text-xs font-semibold text-white shadow-md backdrop-blur-md transition-transform duration-200 group-hover:scale-105">
+          <Maximize2 className="size-3 sm:size-3.5" aria-hidden="true" />
           <span>Lihat Foto</span>
         </div>
       </div>
-      <div className="flex w-full flex-col gap-1.5 px-3.5 pb-3.5 pt-1.5">
-        <span className="truncate font-display text-lg font-bold text-navy sm:text-xl lg:text-2xl">
+      <div className="flex shrink-0 w-full flex-col gap-1 sm:gap-1.5 px-3 pb-2.5 pt-1 sm:px-3.5 sm:pb-3 sm:pt-1.5">
+        <span className="truncate font-display text-base font-bold text-navy sm:text-lg lg:text-xl xl:text-2xl">
           {data.title}
         </span>
-        <span className="text-xs sm:text-sm lg:text-base text-muted-foreground">
+        <span className="truncate text-xs sm:text-sm lg:text-base text-muted-foreground">
           {data.description}
         </span>
       </div>
@@ -130,9 +130,9 @@ function AnimatedCard({
     <motion.div
       key={card.id}
       initial={initialAnim}
-      animate={{ y, scale }}
+      animate={{ y, scale, opacity: 1 }}
       {...(exitAnim ? { exit: exitAnim } : {})}
-      transition={{ type: "spring", duration: 1, bounce: 0 }}
+      transition={{ type: "spring", duration: 0.8, bounce: 0 }}
       drag={isTop ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.6}
@@ -140,16 +140,16 @@ function AnimatedCard({
       onClick={() => {
         if (isTop) onCardClick();
       }}
-      style={{ zIndex, left: "50%", x: "-50%", bottom: "2.5rem" }}
-      className={`absolute flex h-[410px] w-[320px] sm:h-[560px] sm:w-[560px] lg:h-[650px] lg:w-[670px] xl:h-[700px] xl:w-[720px] items-center justify-center will-change-transform select-none touch-pan-y ${
+      style={{ zIndex, left: "50%", x: "-50%" }}
+      className={`absolute bottom-5 sm:bottom-7 lg:bottom-8 flex h-[380px] w-[calc(100%-1rem)] max-w-[320px] sm:h-[480px] sm:w-[calc(100%-1.5rem)] sm:max-w-[450px] lg:h-[500px] lg:w-[calc(100%-1.5rem)] lg:max-w-[460px] xl:h-[570px] xl:w-[calc(100%-2rem)] xl:max-w-[540px] 2xl:h-[630px] 2xl:w-[calc(100%-2rem)] 2xl:max-w-[600px] items-center justify-center will-change-transform select-none touch-pan-y ${
         isTop
           ? "cursor-grab active:cursor-grabbing"
           : "pointer-events-none"
       }`}
     >
       <div
-        className={`h-full w-full overflow-hidden rounded-3xl border border-border bg-card p-2.5 sm:p-3 ${
-          isTop ? "hover:border-primary/40" : ""
+        className={`h-full w-full overflow-hidden rounded-3xl border border-border bg-card p-2.5 sm:p-3 shadow-lg ${
+          isTop ? "hover:border-primary/40 shadow-xl" : ""
         }`}
       >
         <CardContent
@@ -227,7 +227,7 @@ export default function AnimatedCardStack() {
   return (
     <>
       <div
-        className="relative mx-auto h-[505px] w-full max-w-[350px] px-4 sm:h-[665px] sm:max-w-[600px] sm:px-6 lg:h-[765px] lg:max-w-[710px] lg:px-8 xl:h-[815px] xl:max-w-[760px] overflow-hidden"
+        className="relative mx-auto h-[480px] w-full max-w-[340px] p-2 sm:h-[580px] sm:max-w-[480px] sm:p-3 lg:h-[610px] lg:max-w-[490px] lg:p-3 xl:h-[680px] xl:max-w-[580px] xl:p-4 2xl:h-[750px] 2xl:max-w-[650px] 2xl:p-4 overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
