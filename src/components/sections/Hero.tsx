@@ -1,6 +1,7 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { StatCounter } from "@/components/ui/StatCounter";
 import AnimatedCardStack from "@/components/ui/card-stack-hero";
 import { FormButton, WhatsAppButton } from "./shared";
@@ -14,20 +15,22 @@ export function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:py-20 xl:max-w-[1440px] xl:grid-cols-[1fr_1.1fr] xl:gap-16">
         <div>
-          {/* Badge dengan pulsing live indicator dot
+          {/* Official School & PPDB Badge with Logo */}
           <div
             className="reveal-up"
             style={{ "--i": 0 } as React.CSSProperties}
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold tracking-wide text-accent-foreground uppercase shadow-sm">
-              <span className="relative flex size-2">
-                <span className="animate-pulse-badge absolute inline-flex size-full rounded-full bg-terracotta" />
-                <span className="relative inline-flex size-2 rounded-full bg-terracotta" />
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3.5 py-1.5 backdrop-blur shadow-sm">
+              <Logo size="xs" />
+              <span className="text-xs font-bold tracking-wide text-white">
+                PPDB {SCHOOL.year} Resmi Dibuka
               </span>
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              PPDB {SCHOOL.year} Dibuka
-            </span>
-          </div> */}
+              <span className="relative flex size-2">
+                <span className="animate-ping absolute inline-flex size-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-accent" />
+              </span>
+            </div>
+          </div>
 
           {/* Eyebrow Tagline */}
           <p

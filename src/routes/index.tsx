@@ -31,7 +31,7 @@ const jsonLdSchema = {
       name: "SMK Madinatulquran",
       alternateName: "SMK MQ",
       url: siteUrl,
-      logo: `${siteUrl}/favicon.ico`,
+      logo: `${siteUrl}/logo-512.png`,
       description:
         "Sekolah Menengah Kejuruan berbasis Pesantren dan Teknologi (TKJ & RPL) dengan kurikulum industri dan hafalan Al-Qur'an di Jonggol, Bogor.",
       address: {
@@ -82,8 +82,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: pageDescription },
       { property: "og:url", content: siteUrl },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: `${siteUrl}/logo-512.png` },
       { name: "twitter:title", content: pageTitle },
       { name: "twitter:description", content: pageDescription },
+      { name: "twitter:image", content: `${siteUrl}/logo-512.png` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

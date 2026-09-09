@@ -1,5 +1,6 @@
 import { Facebook, Globe, Instagram, MapPin, Phone, Youtube } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { WhatsAppIcon } from "./shared";
 
 export function SiteFooter() {
@@ -7,8 +8,18 @@ export function SiteFooter() {
     <footer id="kontak" className="bg-navy text-navy-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-2xl font-bold">{SCHOOL.name}</h2>
-          <p className="mt-2 text-sm text-navy-foreground/70">
+          <div className="flex items-center gap-3.5">
+            <div className="rounded-full bg-white p-1 ring-2 ring-white/20 shadow-md shrink-0">
+              <Logo size="lg" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl font-bold text-white">{SCHOOL.name}</h2>
+              <p className="text-xs font-semibold text-accent uppercase tracking-wider">
+                Pesantren &amp; Vokasi IT Terpadu
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-navy-foreground/70">
             {SCHOOL.tagline} — PPDB Tahun Ajaran {SCHOOL.year}
           </p>
 

@@ -2,6 +2,7 @@ export const SCHOOL = {
   name: "SMK Madinatulquran",
   tagline: "Digital Intelligent, Islamic Attitude",
   year: "2027/2028",
+  logo: "/logo.png",
   formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform",
   address:
     "Kp. Kebon Kelapa, RT.002/RW.011, Singasari, Kec. Jonggol, Bogor, Jawa Barat 16830",

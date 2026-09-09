@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { PROGRAM_FEES, REGISTRATION_FEE, SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { FormButton, SectionHeading, WhatsAppButton, WhatsAppIcon } from "./shared";
 
 export function Fees() {
@@ -220,10 +221,10 @@ export function Fees() {
             </div>
 
             <div className="rounded-2xl border border-border bg-cream p-5">
-              <div className="flex items-center gap-3">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-                  <Building2 className="size-6" aria-hidden="true" />
-                </span>
+              <div className="flex items-center gap-3.5">
+                <div className="rounded-full bg-white p-1 border border-border/60 shadow-sm shrink-0">
+                  <Logo size="lg" />
+                </div>
                 <div>
                   <p className="text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     Rekening Resmi Bank {SCHOOL.bank.name}

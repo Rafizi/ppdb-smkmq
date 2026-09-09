@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Maximize2, X } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
 import heroImage from "@/assets/hero-school.jpg";
 
 interface Card {
@@ -77,6 +78,10 @@ function CardContent({
           className="h-full w-full select-none object-cover rounded-[inherit] transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+        <div className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white shadow-md backdrop-blur-md">
+          <Logo size="xs" />
+          <span className="text-[11px] font-bold">SMK MQ</span>
+        </div>
         <div className="absolute top-3 right-3 sm:top-3.5 sm:right-3.5 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 sm:px-3 sm:py-1.5 text-xs font-semibold text-white shadow-md backdrop-blur-md transition-transform duration-200 group-hover:scale-105">
           <Maximize2 className="size-3 sm:size-3.5" aria-hidden="true" />
           <span>Lihat Foto</span>
@@ -292,8 +297,9 @@ export default function AnimatedCardStack() {
                       {previewImage.description}
                     </p>
                   </div>
-                  <span className="shrink-0 rounded-full bg-primary/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-primary">
-                    SMK Madinatulquran
+                  <span className="shrink-0 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-primary">
+                    <Logo size="xs" />
+                    <span>SMK Madinatulquran</span>
                   </span>
                 </div>
               </div>

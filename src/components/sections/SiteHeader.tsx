@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { GraduationCap } from "lucide-react";
 import { SCHOOL, waLink } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { FormButton, WhatsAppIcon } from "./shared";
 
 const NAV = [
@@ -17,18 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-        <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <GraduationCap className="size-5" aria-hidden="true" />
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-sm font-bold text-navy">
-              {SCHOOL.name}
-            </span>
-            <span className="block text-[11px] font-medium text-primary">
-              PPDB {SCHOOL.year} Dibuka
-            </span>
-          </span>
+        <Link to="/" className="flex items-center transition-opacity hover:opacity-95">
+          <Logo size="md" showText />
         </Link>
 
         <nav className="ml-auto hidden items-center gap-5 lg:flex xl:gap-6">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Phone } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { FormButton, WhatsAppButton } from "./shared";
 
 export function CtaBanner() {
@@ -13,6 +14,11 @@ export function CtaBanner() {
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-2xl">
+            <div className="mx-auto mb-6 flex justify-center">
+              <div className="rounded-full bg-white/15 p-2 backdrop-blur-md ring-1 ring-white/30 shadow-lift">
+                <Logo size="lg" className="rounded-full shadow-md" />
+              </div>
+            </div>
             <h2 className="font-display text-3xl font-extrabold text-balance sm:text-4xl">
               Amankan Kursi Putra/Putri Anda di {SCHOOL.name}
             </h2>
