@@ -4,7 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Maximize2, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
-import heroImage from "@/assets/hero-school.jpg";
+import imgKurikulum from "@/assets/hero/kurikulum.jpg";
+import imgTkj from "@/assets/hero/tkj.jpg";
+import imgRpl from "@/assets/hero/rpl.jpg";
 
 interface Card {
   id: number;
@@ -17,23 +19,21 @@ interface CardData {
   image: string;
 }
 
-const HERO_IMG = heroImage;
-
 const cardData: Record<1 | 2 | 3, CardData> = {
   1: {
     title: "Teknik Komputer & Jaringan",
     description: "Bersertifikasi Cisco & MikroTik",
-    image: HERO_IMG,
+    image: imgTkj,
   },
   2: {
     title: "Rekayasa Perangkat Lunak",
     description: "Proyek nyata dari client industri",
-    image: HERO_IMG,
+    image: imgRpl,
   },
   3: {
     title: "Kurikulum Tersertifikasi",
     description: "Bermitra dengan Cisco, MikroTik, ITC & LSP Telematika",
-    image: HERO_IMG,
+    image: imgKurikulum,
   },
 };
 

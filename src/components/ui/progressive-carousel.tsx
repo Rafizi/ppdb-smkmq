@@ -198,7 +198,7 @@ export const SliderBtn: FC<SliderBtnProps> = ({
   return (
     <button
       className={cn(
-        `relative ${active === value ? 'opacity-100' : 'opacity-50'}`,
+        `relative isolate ${active === value ? 'opacity-100' : 'opacity-50'}`,
         className
       )}
       onClick={() => handleButtonClick(value)}

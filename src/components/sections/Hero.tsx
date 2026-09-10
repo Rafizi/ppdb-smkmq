@@ -66,7 +66,7 @@ export function Hero() {
               variant="accent"
               className="hover-lift hover:scale-[1.02] text-base font-bold shadow-lift"
             >
-              Isi Formulir Pendaftaran (5 Menit)
+              Daftar Sekarang (5 Menit)
             </FormButton>
             <WhatsAppButton
               size="lg"

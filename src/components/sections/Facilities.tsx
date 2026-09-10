@@ -8,7 +8,10 @@ import {
   Wifi,
   Landmark,
 } from "lucide-react";
-import heroImage from "@/assets/hero-school.jpg";
+import futsalImage from "@/assets/ekskul/futsal.jpg";
+import diplomasiImage from "@/assets/ekskul/diplomasi.jpg";
+import karateImage from "@/assets/ekskul/karate.jpg";
+import kepanduanImage from "@/assets/ekskul/kepanduan.jpg";
 import { FACILITIES } from "@/lib/ppdb";
 import {
   ProgressSlider,
@@ -31,32 +34,30 @@ const ICON_MAP = {
 
 const EKSKUL_ITEMS = [
   {
-    img: heroImage, // TODO: ganti dengan foto asli kegiatan Futsal — sementara pakai path foto hero yang sudah ada
+    img: futsalImage,
     title: "Futsal",
-    desc: "Melatih kerja sama tim dan sportivitas santri melalui latihan rutin.",
+    desc: "Melatih kerja sama tim, ketahanan fisik, dan sportivitas santri melalui latihan rutin dan turnamen.",
     sliderName: "futsal",
   },
   {
-    img: heroImage, // TODO: ganti dengan foto asli kegiatan Diplomasi
+    img: diplomasiImage,
     title: "Diplomasi",
-    desc: "Mengasah kemampuan komunikasi, debat, dan kepercayaan diri santri.",
+    desc: "Mengasah kemampuan komunikasi, debat, wawasan global, dan public speaking dalam forum formal.",
     sliderName: "diplomasi",
   },
   {
-    img: heroImage, // TODO: ganti dengan foto asli kegiatan Karate
+    img: karateImage,
     title: "Karate",
-    desc: "Membentuk disiplin dan ketahanan fisik melalui seni bela diri.",
+    desc: "Membentuk disiplin mental, ketahanan fisik, dan seni pertahanan diri beladiri santri.",
     sliderName: "karate",
   },
   {
-    img: heroImage, // TODO: ganti dengan foto asli kegiatan Kepanduan
+    img: kepanduanImage,
     title: "Kepanduan",
-    desc: "Menumbuhkan jiwa kepemimpinan dan kemandirian santri.",
+    desc: "Menumbuhkan jiwa kepemimpinan, kemandirian, kekompakan regu, dan ketangkasan di alam terbuka.",
     sliderName: "kepanduan",
   },
 ];
-// CATATAN: seluruh teks deskripsi di atas dummy. Jangan publish ke production
-// sebelum diganti dengan copy & foto asli dari sekolah untuk masing-masing ekskul.
 
 export function Facilities() {
   return (
@@ -111,26 +112,28 @@ export function Facilities() {
             {EKSKUL_ITEMS.map((item) => (
               <SliderWrapper key={item.sliderName} value={item.sliderName}>
                 <img
-                  className="h-[300px] sm:h-[360px] md:h-[420px] w-full object-cover"
+                  className="w-full aspect-[16/10] sm:aspect-video object-cover"
                   src={item.img}
-                  alt={item.title}
+                  alt={`Kegiatan Ekstrakurikuler ${item.title} SMK Madinatulquran`}
+                  loading="lazy"
+                  decoding="async"
                 />
               </SliderWrapper>
             ))}
           </SliderContent>
 
-          <SliderBtnGroup className="absolute bottom-0 left-0 right-0 grid h-fit grid-cols-2 overflow-hidden rounded-b-2xl border-t border-white/10 bg-navy/85 backdrop-blur-md md:grid-cols-4">
+          <SliderBtnGroup className="grid grid-cols-2 overflow-hidden rounded-b-2xl border-t border-white/10 bg-primary md:grid-cols-4">
             {EKSKUL_ITEMS.map((item) => (
               <SliderBtn
                 key={item.sliderName}
                 value={item.sliderName}
-                className="cursor-pointer p-3 sm:p-3.5 text-left border-b md:border-b-0 border-r border-white/10 [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:last:border-r-0 transition-opacity duration-300 hover:opacity-100"
+                className="cursor-pointer p-3 sm:p-4 text-left border-b md:border-b-0 border-r border-white/15 [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:last:border-r-0 transition-opacity duration-300 hover:opacity-100"
                 progressBarClass="h-full bg-accent/40"
               >
-                <h4 className="relative mb-1 w-fit rounded-full bg-white/15 px-2.5 py-0.5 font-display text-xs font-bold text-white sm:text-sm">
+                <h4 className="relative mb-1 w-fit rounded-full bg-accent px-2.5 py-0.5 font-display text-xs font-bold text-accent-foreground shadow-xs sm:text-sm">
                   {item.title}
                 </h4>
-                <p className="line-clamp-2 text-xs text-white/80 leading-relaxed">{item.desc}</p>
+                <p className="line-clamp-2 text-xs text-white leading-relaxed">{item.desc}</p>
               </SliderBtn>
             ))}
           </SliderBtnGroup>

@@ -45,7 +45,7 @@ export function SiteHeader() {
             <span>Tanya CS</span>
           </a>
 
-          <FormButton size="md" variant="primary">
+          <FormButton size="md" variant="accent">
             <span className="hidden sm:inline">Daftar Online</span>
             <span className="sm:hidden">Daftar</span>
           </FormButton>
