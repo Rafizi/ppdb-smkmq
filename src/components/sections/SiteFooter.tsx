@@ -9,9 +9,8 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 lg:grid-cols-2">
         <div>
           <div className="flex items-center gap-3.5">
-            <div className="rounded-full bg-white p-1 ring-2 ring-white/20 shadow-md shrink-0">
-              <Logo size="lg" />
-            </div>
+            <Logo size="lg" />
+           
             <div>
               <h2 className="font-display text-2xl font-bold text-white">{SCHOOL.name}</h2>
               <p className="text-xs font-semibold text-accent uppercase tracking-wider">
@@ -20,7 +19,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-3 text-sm text-navy-foreground/70">
-            {SCHOOL.tagline} — PPDB Tahun Ajaran {SCHOOL.year}
+            {SCHOOL.tagline} | PPDB Tahun Ajaran {SCHOOL.year}
           </p>
 
           <ul className="mt-6 space-y-4 text-sm">

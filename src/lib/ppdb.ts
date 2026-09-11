@@ -31,10 +31,26 @@ export const TRUST_METRICS = [
 ] as const;
 
 export const PARTNERS = [
-  { name: "MikroTik Academy", note: "Jaringan & Routing Internasional" },
-  { name: "Cisco Networking Academy", note: "Networking Global Terstandar" },
-  { name: "ITC", note: "International Test Center (English Discovery)" },
-  { name: "LSP Telematika", note: "Sertifikasi Profesi BNSP" },
+  {
+    name: "MikroTik Academy",
+    note: "Jaringan & Routing Internasional",
+    logo: "/partners/mikrotik.png",
+  },
+  {
+    name: "Cisco Networking Academy",
+    note: "Networking Global Terstandar",
+    logo: "/partners/cisco.png",
+  },
+  {
+    name: "ITC",
+    note: "International Test Center (English Discovery)",
+    logo: "/partners/itc.png",
+  },
+  {
+    name: "LSP Telematika",
+    note: "Sertifikasi Profesi BNSP",
+    logo: "/partners/lsp-telematika.png",
+  },
 ] as const;
 
 export const PROGRAMS = [
