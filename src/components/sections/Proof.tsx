@@ -9,9 +9,9 @@ export function Proof() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Bukti Kepercayaan"
-            title="Kurikulum tersertifikasi, bermitra dengan lembaga teknologi nasional & internasional"
-            description="Pembelajaran di SMK Madinatulquran mengikuti standar mitra industri, sehingga kompetensi santri terukur dan diakui."
+            eyebrow="Mitra Industri Resmi"
+            title="Kurikulum terstandarisasi dengan lembaga teknologi nasional dan internasional"
+            description="Pembelajaran di SMK Madinatulquran mengacu pada silabus resmi mitra industri global. Kompetensi santri teruji melalui sertifikasi yang diakui dunia kerja."
           />
         </div>
 

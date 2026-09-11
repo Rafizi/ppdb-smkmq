@@ -21,9 +21,9 @@ export function Fees() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Rincian Biaya PPDB"
-            title="Transparan sejak awal, tanpa biaya tersembunyi"
-            description={`Rincian biaya resmi PPDB SMK Madinatulquran Tahun Ajaran ${SCHOOL.year}. Tersedia opsi cicilan 2x untuk kemudahan orang tua santri.`}
+            eyebrow="Investasi Pendidikan"
+            title="Rincian Biaya Transparan, Tanpa Biaya Tersembunyi"
+            description={`Seluruh komponen biaya resmi PPDB SMK Madinatulquran Tahun Ajaran ${SCHOOL.year} dipaparkan secara terbuka. Tersedia skema cicilan 2 kali untuk kenyamanan perencanaan orang tua.`}
           />
         </div>
 

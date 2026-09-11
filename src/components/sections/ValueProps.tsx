@@ -25,9 +25,9 @@ export function ValueProps() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Nilai Tambah"
-            title="Lebih dari sekadar sekolah kejuruan"
-            description="Program pendukung yang membentuk kompetensi teknis, karakter Qurani, dan kesiapan global santri."
+            eyebrow="Keunggulan Pendidikan"
+            title="Enam Pilar Keunggulan Santri di SMK Madinatulquran"
+            description="Program terpadu yang memadukan kedalaman spiritual, keahlian teknologi aplikatif, dan kesiapan masa depan santri."
           />
         </div>
 

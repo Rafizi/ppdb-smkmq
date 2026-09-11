@@ -9,9 +9,9 @@ export function Steps() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Alur Pendaftaran"
-            title="4 Langkah Mudah Menuju SMK Madinatulquran"
-            description="Alur pendaftaran dan seleksi terpadu yang efisien. Tes akademik, minat bakat, dan wawancara dilaksanakan dalam 1 hari."
+            eyebrow="Alur Pendaftaran &amp; Seleksi"
+            title="4 Langkah Mudah Menjadi Santri SMK Madinatulquran"
+            description="Alur penerimaan yang terstruktur dan efisien. Seluruh rangkaian tes akademik, minat bakat IT, baca Al-Qur'an, dan wawancara orang tua tuntas dalam 1 hari."
           />
         </div>
 
@@ -55,7 +55,7 @@ export function Steps() {
 
         <div className="reveal-up mt-12 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
           <FormButton size="lg" variant="primary" className="hover-lift">
-            Mulai Isi Formulir Online
+            Isi Formulir Pendaftaran (5 Menit)
           </FormButton>
           <WhatsAppButton
             size="lg"

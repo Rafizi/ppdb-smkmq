@@ -36,25 +36,25 @@ const EKSKUL_ITEMS = [
   {
     img: futsalImage,
     title: "Futsal",
-    desc: "Melatih kerja sama tim, ketahanan fisik, dan sportivitas santri melalui latihan rutin dan turnamen.",
+    desc: "Melatih kerja sama tim, kebugaran fisik, dan sportivitas santri melalui latihan rutin dan turnamen terarah.",
     sliderName: "futsal",
   },
   {
     img: diplomasiImage,
     title: "Diplomasi",
-    desc: "Mengasah kemampuan komunikasi, debat, wawasan global, dan public speaking dalam forum formal.",
+    desc: "Mengasah keberanian berbicara di depan publik, teknik debat argumentatif, dan wawasan komunikasi global.",
     sliderName: "diplomasi",
   },
   {
     img: karateImage,
     title: "Karate",
-    desc: "Membentuk disiplin mental, ketahanan fisik, dan seni pertahanan diri beladiri santri.",
+    desc: "Membangun ketahanan fisik, ketenangan mental, disiplin diri, serta seni bela diri yang terukur.",
     sliderName: "karate",
   },
   {
     img: kepanduanImage,
     title: "Kepanduan",
-    desc: "Menumbuhkan jiwa kepemimpinan, kemandirian, kekompakan regu, dan ketangkasan di alam terbuka.",
+    desc: "Menumbuhkan jiwa kepemimpinan, kekompakan regu, survival alam terbuka, dan kemandirian santri asrama.",
     sliderName: "kepanduan",
   },
 ];
@@ -65,9 +65,9 @@ export function Facilities() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Fasilitas & Ekstrakurikuler"
-            title="Lingkungan belajar yang nyaman untuk santri"
-            description="Fasilitas harian yang mendukung kegiatan akademik, ibadah, dan tumbuh kembang santri."
+            eyebrow="Fasilitas &amp; Asrama"
+            title="Lingkungan Belajar Asri &amp; Asrama yang Kondusif"
+            description="Sarana belajar ber-AC, koneksi internet cepat, serta lingkungan asrama di Jonggol yang mendukung ibadah, akademik, dan kesehatan santri."
           />
         </div>
 
@@ -93,13 +93,13 @@ export function Facilities() {
 
         <div className="reveal-up mt-16 mb-6 text-center">
           <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-            Ekstrakurikuler
+            Ekstrakurikuler Pilihan
           </span>
           <h3 className="mt-2 font-display text-2xl font-bold text-navy sm:text-3xl">
-            Kegiatan Pengembangan Diri Santri
+            Ajang Pembentukan Karakter &amp; Minat Santri
           </h3>
           <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
-            Membentuk karakter, kedisiplinan, dan sportivitas santri melalui beragam kegiatan pilihan.
+            Melatih ketangkasan fisik, mental sportivitas, dan kepercayaan diri melalui pembinaan kegiatan yang seru dan terarah.
           </p>
         </div>
 

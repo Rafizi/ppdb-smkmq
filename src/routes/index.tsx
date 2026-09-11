@@ -42,7 +42,7 @@ const jsonLdSchema = {
         postalCode: "16830",
         addressCountry: "ID",
       },
-      telephone: "+62 855 4518 2776",
+      telephone: "+62 851-1139-0457",
       sameAs: [
         "https://www.instagram.com/smkmadinatulquran",
         "https://www.youtube.com/@smkmadinatulquran",

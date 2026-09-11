@@ -23,7 +23,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3.5 py-1.5 backdrop-blur shadow-sm">
               <Logo size="xs" />
               <span className="text-xs font-bold tracking-wide text-white">
-                PPDB {SCHOOL.year} Resmi Dibuka
+                PPDB TA {SCHOOL.year} Resmi Dibuka • Kuota Terbatas
               </span>
               <span className="relative flex size-2">
                 <span className="animate-ping absolute inline-flex size-full rounded-full bg-accent opacity-75" />
@@ -40,21 +40,20 @@ export function Hero() {
             {SCHOOL.tagline}
           </p>
 
-          {/* H1 Aksi Utama */}
+          {/* H1 Aksi Utama Berorientasi Hasil & Karakter */}
           <h1
             className="reveal-up mt-2.5 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
-            Daftarkan Putra/Putri Anda ke {SCHOOL.name}
+            Kuasai Teknologi Tingkat Industri, Teguhkan Adab dan Hafalan Al-Qur'an
           </h1>
 
-          {/* Subtext dengan ajakan pengisian form */}
+          {/* Subtext dengan proposisi nilai terpadu */}
           <p
             className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
             style={{ "--i": 3 } as React.CSSProperties}
           >
-            Sekolah kejuruan berbasis Al-Qur'an &amp; teknologi — mencetak generasi
-            Qurani, technopreneur, dan siap kerja global. Isi formulir pendaftaran, prosesnya cuma 5 menit.
+            SMK Madinatulquran memadukan kejuruan IT (TKJ &amp; RPL) dengan ekosistem pesantren di Jonggol, Bogor. Dibekali sertifikasi industri internasional Cisco dan MikroTik, proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
           </p>
 
           <div
@@ -66,7 +65,7 @@ export function Hero() {
               variant="accent"
               className="hover-lift hover:scale-[1.02] text-base font-bold shadow-lift"
             >
-              Daftar Sekarang (5 Menit)
+              Isi Formulir Pendaftaran (5 Menit)
             </FormButton>
             <WhatsAppButton
               size="lg"
@@ -74,7 +73,7 @@ export function Hero() {
               className="hover-lift"
               message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
             >
-              Tanya Admin via WhatsApp
+              Konsultasi Santri Baru via WhatsApp
             </WhatsAppButton>
           </div>
 
@@ -96,13 +95,13 @@ export function Hero() {
 
             <div className="flex flex-col">
               <span className="font-display text-2xl sm:text-3xl font-extrabold text-accent">
-                <StatCounter value={100} suffix="%" />
+                <StatCounter value={2} suffix=" Mitra" />
               </span>
               <span className="mt-0.5 text-xs font-semibold text-primary-foreground">
-                Standar Industri
+                Sertifikasi Global
               </span>
               <span className="text-[11px] text-primary-foreground/70">
-                Cisco &amp; MikroTik
+                Resmi Cisco &amp; MikroTik
               </span>
             </div>
 
