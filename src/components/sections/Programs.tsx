@@ -80,7 +80,7 @@ export function Programs() {
                         </li>
                       ))}
                     </ul>
-                    <p className="mt-3 text-[10px] italic text-muted-foreground">
+                    <p className="mt-3 text-xs italic text-navy/70">
                       {program.dummyNote}
                     </p>
                   </div>

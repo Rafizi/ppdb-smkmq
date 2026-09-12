@@ -153,6 +153,36 @@
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
+/* Unified CTA Button System */
+.btn-cta-primary {
+  background-color: #C89B3C;
+  color: #0B3B2E;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-cta-primary:hover {
+  background-color: #D9AF52;
+}
+
+.btn-cta-secondary-light {
+  border: 1.5px solid #0B3B2E;
+  color: #0B3B2E;
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+.btn-cta-secondary-light:hover {
+  background-color: rgba(11, 59, 46, 0.08);
+}
+
+.btn-cta-secondary-dark {
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+.btn-cta-secondary-dark:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
 /* Animation and transition styles protected for prefers-reduced-motion */
 @media (prefers-reduced-motion: no-preference) {
   /* Scroll reveal utility */
@@ -246,6 +276,18 @@
     }
   }
 
+  @keyframes pulseDotShadow {
+    0% {
+      box-shadow: 0 0 0 0 oklch(0.784 0.159 73 / 0.85);
+    }
+    70% {
+      box-shadow: 0 0 0 7px oklch(0.784 0.159 73 / 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 oklch(0.784 0.159 73 / 0);
+    }
+  }
+
   /* Animation class triggers */
   .animate-slowzoom {
     animation: slowzoom 24s ease-in-out infinite alternate;
@@ -253,6 +295,10 @@
 
   .animate-pulse-badge {
     animation: pulseBadge 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-shadow {
+    animation: pulseDotShadow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .animate-breathe {
@@ -294,10 +340,20 @@
   }
 }
 .animate-accordion-down {
-  animation: accordion-down 0.25s ease-out;
+  animation: accordion-down 300ms ease;
 }
 .animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
+  animation: accordion-up 300ms ease;
+}
+
+/* Accordion icon plus/cross rotation (300ms ease) */
+.accordion-icon-rotate {
+  transition: transform 300ms ease, background-color 0.2s ease, color 0.2s ease;
+  will-change: transform;
+}
+[data-state="open"] .accordion-icon-rotate,
+[data-state="open"] > .accordion-icon-rotate {
+  transform: rotate(45deg);
 }
 
 /* Reduced motion fallbacks */
@@ -312,6 +368,7 @@
   }
   .animate-slowzoom,
   .animate-pulse-badge,
+  .animate-pulse-shadow,
   .animate-breathe,
   .animate-fade-up,
   .animate-fade-in,
@@ -342,3 +399,32 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* Sticky CTA — Responsive behavior (Breakpoint: ≤860px) */
+@media (min-width: 861px) {
+  .sticky-cta-desktop {
+    display: block;
+  }
+  .sticky-cta-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .sticky-cta-desktop {
+    display: none !important;
+  }
+  .sticky-cta-mobile {
+    display: block;
+  }
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta-desktop {
+    transition: none !important;
+  }
+}
+

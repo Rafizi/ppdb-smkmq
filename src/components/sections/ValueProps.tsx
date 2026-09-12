@@ -37,7 +37,7 @@ export function ValueProps() {
             return (
               <div
                 key={item.title}
-                className="reveal-up hover-lift stagger-fast rounded-2xl border border-border bg-card p-6 shadow-card transition-colors hover:border-primary/40"
+                className="reveal-up hover-lift stagger-fast rounded-3xl border border-border bg-card p-6 shadow-card transition-colors hover:border-primary/40"
                 style={{ "--i": idx } as React.CSSProperties}
               >
                 <span className="flex size-11 items-center justify-center rounded-xl bg-primary-light/25 text-primary-dark">
@@ -46,7 +46,7 @@ export function ValueProps() {
                 <h3 className="mt-4 font-display text-base font-bold text-navy">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-navy/75">
                   {item.desc}
                 </p>
               </div>

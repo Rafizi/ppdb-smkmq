@@ -14,7 +14,9 @@ import { Steps } from "@/components/sections/Steps";
 import { Fees } from "@/components/sections/Fees";
 import { Faq } from "@/components/sections/Faq";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { FeeSummary } from "@/components/sections/FeeSummary";
 import { SiteFooter } from "@/components/sections/SiteFooter";
+import { StickyCta } from "@/components/sections/StickyCta";
 
 const pageTitle = "PPDB SMK Madinatulquran 2027/2028 — Pendaftaran Santri Baru Online";
 const pageDescription =
@@ -108,18 +110,20 @@ function Index() {
       <main>
         <Hero />
         <Proof />
+        <FeeSummary />
         <Programs />
         <Vision />
         <ValueProps />
         <Facilities />
-        <Achievements />
         <Testimonials />
+        <Achievements />
         <Steps />
         <Fees />
         <Faq />
         <CtaBanner />
       </main>
       <SiteFooter />
+      <StickyCta />
     </div>
   );
 }

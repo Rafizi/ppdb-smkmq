@@ -10,27 +10,17 @@ export function FormButton({
   href = SCHOOL.formUrl,
   className,
   size = "lg",
-  variant = "accent",
 }: {
   children?: React.ReactNode;
   href?: string;
   className?: string;
   size?: "lg" | "md" | "sm";
-  variant?: "accent" | "primary" | "white";
+  variant?: string;
 }) {
-  const variantStyles = {
-    accent:
-      "bg-accent text-accent-foreground shadow-lift hover:bg-accent/90 border border-accent-foreground/10",
-    primary:
-      "bg-primary text-primary-foreground shadow-lift hover:bg-primary-dark",
-    white:
-      "bg-white text-navy shadow-lift hover:bg-cream border border-border",
-  };
-
   const sizeStyles = {
     lg: "px-7 py-4 text-base font-bold",
-    md: "px-5 py-2.5 text-sm font-semibold",
-    sm: "px-4 py-2 text-xs font-semibold",
+    md: "px-5 py-2.5 text-sm font-bold",
+    sm: "px-4 py-2 text-xs font-bold",
   };
 
   return (
@@ -39,8 +29,7 @@ export function FormButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring active:translate-y-0",
-        variantStyles[variant],
+        "inline-flex items-center justify-center gap-2.5 rounded-full bg-[#C89B3C] text-[#0B3B2E] transition-all duration-200 hover:bg-[#D9AF52] hover:-translate-y-0.5 shadow-card border border-[#C89B3C]/30 font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C89B3C] active:translate-y-0",
         sizeStyles[size],
         className,
       )}
@@ -57,22 +46,19 @@ export function WhatsAppButton({
   message,
   className,
   size = "lg",
-  variant = "solid",
+  variant = "light",
 }: {
   children?: React.ReactNode;
   message?: string;
   className?: string;
   size?: "lg" | "md" | "sm";
-  variant?: "solid" | "outline" | "subtle";
+  variant?: "light" | "dark" | "outline" | "solid" | "subtle";
 }) {
-  const variantStyles = {
-    solid:
-      "bg-whatsapp text-whatsapp-foreground shadow-card hover:-translate-y-0.5 hover:shadow-lift",
-    outline:
-      "border-2 border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10",
-    subtle:
-      "border border-border bg-card text-navy shadow-sm hover:border-whatsapp hover:text-whatsapp-foreground hover:bg-whatsapp/10",
-  };
+  const isDark = variant === "dark" || variant === "outline";
+
+  const variantStyles = isDark
+    ? "border-2 border-white/80 bg-transparent text-white hover:bg-white/10 hover:border-white focus-visible:outline-white"
+    : "border-2 border-[#0B3B2E] bg-transparent text-[#0B3B2E] hover:bg-[#0B3B2E]/10 focus-visible:outline-[#0B3B2E]";
 
   const sizeStyles = {
     lg: "px-7 py-4 text-base",
@@ -86,8 +72,8 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-whatsapp active:translate-y-0",
-        variantStyles[variant],
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2",
+        variantStyles,
         sizeStyles[size],
         className,
       )}

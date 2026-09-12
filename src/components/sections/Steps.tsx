@@ -59,7 +59,7 @@ export function Steps() {
           </FormButton>
           <WhatsAppButton
             size="lg"
-            variant="subtle"
+            variant="light"
             className="hover-lift"
             message="Assalamu'alaikum Admin PMB, saya ingin dipandu mengenai alur pendaftaran PPDB SMK Madinatulquran."
           >

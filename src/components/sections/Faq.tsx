@@ -36,7 +36,7 @@ export function Faq() {
                     <span>{faq.question}</span>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="pt-2 pl-9 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <AccordionContent className="pt-2 pl-9 text-sm leading-relaxed text-navy/80 sm:text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -44,17 +44,17 @@ export function Faq() {
           </Accordion>
         </div>
 
-        <div className="reveal-up mt-8 rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-6 text-center">
+        <div className="reveal-up mt-8 rounded-3xl border border-dashed border-primary/30 bg-primary/5 p-6 text-center">
           <p className="text-sm font-semibold text-navy">
             Punya pertanyaan lain yang belum terjawab di sini?
           </p>
-          <p className="mt-1 text-xs text-muted-foreground">
+          <p className="mt-1 text-xs font-medium text-navy/75">
             Admin PMB kami siap menjawab dan membantu seluruh pertanyaan Anda.
           </p>
           <div className="mt-4 flex justify-center">
             <WhatsAppButton
               size="md"
-              variant="solid"
+              variant="light"
               className="hover-lift"
               message="Assalamu'alaikum Admin PMB, saya memiliki pertanyaan mengenai PPDB SMK Madinatulquran yang belum ada di FAQ."
             >

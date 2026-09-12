@@ -19,6 +19,12 @@ export const SCHOOL = {
     "SMK Madinatulquran hanya menerima pembayaran ke rekening resmi BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasikan setiap bukti pembayaran hanya melalui Admin PMB resmi di nomor +62 855 4518 2776. Sekolah tidak bertanggung jawab atas transaksi ke rekening/nomor lain di luar yang tercantum resmi di halaman ini.",
 } as const;
 
+export const PPDB_QUOTA = {
+  wave: "Gelombang 1",
+  remaining: 18,
+  total: 60,
+} as const;
+
 export const waLink = (
   message = `Assalamu'alaikum, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran TA ${SCHOOL.year}. Mohon informasinya.`,
 ) => `https://wa.me/${SCHOOL.waAdmin}?text=${encodeURIComponent(message)}`;

@@ -15,7 +15,7 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
+    <header className="relative z-30 border-b border-border/60 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-2.5">
           <span className="flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
@@ -49,9 +49,9 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             title="Tanya Admin via WhatsApp"
-            className="hidden items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-2 text-xs font-semibold text-navy transition-colors hover:border-whatsapp hover:bg-whatsapp/10 hover:text-whatsapp-foreground sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-2 text-xs font-semibold text-[#0B3B2E] transition-all hover:bg-[#0B3B2E]/10 hover:-translate-y-0.5 sm:inline-flex"
           >
-            <WhatsAppIcon className="size-3.5 text-whatsapp" aria-hidden="true" />
+            <WhatsAppIcon className="size-3.5" aria-hidden="true" />
             <span>Tanya CS</span>
           </a>
 

@@ -1,37 +1,92 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BadgeCheck, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-school.jpg";
-import { SCHOOL } from "@/lib/ppdb";
+import { PPDB_QUOTA, SCHOOL } from "@/lib/ppdb";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { FormButton, WhatsAppButton } from "./shared";
 
 export function Hero() {
+  const [remainingSeats, setRemainingSeats] = useState<number>(() => {
+    if (typeof window !== "undefined") {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      if (prefersReducedMotion) return PPDB_QUOTA.remaining;
+    }
+    return 0;
+  });
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReducedMotion) {
+      setRemainingSeats(PPDB_QUOTA.remaining);
+      return;
+    }
+
+    const duration = 1200; // ms
+    const target = PPDB_QUOTA.remaining;
+    const start = performance.now();
+
+    let frameId: number;
+
+    const step = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Smooth ease-out exponential curve
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const current = Math.round(ease * target);
+      setRemainingSeats(current);
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step);
+      } else {
+        setRemainingSeats(target);
+      }
+    };
+
+    frameId = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+    <section id="hero" className="relative overflow-hidden bg-primary text-primary-foreground">
       <div
         // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
         aria-hidden="true"
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div>
-          {/* Badge dengan pulsing live indicator dot
+          {/* Badge urgency kuota dengan dot berdenyut box-shadow */}
           <div
             className="reveal-up"
             style={{ "--i": 0 } as React.CSSProperties}
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold tracking-wide text-accent-foreground uppercase shadow-sm">
-              <span className="relative flex size-2">
-                <span className="animate-pulse-badge absolute inline-flex size-full rounded-full bg-terracotta" />
-                <span className="relative inline-flex size-2 rounded-full bg-terracotta" />
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white shadow-xs backdrop-blur-xs">
+              <span className="relative flex size-2 shrink-0 items-center justify-center">
+                <span
+                  className="animate-pulse-shadow size-2 rounded-full bg-accent"
+                  aria-hidden="true"
+                />
               </span>
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              PPDB {SCHOOL.year} Dibuka
-            </span>
-          </div> */}
+              <span>
+                {PPDB_QUOTA.wave} — sisa{" "}
+                <span className="font-extrabold text-accent tabular-nums">
+                  {remainingSeats}
+                </span>{" "}
+                dari {PPDB_QUOTA.total} kursi
+              </span>
+            </div>
+          </div>
 
           {/* Eyebrow Tagline */}
           <p
-            className="reveal-up mt-4 font-display text-sm font-semibold tracking-wide text-accent sm:text-base"
+            className="reveal-up mt-3.5 font-display text-sm font-semibold tracking-wide text-accent sm:text-base"
             style={{ "--i": 1 } as React.CSSProperties}
           >
             {SCHOOL.tagline}
@@ -39,7 +94,7 @@ export function Hero() {
 
           {/* H1 Aksi Utama */}
           <h1
-            className="reveal-up mt-2.5 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
+            className="reveal-up mt-2 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
             Daftarkan Putra/Putri Anda ke {SCHOOL.name}

@@ -181,7 +181,7 @@ export function Fees() {
                 </FormButton>
                 <WhatsAppButton
                   size="sm"
-                  variant="subtle"
+                  variant="light"
                   className="w-full justify-center"
                   message={`Assalamu'alaikum Admin PMB, saya ingin konsultasi mengenai rincian biaya program ${plan.name} SMK Madinatulquran.`}
                 >

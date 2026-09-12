@@ -83,7 +83,7 @@ export function SiteFooter() {
               href={SCHOOL.formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2 text-xs font-bold text-accent-foreground transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-[#C89B3C] px-5 py-2 text-xs font-bold text-[#0B3B2E] transition-all hover:bg-[#D9AF52] hover:-translate-y-0.5 border border-[#C89B3C]/30 shadow-xs"
             >
               Isi Formulir PPDB Online
             </a>
@@ -91,7 +91,7 @@ export function SiteFooter() {
               href={`https://wa.me/${SCHOOL.waAdmin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-navy-foreground/10 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-whatsapp hover:text-whatsapp-foreground"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 bg-transparent px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-white/10 hover:border-white hover:-translate-y-0.5"
             >
               <WhatsAppIcon className="size-3.5 shrink-0" aria-hidden="true" />
               <span>Chat Admin PMB</span>
