@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { PROGRAM_FEES, REGISTRATION_FEE, SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { FormButton, SectionHeading, WhatsAppButton, WhatsAppIcon } from "./shared";
 
 export function Fees() {
@@ -20,9 +21,9 @@ export function Fees() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="reveal-up">
           <SectionHeading
-            eyebrow="Rincian Biaya PPDB"
-            title="Transparan sejak awal, tanpa biaya tersembunyi"
-            description={`Rincian biaya resmi PPDB SMK Madinatulquran Tahun Ajaran ${SCHOOL.year}. Tersedia opsi cicilan 2x untuk kemudahan orang tua santri.`}
+            eyebrow="Investasi Pendidikan"
+            title="Rincian Biaya Transparan, Tanpa Biaya Tersembunyi"
+            description={`Seluruh komponen biaya resmi PPDB SMK Madinatulquran Tahun Ajaran ${SCHOOL.year} dipaparkan secara terbuka. Tersedia skema cicilan 2 kali untuk kenyamanan perencanaan orang tua.`}
           />
         </div>
 
@@ -220,10 +221,10 @@ export function Fees() {
             </div>
 
             <div className="rounded-2xl border border-border bg-cream p-5">
-              <div className="flex items-center gap-3">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-                  <Building2 className="size-6" aria-hidden="true" />
-                </span>
+              <div className="flex items-center gap-3.5">
+                <div className="rounded-full bg-white p-1 border border-border/60 shadow-sm shrink-0">
+                  <Logo size="lg" />
+                </div>
                 <div>
                   <p className="text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     Rekening Resmi Bank {SCHOOL.bank.name}

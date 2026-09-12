@@ -8,9 +8,19 @@
   "theme_color": "#0f766e",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/favicon.ico?v=mq3",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/logo-192.png?v=mq3",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo-512.png?v=mq3",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }

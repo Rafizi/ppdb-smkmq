@@ -16,16 +16,16 @@ export function Vision() {
               <div className="flex items-center gap-2 text-accent">
                 <Compass className="size-5" aria-hidden="true" />
                 <span className="text-xs font-bold tracking-widest uppercase">
-                  Visi Pendidikan {SCHOOL.name}
+                  Pilar Pendidikan &amp; Karakter Santri
                 </span>
               </div>
 
               <h2 className="mt-4 font-display text-2xl leading-snug font-extrabold text-balance sm:text-3xl lg:text-3.5xl">
-                "Menjadi SMK unggul yang melahirkan generasi Qurani, technopreneur, dan pemimpin masa depan yang inovatif, mandiri, serta berdaya saing global."
+                "Mencetak generasi Qurani dan teknolog andal yang berakhlak mulia, mandiri, serta siap berkontribusi nyata bagi umat dan industri."
               </h2>
 
               <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
-                Memadukan kedalaman adab Islami, hafalan Al-Qur'an, dan penguasaan teknologi tingkat tinggi dalam ekosistem boarding school yang kondusif.
+                Pendidikan terpadu di Jonggol yang menyeimbangkan kematangan adab Islami, ketajaman hafalan Al-Qur'an, dan keterampilan teknologi tingkat lanjut dalam lingkungan asrama yang asri dan suportif.
               </p>
             </div>
 
@@ -33,17 +33,17 @@ export function Vision() {
               <div className="flex items-center gap-2.5">
                 <Sparkles className="size-5 text-accent" aria-hidden="true" />
                 <h3 className="font-display text-lg font-bold text-white">
-                  Target Karakter Lulusan
+                  5 Karakter Utama Lulusan
                 </h3>
               </div>
 
               <ul className="mt-5 space-y-3.5 text-sm">
                 {[
-                  "Hafidz Al-Qur'an minimal 3 Juz bersanad mutqin",
-                  "Hafal & memahami Hadits Arba'in An-Nawawiyyah",
-                  "Beraqidah lurus Ahlussunnah wal Jama'ah & beradab mulia",
-                  "Menguasai keahlian IT profesional siap sertifikasi global",
-                  "Memiliki jiwa kepemimpinan, kemandirian & technopreneurship",
+                  "Hafal Al-Qur'an minimal 3 Juz dengan bacaan tartil dan bersanad mutqin",
+                  "Memahami dan mengamalkan Hadits Arba'in An-Nawawiyyah dalam keseharian",
+                  "Beraqidah lurus Ahlussunnah wal Jama'ah serta berbakti kepada orang tua",
+                  "Menguasai kompetensi IT berstandar sertifikasi industri internasional",
+                  "Memiliki kemandirian asrama, kedisiplinan, dan jiwa wirausaha teknologi",
                 ].map((item, idx) => (
                   <li
                     key={item}

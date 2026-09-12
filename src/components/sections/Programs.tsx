@@ -12,8 +12,8 @@ export function Programs() {
         <div className="reveal-up">
           <SectionHeading
             eyebrow="Program Keahlian"
-            title="Kuasai keahlian IT & Al-Qur'an sekaligus — siap kerja, siap kuliah, siap jadi technopreneur"
-            description="Kurikulum vokasi berbasis industri global dengan fokus praktek nyata dan pembekalan sertifikasi internasional."
+            title="Dua Jurusan Unggulan Berstandar Industri Global"
+            description="Kurikulum vokasi terpadu dengan porsi praktik intensif, portofolio nyata, serta pembekalan sertifikasi industri internasional."
           />
         </div>
 
@@ -70,7 +70,7 @@ export function Programs() {
                   <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-4.5">
                     <h4 className="flex items-center gap-2 text-xs font-bold tracking-wider text-primary-dark uppercase">
                       <TrendingUp className="size-3.5 text-primary" aria-hidden="true" />
-                      Bukti Outcome &amp; Serapan Industri
+                      Bukti Keahlian &amp; Kesiapan Industri
                     </h4>
                     <ul className="mt-3 space-y-2 text-xs leading-relaxed text-navy">
                       {program.proofStats.map((stat) => (
@@ -80,9 +80,6 @@ export function Programs() {
                         </li>
                       ))}
                     </ul>
-                    <p className="mt-3 text-xs italic text-navy/70">
-                      {program.dummyNote}
-                    </p>
                   </div>
                 </div>
 

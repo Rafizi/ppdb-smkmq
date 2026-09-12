@@ -1,6 +1,7 @@
 import React from "react";
 import { Phone } from "lucide-react";
 import { SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { FormButton, WhatsAppButton } from "./shared";
 
 export function CtaBanner() {
@@ -13,11 +14,16 @@ export function CtaBanner() {
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-2xl">
+            <div className="mx-auto mb-6 flex justify-center">
+              <div className="rounded-full bg-white/15 p-2 backdrop-blur-md ring-1 ring-white/30 shadow-lift">
+                <Logo size="lg" className="rounded-full shadow-md" />
+              </div>
+            </div>
             <h2 className="font-display text-3xl font-extrabold text-balance sm:text-4xl">
-              Amankan Kursi Putra/Putri Anda di {SCHOOL.name}
+              Mulai Langkah Nyata Menjadi Santri Ahli Teknologi di {SCHOOL.name}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-              Mulai langkah awal menuju masa depan Qurani dan technopreneur. Tim Admin PMB siap mendampingi proses pendaftaran Anda dari awal sampai tuntas.
+              Kuota penerimaan santri dibatasi setiap tahunnya demi menjaga efektivitas belajar dan rasio santri-mentor yang ideal. Isi formulir pendaftaran Anda sekarang atau hubungi Admin PMB untuk konsultasi.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
               <FormButton

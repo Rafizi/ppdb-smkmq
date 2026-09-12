@@ -2,11 +2,12 @@ export const SCHOOL = {
   name: "SMK Madinatulquran",
   tagline: "Digital Intelligent, Islamic Attitude",
   year: "2027/2028",
-  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform",
+  logo: "/logo.png",
+  formUrl: "https://bit.ly/PMBSMKMQ2728",
   address:
     "Kp. Kebon Kelapa, RT.002/RW.011, Singasari, Kec. Jonggol, Bogor, Jawa Barat 16830",
-  waAdmin: "6285545182776",
-  waAdminLabel: "+62 855 4518 2776",
+  waAdmin: "6285111390457",
+  waAdminLabel: "+62 851-1139-0457",
   hotline: "+62 812 6900 457",
   hotlineHref: "tel:+628126900457",
   website: "smkmadinatulquran.sch.id",
@@ -16,7 +17,7 @@ export const SCHOOL = {
   bank: { name: "BRI", holder: "SMK Madinatulquran", number: "141801000600567" },
   maps: "https://www.google.com/maps?q=SMK+Madinatulquran+Jonggol+Bogor&output=embed",
   antiFraudNotice:
-    "SMK Madinatulquran hanya menerima pembayaran ke rekening resmi BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasikan setiap bukti pembayaran hanya melalui Admin PMB resmi di nomor +62 855 4518 2776. Sekolah tidak bertanggung jawab atas transaksi ke rekening/nomor lain di luar yang tercantum resmi di halaman ini.",
+    "SMK Madinatulquran hanya menerima pembayaran ke rekening resmi BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasikan setiap bukti pembayaran hanya melalui Admin PMB resmi di nomor +62 851-1139-0457. Sekolah tidak bertanggung jawab atas transaksi ke rekening/nomor lain di luar yang tercantum resmi di halaman ini.",
 } as const;
 
 export const PPDB_QUOTA = {
@@ -31,15 +32,31 @@ export const waLink = (
 
 export const TRUST_METRICS = [
   { value: "10+ Th", label: "Pengalaman Mendidik", sub: "Berdiri Sejak 2014" },
-  { value: "100%", label: "Standar Industri", sub: "Cisco, MikroTik & LSP" },
+  { value: "2 Mitra", label: "Sertifikasi Global", sub: "Resmi Cisco & MikroTik" },
   { value: "3 Juz", label: "Target Tahfidz", sub: "+ Hadits Arba'in Nawawi" },
 ] as const;
 
 export const PARTNERS = [
-  { name: "MikroTik Academy", note: "Jaringan & Routing Internasional" },
-  { name: "Cisco Networking Academy", note: "Networking Global Terstandar" },
-  { name: "ITC", note: "International Test Center (English)" },
-  { name: "LSP Telematika", note: "Sertifikasi Profesi BNSP" },
+  {
+    name: "MikroTik Academy",
+    note: "Jaringan & Routing Internasional",
+    logo: "/partners/mikrotik.png",
+  },
+  {
+    name: "Cisco Networking Academy",
+    note: "Networking Global Terstandar",
+    logo: "/partners/cisco.png",
+  },
+  {
+    name: "ITC",
+    note: "International Test Center (English Discovery)",
+    logo: "/partners/itc.png",
+  },
+  {
+    name: "LSP Telematika",
+    note: "Sertifikasi Profesi BNSP",
+    logo: "/partners/lsp-telematika.png",
+  },
 ] as const;
 
 export const PROGRAMS = [
@@ -50,16 +67,15 @@ export const PROGRAMS = [
       "Spesialisasi infrastruktur jaringan modern, instalasi fiber optic & wireless, administrasi Linux server, serta keamanan jaringan tingkat enterprise.",
     outcomes: [
       "Menyelesaikan kurikulum resmi Cisco Networking Academy",
-      "Menguasai administrasi Linux Server & Cloud fundamental",
+      "Menguasai administrasi Linux Server & fundamental Cloud Computing",
       "Meraih sertifikasi industri internasional MikroTik (MTCNA) & Cisco",
-      "Siap berkarir sebagai Network Administrator & Cloud Support",
+      "Siap berkarir sebagai Network Administrator & Cloud Support Engineer",
     ],
     proofStats: [
-      "100% lulusan dibekali sertifikasi MikroTik & Cisco sebelum kelulusan",
-      "Alumni magang/bekerja di: PT Jaringan Nusantara*, ISP Lokal Cianjur Net*",
-      "Rata-rata 2–3 bulan setelah lulus mendapat tawaran kerja di bidang jaringan",
+      "100% santri dibekali materi sertifikasi MikroTik & Cisco sebelum kelulusan",
+      "Portofolio praktik nyata: konfigurasi router Mikrotik, server Linux, dan jaringan fiber optic",
+      "Kesiapan kerja terbukti dengan pemahaman troubleshooting riil perangkat industri",
     ],
-    dummyNote: "*Data mitra/angka di atas adalah ilustrasi dummy dan akan disesuaikan data riil sekolah",
   },
   {
     code: "RPL / PPLG",
@@ -68,48 +84,47 @@ export const PROGRAMS = [
       "Pengembangan aplikasi web & mobile modern, rekayasa database, implementasi clean code, dan metodologi Project Based Learning (PBL).",
     outcomes: [
       "Mampu membangun aplikasi web full-stack modern",
-      "Mampu merilis aplikasi Android sebelum menginjak kelas XII",
-      "Portofolio nyata dari proyek komersial klien (PBL)",
+      "Mampu merilis aplikasi Android fungsional sebelum menginjak kelas XII",
+      "Memiliki portofolio aplikasi nyata melalui metode Project Based Learning",
       "Siap berkarir sebagai Junior Software Engineer & Technopreneur",
     ],
     proofStats: [
-      "10+ aplikasi & website nyata telah dikerjakan santri sebagai proyek klien/PBL",
-      "Alumni magang/bekerja di: Startup Digital Kreatif*, Software House Bogor*",
-      "90%+ santri menguasai pembuatan aplikasi Android sebelum kelas XII",
+      "Proyek aplikasi & website nyata dikerjakan santri secara berkelompok dan mandiri",
+      "Penguasaan ekosistem pemrograman modern, database SQL, dan version control Git",
+      "Santri dilatih merilis dan mempublikasikan karya perangkat lunak sendiri",
     ],
-    dummyNote: "*Data mitra/angka di atas adalah ilustrasi dummy dan akan disesuaikan data riil sekolah",
   },
 ] as const;
 
 export const VALUE_PROPS = [
   {
-    title: "Tahfidz Camp",
-    desc: "Hafal Al-Qur'an 3 Juz & Hadits Arba'in Nawawi dengan sanad mutqin.",
+    title: "Tahfidz & Sanad Mutqin",
+    desc: "Target hafalan minimal 3 Juz Al-Qur'an bersanad mutqin dan 42 Hadits Arba'in An-Nawawiyyah.",
     icon: "book",
   },
   {
-    title: "Program Internasional",
-    desc: "Peluang studi, sertifikasi global, dan program magang ke luar negeri.",
+    title: "Sertifikasi Global",
+    desc: "Akses kurikulum dan sertifikasi industri internasional resmi dari MikroTik dan Cisco.",
     icon: "globe",
   },
   {
     title: "English Discovery",
-    desc: "Pelatihan bahasa Inggris tersertifikasi International Test Center (ITC).",
+    desc: "Pelatihan bahasa Inggris tersertifikasi International Test Center (ITC) untuk komunikasi global.",
     icon: "languages",
   },
   {
-    title: "Entrepreneurship & IT Camp",
-    desc: "Camp intensif bisnis digital, teknologi mutakhir, dan English Camp.",
+    title: "Inkubasi Technopreneur",
+    desc: "Pembentukan mental wirausaha digital, kemandirian teknologi, dan pemecahan masalah riil.",
     icon: "rocket",
   },
   {
     title: "Project Based Learning",
-    desc: "Praktek langsung mengerjakan proyek riil dari klien dan industri mitra.",
+    desc: "Metode belajar aplikatif melalui pengerjaan proyek riil berbasis kebutuhan pengguna nyata.",
     icon: "target",
   },
   {
-    title: "Kurikulum Berstandar Industri",
-    desc: "Materi terintegrasi MikroTik Academy, Cisco Academy, dan LSP Telematika.",
+    title: "Standar Industri & BNSP",
+    desc: "Kurikulum selaras dengan kebutuhan dunia kerja dan uji kompetensi profesi LSP Telematika BNSP.",
     icon: "scroll",
   },
 ] as const;
@@ -130,20 +145,20 @@ export const STEPS = [
   {
     step: 1,
     title: "Isi Formulir Online",
-    desc: "Lengkapi formulir pendaftaran online resmi (±5 menit). Data Anda tersimpan langsung di sistem PMB.",
+    desc: "Lengkapi formulir pendaftaran online resmi (±5 menit). Data Anda tersimpan langsung di sistem PMB sekolah.",
     estimate: "H+3 hari kerja dihubungi",
   },
   {
     step: 2,
     title: "Biaya Registrasi",
-    desc: "Selesaikan biaya pendaftaran sebesar Rp450.000 ke rekening resmi BRI sekolah lalu konfirmasi ke Admin PMB.",
+    desc: "Selesaikan biaya registrasi sebesar Rp450.000 ke rekening resmi BRI sekolah lalu konfirmasikan ke Admin PMB.",
     estimate: "Konfirmasi via WhatsApp",
   },
   {
     step: 3,
-    title: "Tes & Wawancara",
-    desc: "Tes potensi akademik, minat bakat IT, baca Al-Qur'an & wawancara orang tua dilaksanakan di hari yang sama (tanpa dua jadwal terpisah).",
-    estimate: "Dilaksanakan 1 hari",
+    title: "Seleksi Terpadu 1 Hari",
+    desc: "Tes potensi akademik, minat bakat IT, baca Al-Qur'an, dan wawancara orang tua tuntas dalam 1 hari tanpa bolak-balik.",
+    estimate: "Dilaksanakan 1 hari penuh",
   },
   {
     step: 4,
@@ -225,7 +240,7 @@ export const FAQS = [
   {
     question: "Bagaimana cara pembayaran agar aman dari penipuan?",
     answer:
-      "SMK Madinatulquran HANYA menerima transaksi keuangan ke rekening resmi Bank BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasi pembayaran HANYA dilakukan melalui kontak resmi Admin PMB di +62 855 4518 2776. Pihak sekolah tidak pernah meminta transfer ke rekening atas nama pribadi siapa pun.",
+      "SMK Madinatulquran HANYA menerima transaksi keuangan ke rekening resmi Bank BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasi pembayaran HANYA dilakukan melalui kontak resmi Admin PMB di +62 851-1139-0457. Pihak sekolah tidak pernah meminta transfer ke rekening atas nama pribadi siapa pun.",
   },
   {
     question: "Apa saja sertifikasi IT yang akan diperoleh santri?",

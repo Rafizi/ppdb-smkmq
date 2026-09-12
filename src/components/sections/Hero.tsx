@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { BadgeCheck, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-school.jpg";
+import { Sparkles } from "lucide-react";
 import { PPDB_QUOTA, SCHOOL } from "@/lib/ppdb";
+import { Logo } from "@/components/ui/Logo";
 import { StatCounter } from "@/components/ui/StatCounter";
+import AnimatedCardStack from "@/components/ui/card-stack-hero";
 import { FormButton, WhatsAppButton } from "./shared";
 
 export function Hero() {
@@ -60,26 +61,27 @@ export function Hero() {
         // className="pattern-geo pointer-events-none absolute inset-0 text-primary-foreground/25"
         aria-hidden="true"
       />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:py-20 xl:max-w-[1440px] xl:grid-cols-[1fr_1.1fr] xl:gap-16">
         <div>
-          {/* Badge urgency kuota dengan dot berdenyut box-shadow */}
+          {/* Official School & PPDB Badge with Logo & Live Urgency Quota */}
           <div
             className="reveal-up"
             style={{ "--i": 0 } as React.CSSProperties}
           >
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white shadow-xs backdrop-blur-xs">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3.5 py-1.5 backdrop-blur shadow-sm">
+              <Logo size="xs" />
+              <span className="text-xs font-bold tracking-wide text-white">
+                PPDB TA {SCHOOL.year} • {PPDB_QUOTA.wave} sisa{" "}
+                <span className="font-extrabold text-accent tabular-nums">
+                  {remainingSeats}
+                </span>{" "}
+                dari {PPDB_QUOTA.total} kursi
+              </span>
               <span className="relative flex size-2 shrink-0 items-center justify-center">
                 <span
                   className="animate-pulse-shadow size-2 rounded-full bg-accent"
                   aria-hidden="true"
                 />
-              </span>
-              <span>
-                {PPDB_QUOTA.wave} — sisa{" "}
-                <span className="font-extrabold text-accent tabular-nums">
-                  {remainingSeats}
-                </span>{" "}
-                dari {PPDB_QUOTA.total} kursi
               </span>
             </div>
           </div>
@@ -92,21 +94,20 @@ export function Hero() {
             {SCHOOL.tagline}
           </p>
 
-          {/* H1 Aksi Utama */}
+          {/* H1 Aksi Utama Berorientasi Hasil & Karakter */}
           <h1
             className="reveal-up mt-2 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
-            Daftarkan Putra/Putri Anda ke {SCHOOL.name}
+            Kuasai Teknologi Tingkat Industri, Teguhkan Adab dan Hafalan Al-Qur'an
           </h1>
 
-          {/* Subtext dengan ajakan pengisian form */}
+          {/* Subtext dengan proposisi nilai terpadu */}
           <p
             className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
             style={{ "--i": 3 } as React.CSSProperties}
           >
-            Sekolah kejuruan berbasis Al-Qur'an &amp; teknologi — mencetak generasi
-            Qurani, technopreneur, dan siap kerja global. Isi formulir pendaftaran, prosesnya cuma 5 menit.
+            SMK Madinatulquran memadukan kejuruan IT (TKJ &amp; RPL) dengan ekosistem pesantren di Jonggol, Bogor. Dibekali sertifikasi industri internasional Cisco dan MikroTik, proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
           </p>
 
           <div
@@ -126,7 +127,7 @@ export function Hero() {
               className="hover-lift"
               message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
             >
-              Tanya Admin via WhatsApp
+              Konsultasi Santri Baru via WhatsApp
             </WhatsAppButton>
           </div>
 
@@ -148,13 +149,13 @@ export function Hero() {
 
             <div className="flex flex-col">
               <span className="font-display text-2xl sm:text-3xl font-extrabold text-accent">
-                <StatCounter value={100} suffix="%" />
+                <StatCounter value={2} suffix=" Mitra" />
               </span>
               <span className="mt-0.5 text-xs font-semibold text-primary-foreground">
-                Standar Industri
+                Sertifikasi Global
               </span>
               <span className="text-[11px] text-primary-foreground/70">
-                Cisco &amp; MikroTik
+                Resmi Cisco &amp; MikroTik
               </span>
             </div>
 
@@ -172,26 +173,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-3 rounded-[2rem] bg-accent/25 blur-2xl" aria-hidden="true" />
-          <div className="overflow-hidden rounded-[1.75rem] border border-primary-foreground/20 shadow-lift">
-            <img
-              src={heroImage}
-              width={1280}
-              height={960}
-              alt="Santri SMK Madinatulquran belajar di laboratorium komputer dan jaringan"
-              className="animate-slowzoom w-full object-cover will-change-transform"
-            />
-          </div>
-          <div className="relative -mt-8 ml-4 inline-flex max-w-xs items-center gap-3 rounded-2xl bg-card px-4 py-3 text-card-foreground shadow-lift">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-accent/20 text-accent-foreground">
-              <BadgeCheck className="size-5 text-terracotta" aria-hidden="true" />
-            </span>
-            <p className="text-xs leading-snug font-medium text-navy">
-              Kurikulum berstandar industri &amp; bermitra dengan Cisco, MikroTik,
-              ITC, LSP Telematika.
-            </p>
-          </div>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute -inset-6 rounded-[3rem] bg-accent/25 blur-3xl" aria-hidden="true" />
+          <AnimatedCardStack />
         </div>
       </div>
     </section>
