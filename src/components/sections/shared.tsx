@@ -29,7 +29,7 @@ export function FormButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2.5 rounded-full bg-[#C89B3C] text-[#0B3B2E] transition-all duration-200 hover:bg-[#D9AF52] hover:-translate-y-0.5 shadow-card border border-[#C89B3C]/30 font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C89B3C] active:translate-y-0",
+        "inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F5A623] text-[#0B3B2E] transition-all duration-200 hover:bg-[#E0961B] hover:-translate-y-0.5 shadow-card border border-[#F5A623]/30 font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F5A623] active:translate-y-0",
         sizeStyles[size],
         className,
       )}

@@ -93,7 +93,7 @@ export function SiteFooter() {
               href={SCHOOL.formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#C89B3C] px-5 py-2 text-xs font-bold text-[#0B3B2E] transition-all hover:bg-[#D9AF52] hover:-translate-y-0.5 border border-[#C89B3C]/30 shadow-xs"
+              className="inline-flex items-center gap-2 rounded-full bg-[#F5A623] px-5 py-2 text-xs font-bold text-[#0B3B2E] transition-all hover:bg-[#E0961B] hover:-translate-y-0.5 border border-[#F5A623]/30 shadow-xs"
             >
               Isi Formulir PPDB Online
             </a>

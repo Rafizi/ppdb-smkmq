@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, FileText, GraduationCap } from "lucide-react";
 import { SCHOOL, waLink } from "@/lib/ppdb";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import Logo from "../ui/Logo";
 
 export function StickyCta() {
   const [isVisibleDesktop, setIsVisibleDesktop] = useState(false);
@@ -39,9 +40,9 @@ export function StickyCta() {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6">
           <div className="flex items-center gap-2.5">
-            <span className="flex size-7 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-xs">
-              <GraduationCap className="size-4" aria-hidden="true" />
-            </span>
+            <div className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xs">
+              <Logo size="sm" className="rounded-full shadow-md" />
+            </div>
             <div className="leading-tight">
               <span className="font-display text-sm font-bold text-navy">
                 {SCHOOL.name}
@@ -67,7 +68,7 @@ export function StickyCta() {
               href={SCHOOL.formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#C89B3C] px-4 py-1.5 text-xs font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#D9AF52] hover:-translate-y-0.5 active:translate-y-0 border border-[#C89B3C]/30"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#F5A623] px-4 py-1.5 text-xs font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#E0961B] hover:-translate-y-0.5 active:translate-y-0 border border-[#F5A623]/30"
             >
               <FileText className="size-3.5" aria-hidden="true" />
               <span>Daftar Sekarang</span>
@@ -98,7 +99,7 @@ export function StickyCta() {
             href={SCHOOL.formUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#C89B3C] py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-transform hover:bg-[#D9AF52] active:scale-95 border border-[#C89B3C]/30"
+            className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#F5A623] py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-transform hover:bg-[#E0961B] active:scale-95 border border-[#F5A623]/30"
           >
             <FileText className="size-4 shrink-0" aria-hidden="true" />
             <span>Daftar Sekarang</span>

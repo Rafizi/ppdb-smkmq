@@ -88,10 +88,10 @@
   --navy-foreground: oklch(0.974 0.011 84.6);
 
   /* 10% — aksen */
-  --accent: oklch(0.784 0.159 73);
-  --accent-foreground: oklch(0.318 0.06 233.3);
-  --terracotta: oklch(0.535 0.138 44.1);
-  --terracotta-foreground: oklch(1 0 0);
+  --accent: #F5A623;
+  --accent-foreground: #0B3B2E;
+  --terracotta: #F5A623;
+  --terracotta-foreground: #0B3B2E;
 
   /* fungsional */
   --whatsapp: oklch(0.761 0.201 149.7);
@@ -131,10 +131,10 @@
   --muted-foreground: oklch(0.78 0.02 233.3);
   --navy: oklch(0.2 0.045 233.3);
   --navy-foreground: oklch(0.974 0.011 84.6);
-  --accent: oklch(0.784 0.159 73);
-  --accent-foreground: oklch(0.24 0.05 233.3);
-  --terracotta: oklch(0.62 0.14 44.1);
-  --terracotta-foreground: oklch(1 0 0);
+  --accent: #F5A623;
+  --accent-foreground: #0B3B2E;
+  --terracotta: #F5A623;
+  --terracotta-foreground: #0B3B2E;
   --whatsapp: oklch(0.761 0.201 149.7);
   --whatsapp-foreground: oklch(0.2 0.05 150);
   --border: oklch(1 0 0 / 12%);
@@ -155,12 +155,12 @@
 
 /* Unified CTA Button System */
 .btn-cta-primary {
-  background-color: #C89B3C;
+  background-color: #F5A623;
   color: #0B3B2E;
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-cta-primary:hover {
-  background-color: #D9AF52;
+  background-color: #E0961B;
 }
 
 .btn-cta-secondary-light {
@@ -278,13 +278,13 @@
 
   @keyframes pulseDotShadow {
     0% {
-      box-shadow: 0 0 0 0 oklch(0.784 0.159 73 / 0.85);
+      box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.85);
     }
     70% {
-      box-shadow: 0 0 0 7px oklch(0.784 0.159 73 / 0);
+      box-shadow: 0 0 0 7px rgba(245, 166, 35, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 oklch(0.784 0.159 73 / 0);
+      box-shadow: 0 0 0 0 rgba(245, 166, 35, 0);
     }
   }
 

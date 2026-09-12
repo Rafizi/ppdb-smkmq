@@ -15,9 +15,7 @@ export function CtaBanner() {
           />
           <div className="relative mx-auto max-w-2xl">
             <div className="mx-auto mb-6 flex justify-center">
-              <div className="rounded-full bg-white/15 p-2 backdrop-blur-md ring-1 ring-white/30 shadow-lift">
-                <Logo size="lg" className="rounded-full shadow-md" />
-              </div>
+              <Logo size="2xl" className="rounded-full shadow-md" />
             </div>
             <h2 className="font-display text-3xl font-extrabold text-balance sm:text-4xl">
               Mulai Langkah Nyata Menjadi Santri Ahli Teknologi di {SCHOOL.name}

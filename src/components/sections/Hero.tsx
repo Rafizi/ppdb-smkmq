@@ -63,7 +63,7 @@ export function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:py-20 xl:max-w-[1440px] xl:grid-cols-[1fr_1.1fr] xl:gap-16">
         <div>
-          {/* Official School & PPDB Badge with Logo & Live Urgency Quota */}
+          {/* Official School & PPDB Badge with Logo */}
           <div
             className="reveal-up"
             style={{ "--i": 0 } as React.CSSProperties}
@@ -71,17 +71,11 @@ export function Hero() {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3.5 py-1.5 backdrop-blur shadow-sm">
               <Logo size="xs" />
               <span className="text-xs font-bold tracking-wide text-white">
-                PPDB TA {SCHOOL.year} • {PPDB_QUOTA.wave} sisa{" "}
-                <span className="font-extrabold text-accent tabular-nums">
-                  {remainingSeats}
-                </span>{" "}
-                dari {PPDB_QUOTA.total} kursi
+                PPDB TA {SCHOOL.year} Resmi Dibuka • Kuota Terbatas
               </span>
-              <span className="relative flex size-2 shrink-0 items-center justify-center">
-                <span
-                  className="animate-pulse-shadow size-2 rounded-full bg-accent"
-                  aria-hidden="true"
-                />
+              <span className="relative flex size-2">
+                <span className="animate-ping absolute inline-flex size-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-accent" />
               </span>
             </div>
           </div>
