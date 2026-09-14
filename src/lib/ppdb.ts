@@ -3,7 +3,7 @@ export const SCHOOL = {
   tagline: "Digital Intelligent, Islamic Attitude",
   year: "2027/2028",
   logo: "/logo.png",
-  formUrl: "https://bit.ly/PMBSMKMQ2728",
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform",
   address:
     "Kp. Kebon Kelapa, RT.002/RW.011, Singasari, Kec. Jonggol, Bogor, Jawa Barat 16830",
   waAdmin: "6285111390457",
@@ -174,14 +174,13 @@ export const PROGRAM_FEES = [
   {
     name: "Fullday",
     subtitle: "Pulang-pergi, makan siang bergizi di sekolah",
-    registrationFee: "Rp450.000",
     entry: "Rp8.500.000",
-    totalInitial: "Rp8.950.000",
-    totalInitialBreakdown: "Rp450.000 (Registrasi) + Rp8.500.000 (Uang Masuk)",
+    totalInitial: "Rp8.500.000",
+    totalInitialBreakdown: "Di luar biaya registrasi seleksi (Rp450.000)",
     entryIncludes: "Uang Pangkal, Seragam Lengkap (3 Set), dan Jas Almamater",
-    installmentText: "Bisa dicicil 2x. 70% saat dinyatakan lulus, 30% sebelum Juni 2027",
+    installmentText: "Bisa dicicil 2x. Rp5.950.000 saat dinyatakan lulus, Rp2.550.000 sebelum Juni 2027",
     installmentStages: [
-      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp5.950.000", desc: "70% dari Uang Masuk saat dinyatakan lulus tes" },
+      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp5.950.000", desc: "70% dari Total Biaya Masuk saat dinyatakan lulus tes" },
       { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp2.550.000", desc: "30% pelunasan sebelum bulan Juni 2027" },
     ],
     reRegistration: "Rp3.500.000",
@@ -193,10 +192,9 @@ export const PROGRAM_FEES = [
   {
     name: "Boarding",
     subtitle: "Asrama 24 jam, makan 3x sehari + fasilitas laundry",
-    registrationFee: "Rp450.000",
     entry: "Rp14.500.000",
-    totalInitial: "Rp14.950.000",
-    totalInitialBreakdown: "Rp450.000 (Registrasi) + Rp14.500.000 (Uang Masuk)",
+    totalInitial: "Rp14.500.000",
+    totalInitialBreakdown: "Di luar biaya registrasi seleksi (Rp450.000)",
     entryIncludes: "Uang Pangkal, Kasur/Lemari Asrama, Seragam Lengkap, dan Jas Almamater",
     installmentText: "Bisa dicicil 2x. Rp10.000.000 saat dinyatakan lulus, Rp4.500.000 sebelum Juni 2027",
     installmentStages: [
@@ -215,7 +213,7 @@ export const FAQS = [
   {
     question: "Bagaimana cara mendaftar PPDB SMK Madinatulquran?",
     answer:
-      "Pendaftaran dilakukan secara online dengan mengisi formulir resmi di tautan https://bit.ly/PMBSMKMQ2728 (estimasi pengisian hanya ±5 menit). Setelah formulir terkirim, Admin PMB akan menghubungi Anda dalam H+3 hari kerja untuk mengonfirmasi jadwal seleksi.",
+      "Pendaftaran dilakukan secara online dengan mengisi formulir resmi di tautan https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform (estimasi pengisian hanya ±5 menit). Setelah formulir terkirim, Admin PMB akan menghubungi Anda dalam H+3 hari kerja untuk mengonfirmasi jadwal seleksi.",
   },
   {
     question: "Apakah tes potensi dan wawancara dilaksanakan di hari yang berbeda?",
