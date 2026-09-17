@@ -86,7 +86,7 @@ export function Programs() {
                 <div className="mt-7 pt-4 border-t border-border">
                   <WhatsAppButton
                     size="md"
-                    className="hover-lift w-full sm:w-auto"
+                    className="w-full sm:w-auto"
                     message={`Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai jurusan ${program.title} (${program.code}) di SMK Madinatulquran.`}
                   >
                     Konsultasi Jurusan {program.code.split(" ")[0]}

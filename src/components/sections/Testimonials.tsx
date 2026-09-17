@@ -172,7 +172,7 @@ export function Testimonials() {
                     type="button"
                     aria-label="Testimoni sebelumnya"
                     onClick={() => api?.scrollPrev()}
-                    className="hover-lift flex size-10 items-center justify-center rounded-full border border-border bg-card text-navy shadow-card transition-colors hover:border-primary hover:text-primary"
+                    className="flex size-10 items-center justify-center rounded-full border border-border bg-card text-navy shadow-card transition-all hover:border-primary hover:text-primary hover:shadow-md active:scale-95 select-none [&_svg]:pointer-events-none cursor-pointer"
                   >
                     <ChevronLeft className="size-5" aria-hidden="true" />
                   </button>
@@ -180,7 +180,7 @@ export function Testimonials() {
                     type="button"
                     aria-label="Testimoni berikutnya"
                     onClick={() => api?.scrollNext()}
-                    className="hover-lift flex size-10 items-center justify-center rounded-full border border-border bg-card text-navy shadow-card transition-colors hover:border-primary hover:text-primary"
+                    className="flex size-10 items-center justify-center rounded-full border border-border bg-card text-navy shadow-card transition-all hover:border-primary hover:text-primary hover:shadow-md active:scale-95 select-none [&_svg]:pointer-events-none cursor-pointer"
                   >
                     <ChevronRight className="size-5" aria-hidden="true" />
                   </button>

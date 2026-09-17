@@ -29,7 +29,7 @@ export function FormButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F5A623] text-[#0B3B2E] transition-all duration-200 hover:bg-[#E0961B] hover:-translate-y-0.5 shadow-card border border-[#F5A623]/30 font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F5A623] active:translate-y-0",
+        "group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F5A623] text-[#0B3B2E] transition-all duration-200 hover:bg-[#E0961B] shadow-card hover:shadow-lift border border-[#F5A623]/30 font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F5A623] active:scale-[0.98] select-none [&_svg]:pointer-events-none",
         sizeStyles[size],
         className,
       )}
@@ -72,7 +72,7 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2",
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 hover:shadow-md active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 select-none [&_svg]:pointer-events-none",
         variantStyles,
         sizeStyles[size],
         className,

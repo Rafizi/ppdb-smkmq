@@ -27,14 +27,14 @@ export function CtaBanner() {
               <FormButton
                 size="lg"
                 variant="accent"
-                className="animate-breathe hover-lift hover:scale-[1.02]"
+                className="shadow-lift hover:shadow-xl"
               >
                 Isi Formulir Pendaftaran (5 Menit)
               </FormButton>
               <WhatsAppButton
                 size="lg"
                 variant="outline"
-                className="hover-lift"
+                className="hover:shadow-md"
                 message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
               >
                 Konsultasi via WhatsApp

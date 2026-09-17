@@ -58,7 +58,7 @@ export function StickyCta() {
               href={waLink("Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 hover:shadow-xs active:scale-95 select-none [&_svg]:pointer-events-none"
             >
               <WhatsAppIcon className="size-3.5" aria-hidden="true" />
               <span>WhatsApp</span>
@@ -68,7 +68,7 @@ export function StickyCta() {
               href={SCHOOL.formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#F5A623] px-4 py-1.5 text-xs font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#E0961B] hover:-translate-y-0.5 active:translate-y-0 border border-[#F5A623]/30"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#F5A623] px-4 py-1.5 text-xs font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#E0961B] hover:shadow-sm active:scale-95 border border-[#F5A623]/30 select-none [&_svg]:pointer-events-none"
             >
               <FileText className="size-3.5" aria-hidden="true" />
               <span>Daftar Sekarang</span>
@@ -89,7 +89,7 @@ export function StickyCta() {
             href={waLink("Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#0B3B2E] bg-transparent py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-transform hover:bg-[#0B3B2E]/10 active:scale-95"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#0B3B2E] bg-transparent py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 active:scale-95 select-none [&_svg]:pointer-events-none"
           >
             <WhatsAppIcon className="size-4 shrink-0" aria-hidden="true" />
             <span>WhatsApp</span>
@@ -99,7 +99,7 @@ export function StickyCta() {
             href={SCHOOL.formUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#F5A623] py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-transform hover:bg-[#E0961B] active:scale-95 border border-[#F5A623]/30"
+            className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#F5A623] py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#E0961B] active:scale-95 border border-[#F5A623]/30 select-none [&_svg]:pointer-events-none"
           >
             <FileText className="size-4 shrink-0" aria-hidden="true" />
             <span>Daftar Sekarang</span>

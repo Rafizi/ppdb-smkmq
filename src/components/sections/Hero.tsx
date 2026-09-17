@@ -101,7 +101,7 @@ export function Hero() {
             className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
             style={{ "--i": 3 } as React.CSSProperties}
           >
-            SMK Madinatulquran memadukan kejuruan IT (TKJ &amp; RPL) dengan ekosistem pesantren di Jonggol, Bogor. Dibekali sertifikasi industri internasional Cisco dan MikroTik, proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
+            SMK Madinatulquran memadukan kejuruan IT (TKJ & RPL) dengan ekosistem pesantren di Jonggol, Bogor. Dibekali sertifikasi industri internasional Cisco dan MikroTik, proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
           </p>
 
           <div
@@ -111,14 +111,14 @@ export function Hero() {
             <FormButton
               size="lg"
               variant="accent"
-              className="hover-lift hover:scale-[1.02] text-base font-bold shadow-lift"
+              className="text-base font-bold shadow-lift hover:shadow-xl"
             >
               Isi Formulir Pendaftaran (5 Menit)
             </FormButton>
             <WhatsAppButton
               size="lg"
               variant="outline"
-              className="hover-lift"
+              className="hover:shadow-md"
               message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
             >
               Konsultasi Santri Baru via WhatsApp

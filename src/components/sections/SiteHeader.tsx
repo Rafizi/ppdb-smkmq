@@ -39,7 +39,7 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             title="Tanya Admin via WhatsApp"
-            className="hidden items-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-2 text-xs font-semibold text-[#0B3B2E] transition-all hover:bg-[#0B3B2E]/10 hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-2 text-xs font-semibold text-[#0B3B2E] transition-all hover:bg-[#0B3B2E]/10 hover:shadow-xs active:scale-95 select-none [&_svg]:pointer-events-none sm:inline-flex"
           >
             <WhatsAppIcon className="size-3.5" aria-hidden="true" />
             <span>Tanya CS</span>

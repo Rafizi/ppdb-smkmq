@@ -55,7 +55,6 @@ export function Faq() {
             <WhatsAppButton
               size="md"
               variant="light"
-              className="hover-lift"
               message="Assalamu'alaikum Admin PMB, saya memiliki pertanyaan mengenai PPDB SMK Madinatulquran yang belum ada di FAQ."
             >
               Tanya Langsung ke Admin via WhatsApp

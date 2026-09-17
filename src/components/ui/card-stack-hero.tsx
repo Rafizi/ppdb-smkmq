@@ -274,7 +274,7 @@ export default function AnimatedCardStack() {
                 type="button"
                 onClick={() => setPreviewImage(null)}
                 aria-label="Tutup preview gambar"
-                className="absolute top-4 right-4 z-10 flex size-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/90 hover:scale-110 active:scale-95"
+                className="absolute top-4 right-4 z-10 flex size-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/90 hover:text-white active:scale-95 select-none [&_svg]:pointer-events-none cursor-pointer"
               >
                 <X className="size-5" aria-hidden="true" />
               </button>

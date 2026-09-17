@@ -52,7 +52,7 @@ export function FeeSummary() {
             <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end gap-2">
               <a
                 href="#biaya"
-                className="hover-lift inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0B3B2E] bg-transparent px-5 py-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0B3B2E] bg-transparent px-5 py-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 hover:shadow-md active:scale-95 select-none [&_svg]:pointer-events-none"
               >
                 <span>Lihat Rincian Biaya Lengkap</span>
                 <ArrowDown className="size-4 shrink-0" aria-hidden="true" />

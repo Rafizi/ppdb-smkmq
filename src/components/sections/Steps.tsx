@@ -54,13 +54,12 @@ export function Steps() {
         </div>
 
         <div className="reveal-up mt-12 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
-          <FormButton size="lg" variant="primary" className="hover-lift">
+          <FormButton size="lg" variant="primary">
             Isi Formulir Pendaftaran (5 Menit)
           </FormButton>
           <WhatsAppButton
             size="lg"
             variant="light"
-            className="hover-lift"
             message="Assalamu'alaikum Admin PMB, saya ingin dipandu mengenai alur pendaftaran PPDB SMK Madinatulquran."
           >
             Bantuan Alur via WhatsApp
