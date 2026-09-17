@@ -10,7 +10,7 @@ export function Steps() {
         <div className="reveal-up">
           <SectionHeading
             eyebrow="Alur Pendaftaran &amp; Seleksi"
-            title="4 Langkah Mudah Menjadi Santri SMK Madinatulquran"
+            title="4 Langkah Mudah Menjadi Murid SMK Madinatulquran"
             description="Alur penerimaan yang terstruktur dan efisien. Seluruh rangkaian tes akademik, minat bakat IT, baca Al-Qur'an, dan wawancara orang tua tuntas dalam 1 hari."
           />
         </div>

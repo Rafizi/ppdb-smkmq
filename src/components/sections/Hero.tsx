@@ -93,7 +93,7 @@ export function Hero() {
             className="reveal-up mt-2 font-display text-4xl leading-[1.05] font-extrabold text-balance sm:text-5xl lg:text-6xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
-            Kuasai Teknologi Tingkat Industri, Teguhkan Adab dan Hafalan Al-Qur'an
+            Kuasai Teknologi Tingkat Industri, Beretika Islami
           </h1>
 
           {/* Subtext dengan proposisi nilai terpadu */}
@@ -101,7 +101,7 @@ export function Hero() {
             className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
             style={{ "--i": 3 } as React.CSSProperties}
           >
-            SMK Madinatulquran memadukan kejuruan IT (TKJ & RPL) dengan ekosistem pesantren di Jonggol, Bogor. Dibekali sertifikasi industri internasional Cisco dan MikroTik, proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
+            SMK Madinatulquran memadukan kurikulum kejuruan IT (TKJ & RPL) dengan lingkungan islami di Jonggol, Bogor. Dibekali sertifikasi internasional Cisco, MikroTik, dll; proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
           </p>
 
           <div
@@ -119,9 +119,9 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="hover:shadow-md"
-              message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran santri baru SMK Madinatulquran."
+              message="Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai pendaftaran murid baru SMK Madinatulquran."
             >
-              Konsultasi Santri Baru via WhatsApp
+              Konsultasi Murid Baru via WhatsApp
             </WhatsAppButton>
           </div>
 
@@ -137,7 +137,7 @@ export function Hero() {
                 Pengalaman Mendidik
               </span>
               <span className="text-[11px] text-primary-foreground/70">
-                Sejak 2014
+                Sejak 2015
               </span>
             </div>
 

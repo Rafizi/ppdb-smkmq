@@ -12,7 +12,7 @@ export const SCHOOL = {
   hotlineHref: "tel:+628126900457",
   website: "smkmadinatulquran.sch.id",
   instagram: "https://instagram.com/smkmadinatulquran",
-  youtube: "https://youtube.com/@smkmadinatulquran",
+  youtube: "https://www.youtube.com/@smk.madinatulquran",
   facebook: "https://facebook.com/smkmadinatulquran",
   bank: { name: "BRI", holder: "SMK Madinatulquran", number: "141801000600567" },
   maps: "https://www.google.com/maps?q=SMK+Madinatulquran+Jonggol+Bogor&output=embed",
@@ -53,9 +53,9 @@ export const PARTNERS = [
     logo: "/partners/itc.png",
   },
   {
-    name: "LSP Telematika",
-    note: "Sertifikasi Profesi BNSP",
-    logo: "/partners/lsp-telematika.png",
+    name: "LSP Media Informatika",
+    note: "Sertifikasi Profesi Lisensi BNSP",
+    logo: "/partners/lsp-media-informatika.png",
   },
 ] as const;
 
@@ -72,7 +72,7 @@ export const PROGRAMS = [
       "Siap berkarir sebagai Network Administrator & Cloud Support Engineer",
     ],
     proofStats: [
-      "100% santri dibekali materi sertifikasi MikroTik & Cisco sebelum kelulusan",
+      "100% murid dibekali materi sertifikasi MikroTik & Cisco sebelum kelulusan",
       "Portofolio praktik nyata: konfigurasi router Mikrotik, server Linux, dan jaringan fiber optic",
       "Kesiapan kerja terbukti dengan pemahaman troubleshooting riil perangkat industri",
     ],
@@ -89,17 +89,17 @@ export const PROGRAMS = [
       "Siap berkarir sebagai Junior Software Engineer & Technopreneur",
     ],
     proofStats: [
-      "Proyek aplikasi & website nyata dikerjakan santri secara berkelompok dan mandiri",
+      "Proyek aplikasi & website nyata dikerjakan murid secara berkelompok dan mandiri",
       "Penguasaan ekosistem pemrograman modern, database SQL, dan version control Git",
-      "Santri dilatih merilis dan mempublikasikan karya perangkat lunak sendiri",
+      "Murid dilatih merilis dan mempublikasikan karya perangkat lunak sendiri",
     ],
   },
 ] as const;
 
 export const VALUE_PROPS = [
   {
-    title: "Tahfidz & Sanad Mutqin",
-    desc: "Target hafalan minimal 3 Juz Al-Qur'an bersanad mutqin dan 42 Hadits Arba'in An-Nawawiyyah.",
+    title: "Tahfidz & Lancar Baca",
+    desc: "Target hafalan minimal 3 Juz Al-Qur'an lancar dan 42 Hadits Arba'in An-Nawawiyyah.",
     icon: "book",
   },
   {
@@ -124,7 +124,7 @@ export const VALUE_PROPS = [
   },
   {
     title: "Standar Industri & BNSP",
-    desc: "Kurikulum selaras dengan kebutuhan dunia kerja dan uji kompetensi profesi LSP Telematika BNSP.",
+    desc: "Kurikulum selaras dengan kebutuhan dunia kerja dan uji kompetensi profesi LSP Media Informatika BNSP.",
     icon: "scroll",
   },
 ] as const;
@@ -163,7 +163,7 @@ export const STEPS = [
   {
     step: 4,
     title: "Pengumuman Kelulusan",
-    desc: "Dapatkan Surat Keputusan hasil kelulusan seleksi PPDB secara resmi dari panitia penerimaan santri baru.",
+    desc: "Dapatkan Surat Keputusan hasil kelulusan seleksi PPDB secara resmi dari panitia penerimaan murid baru.",
     estimate: "H+3 hari kerja pasca tes",
   },
 ] as const;
@@ -184,9 +184,9 @@ export const PROGRAM_FEES = [
       { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp2.550.000", desc: "30% pelunasan sebelum bulan Juni 2027" },
     ],
     reRegistration: "Rp3.500.000",
-    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat santri naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
+    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp1.000.000",
-    monthlyNote: "Termasuk SPP akademik & makan siang santri",
+    monthlyNote: "Termasuk SPP akademik & makan siang murid",
     featured: false,
   },
   {
@@ -202,12 +202,15 @@ export const PROGRAM_FEES = [
       { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp4.500.000", desc: "±30% pelunasan sebelum bulan Juni 2027" },
     ],
     reRegistration: "Rp3.500.000",
-    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat santri naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
+    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp2.500.000",
     monthlyNote: "Termasuk asrama, pembinaan tahfidz, makan 3x & laundry",
     featured: true,
   },
 ] as const;
+
+export const FEE_NON_REFUNDABLE_NOTE =
+  "Seluruh biaya pendaftaran maupun biaya pendidikan yang telah dibayarkan tidak dapat ditarik kembali (non-refundable) dengan alasan apa pun.";
 
 export const FAQS = [
   {
@@ -218,7 +221,12 @@ export const FAQS = [
   {
     question: "Apakah tes potensi dan wawancara dilaksanakan di hari yang berbeda?",
     answer:
-      "Tidak. Seluruh rangkaian tes (tes potensi akademik, peminatan IT, kemampuan membaca Al-Qur'an) dan sesi wawancara orang tua serta calon santri dilaksanakan pada HARI YANG SAMA untuk menghemat waktu dan memudahkan keluarga santri, khususnya yang berasal dari luar kota.",
+      "Tidak. Seluruh rangkaian tes (tes potensi akademik, peminatan IT, kemampuan membaca Al-Qur'an) dan sesi wawancara orang tua serta calon murid dilaksanakan pada HARI YANG SAMA untuk menghemat waktu dan memudahkan keluarga murid, khususnya yang berasal dari luar kota.",
+  },
+  {
+    question: "Apakah tes seleksi bisa dilaksanakan secara online dan bagaimana penentuan waktunya?",
+    answer:
+      "Ya, tes seleksi dapat dilaksanakan secara Online maupun Offline. Waktu pelaksanaannya fleksibel dan disesuaikan berdasarkan kesepakatan antara orang tua murid dengan pihak sekolah.",
   },
   {
     question: "Apakah uang masuk PPDB dapat dicicil?",
@@ -226,14 +234,19 @@ export const FAQS = [
       "Ya. SMK Madinatulquran menyediakan skema cicilan 2 kali untuk Uang Masuk: untuk Program Boarding dibayar Rp10.000.000 saat dinyatakan lulus seleksi dan pelunasan Rp4.500.000 sebelum Juni 2027. Untuk Program Fullday dibayar 70% (Rp5.950.000) saat dinyatakan lulus dan 30% (Rp2.550.000) sebelum Juni 2027.",
   },
   {
-    question: "Berapa biaya daftar ulang saat santri naik kelas?",
+    question: "Apakah biaya yang sudah dibayarkan dapat dikembalikan jika mengundurkan diri?",
     answer:
-      "Biaya daftar ulang untuk kenaikan kelas (naik ke kelas XI dan kelas XII) adalah sebesar Rp3.500.000 per tahun ajaran baru, berlaku untuk Program Fullday maupun Boarding. Biaya ini dialokasikan untuk pemeliharaan fasilitas dan perbaikan sarana prasarana belajar santri.",
+      "Tidak. Seluruh biaya registrasi formulir maupun biaya pendidikan yang telah dibayarkan tidak dapat ditarik kembali (non-refundable) dengan alasan apa pun.",
+  },
+  {
+    question: "Berapa biaya daftar ulang saat murid naik kelas?",
+    answer:
+      "Biaya daftar ulang untuk kenaikan kelas (naik ke kelas XI dan kelas XII) adalah sebesar Rp3.500.000 per tahun ajaran baru, berlaku untuk Program Fullday maupun Boarding. Biaya ini dialokasikan untuk pemeliharaan fasilitas dan perbaikan sarana prasarana belajar murid.",
   },
   {
     question: "Apa perbedaan antara Program Fullday dan Boarding?",
     answer:
-      "Program Boarding adalah sistem pesantren/asrama penuh 24 jam dengan pembinaan karakter intensif, tahfidz pagi-malam, makan 3 kali sehari, dan layanan laundry. Sedangkan Program Fullday adalah santri pulang-pergi harian yang sudah mencakup makan siang di sekolah. Keduanya mendapatkan kurikulum kejuruan IT dan sertifikasi internasional yang setara.",
+      "Program Boarding adalah sistem pesantren/asrama penuh 24 jam dengan pembinaan karakter intensif, tahfidz pagi-malam, makan 3 kali sehari, dan layanan laundry. Sedangkan Program Fullday adalah murid pulang-pergi harian yang sudah mencakup makan siang di sekolah. Keduanya mendapatkan kurikulum kejuruan IT dan sertifikasi internasional yang setara.",
   },
   {
     question: "Bagaimana cara pembayaran agar aman dari penipuan?",
@@ -241,9 +254,9 @@ export const FAQS = [
       "SMK Madinatulquran HANYA menerima transaksi keuangan ke rekening resmi Bank BRI 141801000600567 a/n SMK Madinatulquran. Konfirmasi pembayaran HANYA dilakukan melalui kontak resmi Admin PMB di +62 851-1139-0457. Pihak sekolah tidak pernah meminta transfer ke rekening atas nama pribadi siapa pun.",
   },
   {
-    question: "Apa saja sertifikasi IT yang akan diperoleh santri?",
+    question: "Apa saja sertifikasi IT yang akan diperoleh murid?",
     answer:
-      "Santri akan dibekali sertifikasi berstandar industri global & nasional, meliputi MikroTik Certified Network Associate (MTCNA), Cisco Networking Academy, International Test Center (ITC) untuk English Discovery, serta uji kompetensi profesi LSP Telematika berlisensi BNSP.",
+      "Murid akan dibekali sertifikasi berstandar industri global & nasional, meliputi MikroTik Certified Network Associate (MTCNA), Cisco Networking Academy, International Test Center (ITC) untuk English Discovery, serta uji kompetensi profesi LSP Media Informatika berlisensi BNSP.",
   },
 ] as const;
 
@@ -263,7 +276,7 @@ export type Testimonial = {
   name: string;
   /** Menentukan badge dan filter yang dipakai di halaman */
   role: TestimonialRole;
-  /** Keterangan singkat: "Orang tua santri Boarding 2024" / "Alumni RPL 2023" */
+  /** Keterangan singkat: "Orang tua murid Boarding 2024" / "Alumni RPL 2023" */
   detail: string;
   /** Isi kutipan 1–3 kalimat, tanpa tanda kutip (ditambahkan otomatis) */
   quote: string;
@@ -283,21 +296,21 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Ibu Siti Aminah",
     role: "orangtua",
-    detail: "Orang tua santri Boarding angkatan 2024",
+    detail: "Orang tua murid Boarding angkatan 2024",
     quote:
       "Hafalan anak saya bertambah dan salatnya jauh lebih disiplin, tapi pelajaran komputernya tetap kuat. Laporan perkembangan dari asrama juga rutin kami terima.",
   },
   {
     name: "Bapak Hendra Kurniawan",
     role: "orangtua",
-    detail: "Orang tua santri Fullday angkatan 2025",
+    detail: "Orang tua murid Fullday angkatan 2025",
     quote:
       "Awalnya saya ragu menggabungkan pesantren dengan SMK teknologi. Ternyata anak saya justru lebih terarah — pagi mengaji, siang praktik jaringan.",
   },
   {
     name: "Ibu Nurul Hidayah",
     role: "orangtua",
-    detail: "Orang tua santri TKJ angkatan 2023",
+    detail: "Orang tua murid TKJ angkatan 2023",
     quote:
       "Yang paling saya syukuri adalah adabnya. Sekarang anak saya lebih hormat pada orang tua, dan sudah bisa memperbaiki jaringan Wi-Fi di rumah sendiri.",
   },
@@ -378,13 +391,13 @@ export type Achievement = {
   level: AchievementLevel;
   /** Tahun perolehan, dipakai untuk mengelompokkan & mengurutkan */
   year: string;
-  /** Opsional — nama santri atau tim peraih */
+  /** Opsional — nama murid atau tim peraih */
   winner?: string;
   /** Opsional — jurusan peraih, mis. "TKJ" atau "RPL" */
   program?: string;
 };
 
-/** DATA DUMMY — ganti seluruh isi array ini dengan prestasi asli santri. */
+/** DATA DUMMY — ganti seluruh isi array ini dengan prestasi asli murid. */
 export const ACHIEVEMENTS: Achievement[] = [
   {
     title: "Medali Perak Kategori IT Software Solutions",
@@ -442,7 +455,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   {
     title: "Juara 1 Futsal Antar Pesantren",
-    event: "Liga Santri Kabupaten Bogor",
+    event: "Liga Murid Kabupaten Bogor",
     level: "Kabupaten/Kota",
     year: "2024",
     winner: "Tim Futsal SMK Madinatulquran",

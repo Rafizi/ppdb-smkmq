@@ -36,7 +36,7 @@ const EKSKUL_ITEMS = [
   {
     img: futsalImage,
     title: "Futsal",
-    desc: "Melatih kerja sama tim, kebugaran fisik, dan sportivitas santri melalui latihan rutin dan turnamen terarah.",
+    desc: "Melatih kerja sama tim, kebugaran fisik, dan sportivitas murid melalui latihan rutin dan turnamen terarah.",
     sliderName: "futsal",
   },
   {
@@ -54,7 +54,7 @@ const EKSKUL_ITEMS = [
   {
     img: kepanduanImage,
     title: "Kepanduan",
-    desc: "Menumbuhkan jiwa kepemimpinan, kekompakan regu, survival alam terbuka, dan kemandirian santri asrama.",
+    desc: "Menumbuhkan jiwa kepemimpinan, kekompakan regu, survival alam terbuka, dan kemandirian murid asrama.",
     sliderName: "kepanduan",
   },
 ];
@@ -67,7 +67,7 @@ export function Facilities() {
           <SectionHeading
             eyebrow="Fasilitas &amp; Asrama"
             title="Lingkungan Belajar Asri &amp; Asrama yang Kondusif"
-            description="Sarana belajar ber-AC, koneksi internet cepat, serta lingkungan asrama di Jonggol yang mendukung ibadah, akademik, dan kesehatan santri."
+            description="Fasilitas ruang belajar ber-AC, koneksi internet cepat, serta lingkungan asrama yang mendukung ibadah, akademik, dan kenyaman murid."
           />
         </div>
 
@@ -96,7 +96,7 @@ export function Facilities() {
             Ekstrakurikuler Pilihan
           </span>
           <h3 className="mt-2 font-display text-2xl font-bold text-navy sm:text-3xl">
-            Ajang Pembentukan Karakter &amp; Minat Santri
+            Ajang Pembentukan Karakter &amp; Minat Murid
           </h3>
           <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
             Melatih ketangkasan fisik, mental sportivitas, dan kepercayaan diri melalui pembinaan kegiatan yang seru dan terarah.

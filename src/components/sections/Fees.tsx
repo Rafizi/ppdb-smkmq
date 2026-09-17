@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AlertCircle,
   AlertTriangle,
   Building2,
   CalendarCheck,
@@ -11,7 +12,7 @@ import {
   ShieldAlert,
   Sparkles,
 } from "lucide-react";
-import { PROGRAM_FEES, REGISTRATION_FEE, SCHOOL } from "@/lib/ppdb";
+import { FEE_NON_REFUNDABLE_NOTE, PROGRAM_FEES, REGISTRATION_FEE, SCHOOL } from "@/lib/ppdb";
 import { Logo } from "@/components/ui/Logo";
 import { FormButton, SectionHeading, WhatsAppButton, WhatsAppIcon } from "./shared";
 
@@ -193,8 +194,25 @@ export function Fees() {
           ))}
         </div>
 
+        {/* Catatan Kebijakan Pembayaran (Non-Refundable) */}
+        <div className="reveal-up mt-8 rounded-2xl border border-terracotta/30 bg-cream p-4 sm:p-5 shadow-xs">
+          <div className="flex items-start gap-3">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta mt-0.5">
+              <AlertCircle className="size-4 text-terracotta" aria-hidden="true" />
+            </div>
+            <div className="text-xs sm:text-sm text-navy/90 leading-relaxed">
+              <span className="font-bold text-navy block sm:inline sm:mr-1.5">
+                Catatan Penting:
+              </span>
+              <span>
+                {FEE_NON_REFUNDABLE_NOTE}
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Banner Waspada Penipuan & Rekening Resmi */}
-        <div className="reveal-up mt-12 overflow-hidden rounded-3xl border-2 border-terracotta/30 bg-card shadow-card">
+        <div className="reveal-up mt-10 overflow-hidden rounded-3xl border-2 border-terracotta/30 bg-card shadow-card">
           <div className="bg-terracotta/10 px-6 py-3.5 border-b border-terracotta/20 flex items-center gap-2.5">
             <ShieldAlert className="size-5 text-terracotta shrink-0" aria-hidden="true" />
             <p className="text-sm font-bold text-terracotta">

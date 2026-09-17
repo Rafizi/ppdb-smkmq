@@ -73,8 +73,8 @@ export function Testimonials() {
         <div className="reveal-up">
           <SectionHeading
             eyebrow="Testimoni"
-            title="Kata orang tua santri & alumni SMK Madinatulquran"
-            description="Pengalaman langsung keluarga santri dan lulusan yang kini melanjutkan kuliah maupun bekerja di industri teknologi."
+            title="Kata orang tua murid & alumni SMK Madinatulquran"
+            description="Pengalaman langsung keluarga murid dan lulusan yang kini melanjutkan kuliah maupun bekerja di industri teknologi."
           />
         </div>
 
@@ -83,7 +83,7 @@ export function Testimonials() {
             <PendingDataPanel
               icon={<MessageSquareQuote className="size-5" aria-hidden="true" />}
               title="Testimoni Orang Tua & Alumni"
-              description="Wadah untuk kutipan orang tua santri boarding/fullday serta alumni RPL dan TKJ yang sudah bekerja atau kuliah. Tambahkan datanya pada TESTIMONIALS di src/lib/ppdb.ts."
+              description="Wadah untuk kutipan orang tua murid boarding/fullday serta alumni RPL dan TKJ yang sudah bekerja atau kuliah. Tambahkan datanya pada TESTIMONIALS di src/lib/ppdb.ts."
             />
           </div>
         ) : (

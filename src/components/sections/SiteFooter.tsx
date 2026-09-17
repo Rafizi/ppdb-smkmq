@@ -14,7 +14,7 @@ export function SiteFooter() {
             <div>
               <h2 className="font-display text-2xl font-bold text-white">{SCHOOL.name}</h2>
               <p className="text-xs font-semibold text-accent uppercase tracking-wider">
-                Pesantren &amp; Vokasi IT Terpadu
+                Boarding &amp; Fullday School 
               </p>
             </div>
           </div>
@@ -68,20 +68,38 @@ export function SiteFooter() {
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {[
-              { href: `https://wa.me/${SCHOOL.waAdmin}`, Icon: WhatsAppIcon, label: "WhatsApp", isWA: true },
-              { href: SCHOOL.instagram, Icon: Instagram, label: "Instagram", isWA: false },
-              { href: SCHOOL.youtube, Icon: Youtube, label: "YouTube", isWA: false },
-              { href: SCHOOL.facebook, Icon: Facebook, label: "Facebook", isWA: false },
-            ].map(({ href, Icon, label, isWA }) => (
+              {
+                href: `https://wa.me/${SCHOOL.waAdmin}`,
+                Icon: WhatsAppIcon,
+                label: "WhatsApp",
+                hoverClasses: "hover:bg-[#25D366] hover:text-white",
+              },
+              {
+                href: SCHOOL.instagram,
+                Icon: Instagram,
+                label: "Instagram",
+                hoverClasses: "hover:bg-[#E4405F] hover:text-white",
+              },
+              {
+                href: SCHOOL.youtube,
+                Icon: Youtube,
+                label: "YouTube",
+                hoverClasses: "hover:bg-[#FF0000] hover:text-white",
+              },
+              {
+                href: SCHOOL.facebook,
+                Icon: Facebook,
+                label: "Facebook",
+                hoverClasses: "hover:bg-[#1877F2] hover:text-white",
+              },
+            ].map(({ href, Icon, label, hoverClasses }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`flex size-10 items-center justify-center rounded-xl bg-navy-foreground/10 transition-colors ${
-                  isWA ? "hover:bg-whatsapp hover:text-whatsapp-foreground" : "hover:bg-primary"
-                }`}
+                className={`flex size-10 items-center justify-center rounded-xl bg-navy-foreground/10 transition-all duration-200 motion-safe:hover:-translate-y-0.5 ${hoverClasses}`}
               >
                 <Icon className="size-4" aria-hidden="true" />
               </a>

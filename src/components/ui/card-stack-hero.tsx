@@ -32,7 +32,7 @@ const cardData: Record<1 | 2 | 3, CardData> = {
   },
   3: {
     title: "Kurikulum Tersertifikasi",
-    description: "Bermitra dengan Cisco, MikroTik, ITC & LSP Telematika",
+    description: "Bermitra dengan Cisco, MikroTik, ITC & LSP Media Informatika",
     image: imgKurikulum,
   },
 };

@@ -26,8 +26,8 @@ export function ValueProps() {
         <div className="reveal-up">
           <SectionHeading
             eyebrow="Keunggulan Pendidikan"
-            title="Enam Pilar Keunggulan Santri di SMK Madinatulquran"
-            description="Program terpadu yang memadukan kedalaman spiritual, keahlian teknologi aplikatif, dan kesiapan masa depan santri."
+            title="Enam Pilar Keunggulan Murid di SMK Madinatulquran"
+            description="Program terpadu yang memadukan kedalaman spiritual, keahlian teknologi aplikatif, dan kesiapan masa depan murid."
           />
         </div>
 

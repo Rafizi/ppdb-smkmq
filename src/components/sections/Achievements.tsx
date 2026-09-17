@@ -23,8 +23,8 @@ export function Achievements() {
         <div className="reveal-up">
           <SectionHeading
             eyebrow="Prestasi & Akreditasi"
-            title="Kompetensi santri yang terukur dan diakui"
-            description="Status akreditasi sekolah beserta capaian santri di ajang kompetisi tingkat kabupaten hingga internasional."
+            title="Kompetensi murid yang terukur dan diakui"
+            description="Status akreditasi sekolah beserta capaian murid di ajang kompetisi tingkat kabupaten hingga internasional."
           />
         </div>
 
@@ -91,8 +91,8 @@ function AchievementList() {
     return (
       <PendingDataPanel
         icon={<Trophy className="size-5" aria-hidden="true" />}
-        title="Prestasi Santri"
-        description="Wadah untuk daftar juara lomba santri — nama ajang, tingkat, tahun, dan peraihnya. Tambahkan datanya pada ACHIEVEMENTS di src/lib/ppdb.ts."
+        title="Prestasi Murid"
+        description="Wadah untuk daftar juara lomba murid — nama ajang, tingkat, tahun, dan peraihnya. Tambahkan datanya pada ACHIEVEMENTS di src/lib/ppdb.ts."
       />
     );
   }
@@ -103,7 +103,7 @@ function AchievementList() {
         <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
           <Award className="size-5" aria-hidden="true" />
         </span>
-        <h3 className="font-display text-lg font-bold text-navy">Prestasi Terbaru Santri</h3>
+        <h3 className="font-display text-lg font-bold text-navy">Prestasi Terbaru Murid</h3>
       </div>
 
       <ol className="mt-6 space-y-7">

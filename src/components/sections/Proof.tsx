@@ -4,7 +4,7 @@ import { SectionHeading } from "./shared";
 import logoMikrotik from "@/assets/partners/mikrotik.png";
 import logoCisco from "@/assets/partners/cisco.png";
 import logoItc from "@/assets/partners/itc.png";
-import logoLsp from "@/assets/partners/lsp-telematika.png";
+import logoLsp from "@/assets/partners/lsp-media-informatika.png";
 
 const PARTNER_CONFIG: Record<
   string,
@@ -22,9 +22,9 @@ const PARTNER_CONFIG: Record<
     src: logoItc,
     className: "max-h-11 sm:max-h-12 max-w-[110px]",
   },
-  "LSP Telematika": {
+  "LSP Media Informatika": {
     src: logoLsp,
-    className: "max-h-10 sm:max-h-11 max-w-[135px]",
+    className: "max-h-12 sm:max-h-[52px] max-w-[64px]",
   },
 };
 
@@ -36,7 +36,7 @@ export function Proof() {
           <SectionHeading
             eyebrow="Mitra Industri Resmi"
             title="Kurikulum terstandarisasi dengan lembaga teknologi nasional dan internasional"
-            description="Pembelajaran di SMK Madinatulquran mengacu pada silabus resmi mitra industri global. Kompetensi santri teruji melalui sertifikasi yang diakui dunia kerja."
+            description="Pembelajaran di SMK Madinatulquran mengacu pada silabus resmi mitra industri global. Kompetensi murid teruji melalui sertifikasi yang diakui dunia kerja."
           />
         </div>
 

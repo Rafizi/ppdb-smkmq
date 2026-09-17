@@ -17,10 +17,11 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 import { FeeSummary } from "@/components/sections/FeeSummary";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { StickyCta } from "@/components/sections/StickyCta";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
-const pageTitle = "PPDB SMK Madinatulquran 2027/2028 — Pendaftaran Santri Baru Online";
+const pageTitle = "PPDB SMK Madinatulquran 2027/2028 — Pendaftaran Murid Baru Online";
 const pageDescription =
-  "Penerimaan Peserta Didik Baru (PPDB) SMK Madinatulquran TA 2027/2028: Jurusan TKJ & RPL, tahfidz 3 juz, sertifikasi Cisco, MikroTik & LSP. Transparan biaya, skema cicilan 2x, dan seleksi terpadu 1 hari.";
+  "Penerimaan Peserta Didik Baru (PPDB) SMK Madinatulquran TA 2027/2028: Jurusan TKJ & RPL, tahfidz 3 juz, sertifikasi Cisco, MikroTik & LSP Media Informatika. Transparan biaya, skema cicilan 2x, dan seleksi terpadu 1 hari.";
 const siteUrl = "https://ppdb.smkmadinatulquran.sch.id";
 
 // JSON-LD Structured Data for Schema.org
@@ -126,6 +127,7 @@ function Index() {
       </main>
       <SiteFooter />
       <StickyCta />
+      <ScrollToTop />
     </div>
   );
 }

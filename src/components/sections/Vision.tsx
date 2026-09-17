@@ -16,16 +16,16 @@ export function Vision() {
               <div className="flex items-center gap-2 text-accent">
                 <Compass className="size-5" aria-hidden="true" />
                 <span className="text-xs font-bold tracking-widest uppercase">
-                  Pilar Pendidikan &amp; Karakter Santri
+                  Pilar Pendidikan &amp; Karakter Murid
                 </span>
               </div>
 
               <h2 className="mt-4 font-display text-2xl leading-snug font-extrabold text-balance sm:text-3xl lg:text-3.5xl">
-                "Mencetak generasi Qurani dan teknolog andal yang berakhlak mulia, mandiri, serta siap berkontribusi nyata bagi umat dan industri."
+                "Mencetak generasi Islami dan teknolog andal yang berakhlak mulia, mandiri, serta siap berkontribusi nyata bagi umat dan industri."
               </h2>
 
               <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
-                Pendidikan terpadu di Jonggol yang menyeimbangkan kematangan adab Islami, ketajaman hafalan Al-Qur'an, dan keterampilan teknologi tingkat lanjut dalam lingkungan asrama yang asri dan suportif.
+                Pendidikan terpadu di Jonggol yang menyeimbangkan kematangan adab Islami, dan keterampilan teknologi tingkat lanjut dalam lingkungan asrama yang asri dan suportif.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export function Vision() {
 
               <ul className="mt-5 space-y-3.5 text-sm">
                 {[
-                  "Hafal Al-Qur'an minimal 3 Juz dengan bacaan tartil dan bersanad mutqin",
+                  "Hafal Al-Qur'an minimal 3 Juz dengan bacaan tartil dan lancar",
                   "Memahami dan mengamalkan Hadits Arba'in An-Nawawiyyah dalam keseharian",
                   "Beraqidah lurus Ahlussunnah wal Jama'ah serta berbakti kepada orang tua",
                   "Menguasai kompetensi IT berstandar sertifikasi industri internasional",

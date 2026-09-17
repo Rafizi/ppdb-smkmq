@@ -6,7 +6,7 @@ Satu halaman landing (single page, `/`) mengikuti blueprint 3P: Proof → Promis
 
 1. **Navbar** — logo teks "SMK Madinatulquran", badge "PPDB 2027/2028 Dibuka", tombol WA di kanan. Sticky.
 2. **Hero** — background teal `#0B7E7E`, headline "Digital Intelligent, Islamic Attitude", sub-headline, CTA hijau WhatsApp + CTA outline "Isi Formulir Pendaftaran", gambar suasana sekolah.
-3. **Proof** — strip logo/partner (MikroTik Academy, Cisco Networking Academy, ITC, LSP Telematika) dengan caption sertifikasi. Slot testimoni & prestasi disiapkan sebagai kartu placeholder yang rapi (mudah diisi nanti), tidak menampilkan klaim palsu.
+3. **Proof** — strip logo/partner (MikroTik Academy, Cisco Networking Academy, ITC, LSP Media Informatika) dengan caption sertifikasi. Slot testimoni & prestasi disiapkan sebagai kartu placeholder yang rapi (mudah diisi nanti), tidak menampilkan klaim palsu.
 4. **Promise — Jurusan** — 2 kartu besar: TKJ/TKJT dan RPL/PPLG, masing-masing fokus + target lulusan.
 5. **Promise — Nilai Tambah** — grid 6 ikon (Tahfidz Camp, Program Internasional, English Discovery, Entrepreneurship/IT Camp, Project Based Learning, Kurikulum Industri).
 6. **Visi & Karakter Lulusan** — kutipan visi di panel teal + 2 poin karakter lulusan.
