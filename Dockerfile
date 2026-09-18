@@ -11,7 +11,7 @@ WORKDIR /app
 
 # Copy manifest dependensi
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci || npm install
 
 # ------------------------------------------------------------------------------
 # Tahap 2: Build Aplikasi
