@@ -10,11 +10,11 @@ export function SiteFooter() {
         <div>
           <div className="flex items-center gap-3.5">
             <Logo size="lg" />
-           
+
             <div>
               <h2 className="font-display text-2xl font-bold text-white">{SCHOOL.name}</h2>
               <p className="text-xs font-semibold text-accent uppercase tracking-wider">
-                Boarding &amp; Fullday School 
+                Boarding &amp; Fullday School
               </p>
             </div>
           </div>
@@ -28,7 +28,10 @@ export function SiteFooter() {
               <span className="text-navy-foreground/85">{SCHOOL.address}</span>
             </li>
             <li className="flex gap-3">
-              <WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-primary-light" aria-hidden="true" />
+              <WhatsAppIcon
+                className="mt-0.5 size-4 shrink-0 text-primary-light"
+                aria-hidden="true"
+              />
               <span className="text-navy-foreground/85">
                 Admin PMB (WA):{" "}
                 <a
@@ -140,8 +143,8 @@ export function SiteFooter() {
 
       <div className="border-t border-navy-foreground/15">
         <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-navy-foreground/60">
-          © {new Date().getFullYear()} {SCHOOL.name}. Seluruh informasi mengacu pada
-          brosur resmi PPDB {SCHOOL.year}.
+          © {new Date().getFullYear()} {SCHOOL.name}. Seluruh informasi mengacu pada brosur resmi
+          PPDB {SCHOOL.year}.
         </p>
       </div>
     </footer>

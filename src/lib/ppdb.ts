@@ -3,9 +3,9 @@ export const SCHOOL = {
   tagline: "Digital Intelligent, Islamic Attitude",
   year: "2027/2028",
   logo: "/logo.png",
-  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform",
-  address:
-    "Kp. Kebon Kelapa, RT.002/RW.011, Singasari, Kec. Jonggol, Bogor, Jawa Barat 16830",
+  formUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdfzfTXpEg8jdU4Je441DtLIUZ_Uk4nZlHLZkCvwkpcgba7rg/viewform",
+  address: "Kp. Kebon Kelapa, RT.002/RW.011, Singasari, Kec. Jonggol, Bogor, Jawa Barat 16830",
   waAdmin: "6285111390457",
   waAdminLabel: "+62 851-1139-0457",
   hotline: "+62 812 6900 457",
@@ -139,7 +139,12 @@ export const FACILITIES = [
   { label: "Lapangan Olahraga", icon: "ball" },
 ] as const;
 
-export const EXTRAS = ["Futsal", "Diplomasi / Public Speaking", "Karate", "Kepanduan / Pramuka"] as const;
+export const EXTRAS = [
+  "Futsal",
+  "Diplomasi / Public Speaking",
+  "Karate",
+  "Kepanduan / Pramuka",
+] as const;
 
 export const STEPS = [
   {
@@ -178,13 +183,23 @@ export const PROGRAM_FEES = [
     totalInitial: "Rp8.500.000",
     totalInitialBreakdown: "Di luar biaya registrasi seleksi (Rp450.000)",
     entryIncludes: "Uang Pangkal, Seragam Lengkap (3 Set), dan Jas Almamater",
-    installmentText: "Bisa dicicil 2x. Rp5.950.000 saat dinyatakan lulus, Rp2.550.000 sebelum Juni 2027",
+    installmentText:
+      "Bisa dicicil 2x. Rp5.950.000 saat dinyatakan lulus, Rp2.550.000 sebelum Juni 2027",
     installmentStages: [
-      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp5.950.000", desc: "70% dari Total Biaya Masuk saat dinyatakan lulus tes" },
-      { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp2.550.000", desc: "30% pelunasan sebelum bulan Juni 2027" },
+      {
+        label: "Tahap 1 (Setelah Lulus)",
+        amount: "Rp5.950.000",
+        desc: "70% dari Total Biaya Masuk saat dinyatakan lulus tes",
+      },
+      {
+        label: "Tahap 2 (Sebelum Juni 2027)",
+        amount: "Rp2.550.000",
+        desc: "30% pelunasan sebelum bulan Juni 2027",
+      },
     ],
     reRegistration: "Rp3.500.000",
-    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
+    reRegistrationNote:
+      "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp1.000.000",
     monthlyNote: "Termasuk SPP akademik & makan siang murid",
     featured: false,
@@ -196,13 +211,23 @@ export const PROGRAM_FEES = [
     totalInitial: "Rp14.500.000",
     totalInitialBreakdown: "Di luar biaya registrasi seleksi (Rp450.000)",
     entryIncludes: "Uang Pangkal, Kasur/Lemari Asrama, Seragam Lengkap, dan Jas Almamater",
-    installmentText: "Bisa dicicil 2x. Rp10.000.000 saat dinyatakan lulus, Rp4.500.000 sebelum Juni 2027",
+    installmentText:
+      "Bisa dicicil 2x. Rp10.000.000 saat dinyatakan lulus, Rp4.500.000 sebelum Juni 2027",
     installmentStages: [
-      { label: "Tahap 1 (Setelah Lulus)", amount: "Rp10.000.000", desc: "±70% dibayarkan setelah dinyatakan lulus tes" },
-      { label: "Tahap 2 (Sebelum Juni 2027)", amount: "Rp4.500.000", desc: "±30% pelunasan sebelum bulan Juni 2027" },
+      {
+        label: "Tahap 1 (Setelah Lulus)",
+        amount: "Rp10.000.000",
+        desc: "±70% dibayarkan setelah dinyatakan lulus tes",
+      },
+      {
+        label: "Tahap 2 (Sebelum Juni 2027)",
+        amount: "Rp4.500.000",
+        desc: "±30% pelunasan sebelum bulan Juni 2027",
+      },
     ],
     reRegistration: "Rp3.500.000",
-    reRegistrationNote: "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
+    reRegistrationNote:
+      "Dibayarkan setiap tahun ajaran baru saat murid naik ke kelas XI dan XII (untuk pemeliharaan & perbaikan sarana prasarana belajar).",
     monthly: "Rp2.500.000",
     monthlyNote: "Termasuk asrama, pembinaan tahfidz, makan 3x & laundry",
     featured: true,
@@ -224,7 +249,8 @@ export const FAQS = [
       "Tidak. Seluruh rangkaian tes (tes potensi akademik, peminatan IT, kemampuan membaca Al-Qur'an) dan sesi wawancara orang tua serta calon murid dilaksanakan pada HARI YANG SAMA untuk menghemat waktu dan memudahkan keluarga murid, khususnya yang berasal dari luar kota.",
   },
   {
-    question: "Apakah tes seleksi bisa dilaksanakan secara online dan bagaimana penentuan waktunya?",
+    question:
+      "Apakah tes seleksi bisa dilaksanakan secara online dan bagaimana penentuan waktunya?",
     answer:
       "Ya, tes seleksi dapat dilaksanakan secara Online maupun Offline. Waktu pelaksanaannya fleksibel dan disesuaikan berdasarkan kesepakatan antara orang tua murid dengan pihak sekolah.",
   },

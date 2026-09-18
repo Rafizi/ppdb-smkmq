@@ -21,11 +21,14 @@ export function Vision() {
               </div>
 
               <h2 className="mt-4 font-display text-2xl leading-snug font-extrabold text-balance sm:text-3xl lg:text-3.5xl">
-                "Mencetak generasi Islami dan teknolog andal yang berakhlak mulia, mandiri, serta siap berkontribusi nyata bagi umat dan industri."
+                "Mencetak generasi Islami dan teknolog andal yang berakhlak mulia, mandiri, serta
+                siap berkontribusi nyata bagi umat dan industri."
               </h2>
 
               <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
-                Pendidikan terpadu di Jonggol yang menyeimbangkan kematangan adab Islami, dan keterampilan teknologi tingkat lanjut dalam lingkungan asrama yang asri dan suportif.
+                Pendidikan terpadu di Jonggol yang menyeimbangkan kematangan adab Islami, dan
+                keterampilan teknologi tingkat lanjut dalam lingkungan asrama yang asri dan
+                suportif.
               </p>
             </div>
 

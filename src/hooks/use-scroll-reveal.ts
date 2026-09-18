@@ -7,9 +7,7 @@ import { useEffect } from "react";
 export function useScrollReveal(threshold = 0.15) {
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const revealEls = document.querySelectorAll(".reveal-up");
 
@@ -54,12 +52,7 @@ export function useScrollReveal(threshold = 0.15) {
 /**
  * Lightweight vanilla frame-based count-up animation
  */
-export function countUp(
-  el: HTMLElement,
-  target: number,
-  duration = 1200,
-  suffix = "",
-) {
+export function countUp(el: HTMLElement, target: number, duration = 1200, suffix = "") {
   const start = performance.now();
 
   function frame(now: number) {

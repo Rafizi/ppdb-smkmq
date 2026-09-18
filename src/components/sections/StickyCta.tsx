@@ -44,9 +44,7 @@ export function StickyCta() {
               <Logo size="sm" className="rounded-full shadow-md" />
             </div>
             <div className="leading-tight">
-              <span className="font-display text-sm font-bold text-navy">
-                {SCHOOL.name}
-              </span>
+              <span className="font-display text-sm font-bold text-navy">{SCHOOL.name}</span>
               <span className="hidden text-[11px] font-medium text-primary sm:inline ml-2">
                 PPDB {SCHOOL.year}
               </span>
@@ -55,7 +53,9 @@ export function StickyCta() {
 
           <div className="flex items-center gap-2.5">
             <a
-              href={waLink("Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.")}
+              href={waLink(
+                "Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.",
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-[#0B3B2E] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 hover:shadow-xs active:scale-95 select-none [&_svg]:pointer-events-none"
@@ -86,7 +86,9 @@ export function StickyCta() {
       >
         <div className="mx-auto grid w-full grid-cols-2 gap-2.5">
           <a
-            href={waLink("Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.")}
+            href={waLink(
+              "Assalamu'alaikum Admin PMB, saya ingin berkonsultasi mengenai PPDB SMK Madinatulquran.",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#0B3B2E] bg-transparent py-2.5 px-3 text-xs sm:text-sm font-bold text-[#0B3B2E] shadow-xs transition-all hover:bg-[#0B3B2E]/10 active:scale-95 select-none [&_svg]:pointer-events-none"

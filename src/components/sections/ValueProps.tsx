@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  BookOpen,
-  Globe2,
-  Languages,
-  Rocket,
-  ScrollText,
-  Target,
-} from "lucide-react";
+import { BookOpen, Globe2, Languages, Rocket, ScrollText, Target } from "lucide-react";
 import { VALUE_PROPS } from "@/lib/ppdb";
 import { SectionHeading } from "./shared";
 
@@ -43,12 +36,8 @@ export function ValueProps() {
                 <span className="flex size-11 items-center justify-center rounded-xl bg-primary-light/25 text-primary-dark">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
-                <h3 className="mt-4 font-display text-base font-bold text-navy">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy/75">
-                  {item.desc}
-                </p>
+                <h3 className="mt-4 font-display text-base font-bold text-navy">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-navy/75">{item.desc}</p>
               </div>
             );
           })}

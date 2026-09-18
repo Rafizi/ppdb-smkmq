@@ -120,10 +120,7 @@ function AnimatedCard({
   const exitAnim = isTop ? exitAnimation : undefined;
   const initialAnim = index === 2 ? enterAnimation : false;
 
-  const handleDragEnd = (
-    _e: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
-  ) => {
+  const handleDragEnd = (_e: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (!isTop) return;
     // Trigger swipe transition if dragged horizontally beyond 50px or flicked quickly
     if (Math.abs(info.offset.x) > 50 || Math.abs(info.velocity.x) > 300) {
@@ -147,9 +144,7 @@ function AnimatedCard({
       }}
       style={{ zIndex, left: "50%", x: "-50%" }}
       className={`absolute bottom-5 sm:bottom-7 lg:bottom-8 flex h-[380px] w-[calc(100%-1rem)] max-w-[320px] sm:h-[480px] sm:w-[calc(100%-1.5rem)] sm:max-w-[450px] lg:h-[500px] lg:w-[calc(100%-1.5rem)] lg:max-w-[460px] xl:h-[570px] xl:w-[calc(100%-2rem)] xl:max-w-[540px] 2xl:h-[630px] 2xl:w-[calc(100%-2rem)] 2xl:max-w-[600px] items-center justify-center will-change-transform select-none touch-pan-y ${
-        isTop
-          ? "cursor-grab active:cursor-grabbing"
-          : "pointer-events-none"
+        isTop ? "cursor-grab active:cursor-grabbing" : "pointer-events-none"
       }`}
     >
       <div
@@ -157,10 +152,7 @@ function AnimatedCard({
           isTop ? "hover:border-primary/40 shadow-xl" : ""
         }`}
       >
-        <CardContent
-          contentType={card.contentType}
-          onImageClick={onImageClick}
-        />
+        <CardContent contentType={card.contentType} onImageClick={onImageClick} />
       </div>
     </motion.div>
   );
@@ -218,9 +210,7 @@ export default function AnimatedCardStack() {
 
   // Autoplay with pause when hovered, modal is active, or reduced motion preferred
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion || isPaused || previewImage !== null) {
       return undefined;
     }

@@ -35,7 +35,9 @@ export function SiteHeader() {
 
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
           <a
-            href={waLink("Assalamu'alaikum Admin PMB, saya ingin bertanya tentang PPDB SMK Madinatulquran.")}
+            href={waLink(
+              "Assalamu'alaikum Admin PMB, saya ingin bertanya tentang PPDB SMK Madinatulquran.",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             title="Tanya Admin via WhatsApp"

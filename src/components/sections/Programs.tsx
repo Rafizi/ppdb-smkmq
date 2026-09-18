@@ -75,7 +75,10 @@ export function Programs() {
                     <ul className="mt-3 space-y-2 text-xs leading-relaxed text-navy">
                       {program.proofStats.map((stat) => (
                         <li key={stat} className="flex gap-2">
-                          <Award className="mt-0.5 size-3.5 shrink-0 text-terracotta" aria-hidden="true" />
+                          <Award
+                            className="mt-0.5 size-3.5 shrink-0 text-terracotta"
+                            aria-hidden="true"
+                          />
                           <span>{stat}</span>
                         </li>
                       ))}

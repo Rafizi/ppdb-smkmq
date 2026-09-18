@@ -62,13 +62,9 @@ export function Fees() {
                 ) : null}
 
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-2xl font-bold text-navy">
-                    Paket {plan.name}
-                  </h3>
+                  <h3 className="font-display text-2xl font-bold text-navy">Paket {plan.name}</h3>
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {plan.subtitle}
-                </p>
+                <p className="mt-1 text-sm text-muted-foreground">{plan.subtitle}</p>
 
                 {/* Total Biaya Masuk Awal (Highlight) */}
                 <div className="mt-6 rounded-2xl border border-primary/25 bg-cream p-5">
@@ -97,9 +93,7 @@ export function Fees() {
                       Skema Cicilan 2x Uang Masuk
                     </h4>
                   </div>
-                  <p className="mt-1.5 text-xs text-muted-foreground">
-                    {plan.installmentText}
-                  </p>
+                  <p className="mt-1.5 text-xs text-muted-foreground">{plan.installmentText}</p>
 
                   <div className="mt-3.5 grid grid-cols-2 gap-3">
                     {plan.installmentStages.map((stage) => (
@@ -107,15 +101,11 @@ export function Fees() {
                         key={stage.label}
                         className="rounded-xl border border-border bg-cream p-3 text-left"
                       >
-                        <p className="text-[11px] font-semibold text-primary-dark">
-                          {stage.label}
-                        </p>
+                        <p className="text-[11px] font-semibold text-primary-dark">{stage.label}</p>
                         <p className="mt-1 font-display text-base font-bold text-navy">
                           {stage.amount}
                         </p>
-                        <p className="text-[10px] text-muted-foreground">
-                          {stage.desc}
-                        </p>
+                        <p className="text-[10px] text-muted-foreground">{stage.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -130,10 +120,7 @@ export function Fees() {
                       </p>
                       <p className="font-display text-2xl font-extrabold text-navy">
                         {plan.monthly}
-                        <span className="text-sm font-normal text-muted-foreground">
-                          {" "}
-                          / bulan
-                        </span>
+                        <span className="text-sm font-normal text-muted-foreground"> / bulan</span>
                       </p>
                     </div>
                   </div>
@@ -151,9 +138,7 @@ export function Fees() {
                         <RefreshCw className="size-3.5" aria-hidden="true" />
                       </span>
                       <div>
-                        <p className="text-xs font-bold text-navy">
-                          Daftar Ulang Kenaikan Kelas
-                        </p>
+                        <p className="text-xs font-bold text-navy">Daftar Ulang Kenaikan Kelas</p>
                         <p className="text-[10px] font-semibold text-terracotta">
                           Hanya saat naik kelas XI &amp; XII (Tahun ke-2 &amp; ke-3)
                         </p>
@@ -204,9 +189,7 @@ export function Fees() {
               <span className="font-bold text-navy block sm:inline sm:mr-1.5">
                 Catatan Penting:
               </span>
-              <span>
-                {FEE_NON_REFUNDABLE_NOTE}
-              </span>
+              <span>{FEE_NON_REFUNDABLE_NOTE}</span>
             </div>
           </div>
         </div>
@@ -222,9 +205,7 @@ export function Fees() {
 
           <div className="p-6 sm:p-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
-              <p className="text-sm leading-relaxed text-navy">
-                {SCHOOL.antiFraudNotice}
-              </p>
+              <p className="text-sm leading-relaxed text-navy">{SCHOOL.antiFraudNotice}</p>
 
               <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-semibold text-muted-foreground">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-cream border border-border px-3 py-1 text-navy">

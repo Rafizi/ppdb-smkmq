@@ -40,7 +40,7 @@ Dependency-ordered. Each question carries explicit "why I'm asking". Stop condit
 
 > **What's the product or service? Give me the name + a 1–2 sentence elevator pitch — what does it do, and who's it for?**
 >
-> *Why I'm asking:* The headline, subtext, and feature copy all derive from this. "App for productivity" produces generic boilerplate; "Async standup tool for remote engineering teams who hate Zoom" produces a landing page that converts.
+> _Why I'm asking:_ The headline, subtext, and feature copy all derive from this. "App for productivity" produces generic boilerplate; "Async standup tool for remote engineering teams who hate Zoom" produces a landing page that converts.
 
 **Refuse mush.** If user gives just a name with no pitch, push back once: "What does it do? Who's it for?" If still no pitch after push-back, deliver with explicit "generic positioning" caveat.
 
@@ -53,7 +53,7 @@ Dependency-ordered. Each question carries explicit "why I'm asking". Stop condit
 > 3. **Consumers** (general public, hobbyists)
 > 4. **Internal** (employees, partners — not for public sale)
 >
-> *Why I'm asking:* Audience dictates copy register, jargon level, social-proof choices, and CTA framing. Technical buyers want specifics; consumers want benefits; internal pages can skip persuasion.
+> _Why I'm asking:_ Audience dictates copy register, jargon level, social-proof choices, and CTA framing. Technical buyers want specifics; consumers want benefits; internal pages can skip persuasion.
 
 Forcing choice.
 
@@ -61,7 +61,7 @@ Forcing choice.
 
 > **Brand colors / fonts to override the default (dark navy + teal + Inter)? Provide as: primary HEX, accent HEX, optional bg HEX. Or say "default" if you want the polished default.**
 >
-> *Why I'm asking:* The default is intentionally beautiful, but matching your brand makes the page feel native to your existing site. Even just a primary color override goes a long way.
+> _Why I'm asking:_ The default is intentionally beautiful, but matching your brand makes the page feel native to your existing site. Even just a primary color override goes a long way.
 
 Accept "default" or partial overrides (e.g., just primary). If only primary provided, derive accent algorithmically (lighten / darken).
 
@@ -74,7 +74,7 @@ Accept "default" or partial overrides (e.g., just primary). If only primary prov
 > 3. **Authoritative** — expert, data-forward, trust-building
 > 4. **Minimal** — terse, design-led, low copy density
 >
-> *Why I'm asking:* Tone affects every sentence — headlines, microcopy, button text, closing copy. Picking upfront prevents tonal whiplash across sections.
+> _Why I'm asking:_ Tone affects every sentence — headlines, microcopy, button text, closing copy. Picking upfront prevents tonal whiplash across sections.
 
 Forcing choice. **Recommended default:** professional if Q2 = technical/business; playful if Q2 = consumer; minimal if the product is design-led.
 
@@ -83,6 +83,7 @@ Forcing choice. **Recommended default:** professional if Q2 = technical/business
 ## Content Extraction (with Fallback Strategy)
 
 From Q1's elevator pitch, derive:
+
 - **Hero headline** — punchy version of "what it does" (8–12 words)
 - **Hero subtext** — version of "who it's for + payoff" (1–2 sentences)
 - **3–6 feature bullets** — distilled from pitch + audience (Q2) + tone (Q4)
@@ -97,15 +98,15 @@ From Q1's elevator pitch, derive:
 
 ```css
 :root {
-  --navy:       #0A1628;
-  --navy-mid:   #0D1F38;
-  --teal:       #00D4AA;
-  --teal-glow:  rgba(0, 212, 170, 0.12);
-  --amber:      #F5A623;
-  --off-white:  #F7F7F2;
+  --navy: #0a1628;
+  --navy-mid: #0d1f38;
+  --teal: #00d4aa;
+  --teal-glow: rgba(0, 212, 170, 0.12);
+  --amber: #f5a623;
+  --off-white: #f7f7f2;
   --text-muted: rgba(247, 247, 242, 0.68);
-  --card-bg:    rgba(0, 212, 170, 0.06);
-  --card-border:rgba(0, 212, 170, 0.15);
+  --card-bg: rgba(0, 212, 170, 0.06);
+  --card-border: rgba(0, 212, 170, 0.15);
 }
 ```
 
@@ -192,7 +193,7 @@ See [`references/gsap_animation_patterns.md`](references/gsap_animation_patterns
 // MUST use gsap.set() FIRST to prevent FOUC
 gsap.set([".eyebrow", ".hero h1", ".hero .subtitle", ".btn-primary", ".scroll-down"], {
   opacity: 0,
-  y: 30
+  y: 30,
 });
 
 const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -211,8 +212,8 @@ hero.addEventListener("mousemove", (e) => {
   const x = (e.clientX / window.innerWidth - 0.5) * 2;
   const y = (e.clientY / window.innerHeight - 0.5) * 2;
   gsap.to(".hero-shapes-back", { x: x * 45, y: y * 22, duration: 0.8 });
-  gsap.to(".hero-shapes-mid",  { x: x * 22, y: y * 11, duration: 0.8 });
-  gsap.to(".hero .container",  { x: x * 8,  y: y * 5,  duration: 0.8 });
+  gsap.to(".hero-shapes-mid", { x: x * 22, y: y * 11, duration: 0.8 });
+  gsap.to(".hero .container", { x: x * 8, y: y * 5, duration: 0.8 });
 });
 ```
 
@@ -223,12 +224,15 @@ gsap.set(".feature-card", { opacity: 0, y: 55, rotateX: 18 });
 
 ScrollTrigger.batch(".feature-card", {
   start: "top 80%",
-  onEnter: batch => gsap.to(batch, {
-    opacity: 1, y: 0, rotateX: 0,
-    duration: 0.8,
-    stagger: 0.11,
-    ease: "power2.out"
-  })
+  onEnter: (batch) =>
+    gsap.to(batch, {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      duration: 0.8,
+      stagger: 0.11,
+      ease: "power2.out",
+    }),
 });
 ```
 
@@ -238,29 +242,50 @@ CSS handles ambient continuous motion (smoother, cheaper than GSAP for indefinit
 
 ```css
 @keyframes floatA {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50%      { transform: translate(20px, -30px) rotate(8deg); }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -30px) rotate(8deg);
+  }
 }
-@keyframes floatB { /* different duration + rotation */ }
-@keyframes floatC { /* different duration + rotation */ }
+@keyframes floatB {
+  /* different duration + rotation */
+}
+@keyframes floatC {
+  /* different duration + rotation */
+}
 
-.hero-shapes-back .shape-a { animation: floatA 12s ease-in-out infinite; }
+.hero-shapes-back .shape-a {
+  animation: floatA 12s ease-in-out infinite;
+}
 ```
 
 ### 5. Scroll Indicator (CSS bounce)
 
 ```css
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
-.scroll-down { animation: bounce 2s ease-in-out infinite; }
+.scroll-down {
+  animation: bounce 2s ease-in-out infinite;
+}
 ```
 
 ## Required CDN Dependencies
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 ```
@@ -300,15 +325,15 @@ Run `scripts/html_validator.py --file ${OUTPUT_DIR}/<slug>.html` after generatio
 
 ## Error Handling
 
-| Situation | Behavior |
-|---|---|
-| Input is just a name with no context | Invent compelling content from name semantics + audience register; flag as `<!-- inferred -->` in HTML source |
-| Input file is large or PDF | Read fully before generating; don't truncate |
-| Brand colors insufficient (only 1 HEX provided) | Use as primary; derive secondary/accent algorithmically (lighten/darken via brand_palette_validator.py) |
-| Features count not specified | Default to 4 |
-| Output dir doesn't exist | Create it |
-| Existing file at output path | Append timestamp suffix or ask user (kebab_slug_generator.py flags duplicates) |
-| html_validator returns FAIL | Regenerate ONLY the failing sections in one targeted pass; do NOT abandon the file |
+| Situation                                       | Behavior                                                                                                      |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Input is just a name with no context            | Invent compelling content from name semantics + audience register; flag as `<!-- inferred -->` in HTML source |
+| Input file is large or PDF                      | Read fully before generating; don't truncate                                                                  |
+| Brand colors insufficient (only 1 HEX provided) | Use as primary; derive secondary/accent algorithmically (lighten/darken via brand_palette_validator.py)       |
+| Features count not specified                    | Default to 4                                                                                                  |
+| Output dir doesn't exist                        | Create it                                                                                                     |
+| Existing file at output path                    | Append timestamp suffix or ask user (kebab_slug_generator.py flags duplicates)                                |
+| html_validator returns FAIL                     | Regenerate ONLY the failing sections in one targeted pass; do NOT abandon the file                            |
 
 ## Portability
 
@@ -317,11 +342,11 @@ Run `scripts/html_validator.py --file ${OUTPUT_DIR}/<slug>.html` after generatio
 
 ## Tooling
 
-| Script | Role |
-|---|---|
-| `scripts/brand_palette_validator.py` | Validates HEX format, checks WCAG AA contrast, generates derived palette from primary (algorithmic lighten/darken). |
-| `scripts/kebab_slug_generator.py` | Product name → kebab-case filename + duplicate detection in output dir. |
-| `scripts/html_validator.py` | Post-generation structural check: 3 sections, CDN deps, gsap.set() initial states, responsive breakpoints, no external files. |
+| Script                               | Role                                                                                                                          |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `scripts/brand_palette_validator.py` | Validates HEX format, checks WCAG AA contrast, generates derived palette from primary (algorithmic lighten/darken).           |
+| `scripts/kebab_slug_generator.py`    | Product name → kebab-case filename + duplicate detection in output dir.                                                       |
+| `scripts/html_validator.py`          | Post-generation structural check: 3 sections, CDN deps, gsap.set() initial states, responsive breakpoints, no external files. |
 
 ## References
 

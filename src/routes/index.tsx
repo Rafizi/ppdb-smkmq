@@ -91,9 +91,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: `${siteUrl}/logo-512.png` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: siteUrl },
-    ],
+    links: [{ rel: "canonical", href: siteUrl }],
     scripts: [
       {
         type: "application/ld+json",

@@ -4,13 +4,13 @@ This reference answers exactly one decision: **what 5 animation patterns make a 
 
 ## The Five Required Patterns
 
-| Pattern | Tool | Purpose |
-|---|---|---|
-| 1. Hero entrance | GSAP timeline | Staggered fade-in of hero elements on page load |
-| 2. Mouse parallax | GSAP mousemove handler | Depth perception in hero — shapes drift opposite cursor |
-| 3. Scroll-triggered reveals | GSAP ScrollTrigger | Feature cards fade + tilt as they enter viewport |
-| 4. Floating shapes | CSS keyframes | Continuous ambient motion in hero bg |
-| 5. Scroll indicator | CSS keyframes | Chevron bounce hint at bottom of hero |
+| Pattern                     | Tool                   | Purpose                                                 |
+| --------------------------- | ---------------------- | ------------------------------------------------------- |
+| 1. Hero entrance            | GSAP timeline          | Staggered fade-in of hero elements on page load         |
+| 2. Mouse parallax           | GSAP mousemove handler | Depth perception in hero — shapes drift opposite cursor |
+| 3. Scroll-triggered reveals | GSAP ScrollTrigger     | Feature cards fade + tilt as they enter viewport        |
+| 4. Floating shapes          | CSS keyframes          | Continuous ambient motion in hero bg                    |
+| 5. Scroll indicator         | CSS keyframes          | Chevron bounce hint at bottom of hero                   |
 
 ## Pattern 1: Hero Entrance (GSAP Timeline)
 
@@ -24,20 +24,21 @@ The fix is `gsap.set()` to apply initial states **before** any timeline runs:
 // CORRECT — initial states set first
 gsap.set([".eyebrow", ".hero h1", ".hero .subtitle", ".btn-primary", ".scroll-down"], {
   opacity: 0,
-  y: 30
+  y: 30,
 });
 
 const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-tl.to(".eyebrow",      { opacity: 1, y: 0, duration: 0.6 })
-  .to(".hero h1",      { opacity: 1, y: 0, duration: 0.8 }, "-=0.3")
+tl.to(".eyebrow", { opacity: 1, y: 0, duration: 0.6 })
+  .to(".hero h1", { opacity: 1, y: 0, duration: 0.8 }, "-=0.3")
   .to(".hero .subtitle", { opacity: 1, y: 0, duration: 0.6 }, "-=0.5")
-  .to(".btn-primary",  { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
-  .to(".scroll-down",  { opacity: 1, y: 0, duration: 0.4 }, "-=0.2");
+  .to(".btn-primary", { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
+  .to(".scroll-down", { opacity: 1, y: 0, duration: 0.4 }, "-=0.2");
 ```
 
 ### Stagger timings
 
 The `-=` syntax overlaps animations. Standard pattern:
+
 - H1 starts 0.3s into eyebrow
 - Subtitle starts 0.5s into H1 (overlapping middle of H1)
 - Button + scroll-down trail by 0.3s + 0.2s
@@ -49,6 +50,7 @@ Total entrance: ~1.5 seconds from page load. Faster feels rushed; slower feels s
 `power3.out` — strong deceleration. Elements arrive at final position quickly and "settle." This feels intentional vs `ease-linear` which feels mechanical.
 
 Alternatives:
+
 - `power2.out` — gentler; better for subtle reveals
 - `back.out(1.4)` — slight overshoot then settle; playful tone
 - `expo.out` — very strong deceleration; "elastic premium" feel
@@ -58,18 +60,19 @@ Alternatives:
 ```js
 const hero = document.querySelector(".hero");
 hero.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 2;   // -1 to 1
-  const y = (e.clientY / window.innerHeight - 0.5) * 2;  // -1 to 1
+  const x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+  const y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
 
   gsap.to(".hero-shapes-back", { x: x * 45, y: y * 22, duration: 0.8 });
-  gsap.to(".hero-shapes-mid",  { x: x * 22, y: y * 11, duration: 0.8 });
-  gsap.to(".hero .container",  { x: x * 8,  y: y * 5,  duration: 0.8 });
+  gsap.to(".hero-shapes-mid", { x: x * 22, y: y * 11, duration: 0.8 });
+  gsap.to(".hero .container", { x: x * 8, y: y * 5, duration: 0.8 });
 });
 ```
 
 ### Depth ratio: 45 / 22 / 8
 
 The three layers move at different multipliers to create depth:
+
 - **Back layer (45 / 22):** moves most — feels "far" from cursor
 - **Mid layer (22 / 11):** moves half as much
 - **Content layer (8 / 5):** barely moves — feels "with" the user
@@ -96,15 +99,16 @@ if (window.matchMedia("(hover: none)").matches) {
 gsap.set(".feature-card", { opacity: 0, y: 55, rotateX: 18 });
 
 ScrollTrigger.batch(".feature-card", {
-  start: "top 80%",   // fires when card top is 80% from viewport top
-  onEnter: batch => gsap.to(batch, {
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    duration: 0.8,
-    stagger: 0.11,
-    ease: "power2.out"
-  })
+  start: "top 80%", // fires when card top is 80% from viewport top
+  onEnter: (batch) =>
+    gsap.to(batch, {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      duration: 0.8,
+      stagger: 0.11,
+      ease: "power2.out",
+    }),
 });
 ```
 
@@ -127,25 +131,46 @@ The card's top edge passes 80% from the top of the viewport. This fires the anim
 Continuous ambient motion uses **CSS keyframes, not GSAP**. Two reasons:
 
 1. **Performance** — CSS animations are GPU-composited at the browser level; cheaper than GSAP tweens for indefinite animation.
-2. **Discipline** — GSAP for *triggered* / *interactive* animations; CSS for *ambient* / *continuous*.
+2. **Discipline** — GSAP for _triggered_ / _interactive_ animations; CSS for _ambient_ / _continuous_.
 
 ```css
 @keyframes floatA {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50%      { transform: translate(20px, -30px) rotate(8deg); }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -30px) rotate(8deg);
+  }
 }
 @keyframes floatB {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50%      { transform: translate(-15px, 25px) rotate(-6deg); }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-15px, 25px) rotate(-6deg);
+  }
 }
 @keyframes floatC {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50%      { transform: translate(12px, -18px) rotate(5deg); }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(12px, -18px) rotate(5deg);
+  }
 }
 
-.hero-shapes-back .shape-a { animation: floatA 12s ease-in-out infinite; }
-.hero-shapes-back .shape-b { animation: floatB 16s ease-in-out infinite; }
-.hero-shapes-mid  .shape-c { animation: floatC 10s ease-in-out infinite; }
+.hero-shapes-back .shape-a {
+  animation: floatA 12s ease-in-out infinite;
+}
+.hero-shapes-back .shape-b {
+  animation: floatB 16s ease-in-out infinite;
+}
+.hero-shapes-mid .shape-c {
+  animation: floatC 10s ease-in-out infinite;
+}
 ```
 
 ### Varied durations + rotations
@@ -158,8 +183,13 @@ If all shapes use the same animation, they move in lockstep — feels mechanical
 
 ```css
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 .scroll-down {
@@ -171,13 +201,13 @@ Subtle, continuous. The chevron points down + bounces 8px every 2 seconds. Stron
 
 ## When GSAP vs CSS
 
-| Animation type | Tool | Why |
-|---|---|---|
-| Page-load entrance | GSAP timeline | Needs precise sequencing + overlap |
-| User-triggered (hover, scroll, mouse) | GSAP | Needs to respond to events |
-| Continuous ambient | CSS keyframes | GPU-composited, cheaper |
-| State transitions (button hover) | CSS transitions | Built-in, no JS needed |
-| Complex multi-property orchestration | GSAP timeline | Easier to choreograph |
+| Animation type                        | Tool            | Why                                |
+| ------------------------------------- | --------------- | ---------------------------------- |
+| Page-load entrance                    | GSAP timeline   | Needs precise sequencing + overlap |
+| User-triggered (hover, scroll, mouse) | GSAP            | Needs to respond to events         |
+| Continuous ambient                    | CSS keyframes   | GPU-composited, cheaper            |
+| State transitions (button hover)      | CSS transitions | Built-in, no JS needed             |
+| Complex multi-property orchestration  | GSAP timeline   | Easier to choreograph              |
 
 ## Anti-Patterns
 
@@ -205,11 +235,11 @@ Subtle, continuous. The chevron points down + bounces 8px every 2 seconds. Stron
 
 1. **GSAP Documentation — GreenSock.com (ongoing).** Authoritative source for the timeline + ScrollTrigger + easing semantics. https://greensock.com/docs/
 
-2. **Val Head, *Designing Interface Animation* (Rosenfeld, 2016).** The book argues for animation as functional communication, not decoration. The "5 patterns max" discipline derives from her framework.
+2. **Val Head, _Designing Interface Animation_ (Rosenfeld, 2016).** The book argues for animation as functional communication, not decoration. The "5 patterns max" discipline derives from her framework.
 
-3. **Rachel Nabors, *Animation at Work* (A Book Apart, 2017).** Covers the "12 principles of animation" applied to UI. The easing choices (power3.out for entrance, power2.out for scroll) follow her recommendations.
+3. **Rachel Nabors, _Animation at Work_ (A Book Apart, 2017).** Covers the "12 principles of animation" applied to UI. The easing choices (power3.out for entrance, power2.out for scroll) follow her recommendations.
 
-4. **Sarah Drasner, *SVG Animations* (O'Reilly, 2017).** Comprehensive on web animation performance. Source for the GSAP-for-interactive / CSS-for-continuous discipline.
+4. **Sarah Drasner, _SVG Animations_ (O'Reilly, 2017).** Comprehensive on web animation performance. Source for the GSAP-for-interactive / CSS-for-continuous discipline.
 
 5. **GPU-Accelerated CSS — Paul Irish (HTML5 Rocks, 2012, updated).** Foundational article on why CSS transforms are cheaper than JS-driven property changes. Justifies using CSS keyframes for the floating shapes.
 

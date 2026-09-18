@@ -5,12 +5,14 @@ This reference answers exactly one decision: **why does the landing skill output
 ## The Core Claim
 
 A landing page is a **deliverable**, not a project. The user should be able to:
+
 - Download the `.html` file
 - Open it in a browser
 - See the page exactly as designed
 - Drop it onto any static host (Vercel, Netlify, plain S3) without configuration
 
 This rules out:
+
 - `npm install` / build steps
 - Separate `.css` and `.js` files
 - Framework toolchains
@@ -20,14 +22,14 @@ The output is one HTML file. The only external network requests are Google Fonts
 
 ## What "Self-Contained" Means
 
-| Resource | Where it lives | Why |
-|---|---|---|
-| CSS | Inline `<style>` block in `<head>` | No FOUC waiting for stylesheet to load |
-| JavaScript | Inline `<script>` block at end of `<body>` | Same file = no build step |
-| Fonts | Google Fonts CDN | Free, fast, no license management |
-| Animation library | GSAP via cdnjs CDN | 70KB minified; loads in <100ms on broadband |
-| Images / icons | Inline SVG | No image hosting; small icons fit inline |
-| Hero shapes | CSS gradients / shapes | No image dependencies |
+| Resource          | Where it lives                             | Why                                         |
+| ----------------- | ------------------------------------------ | ------------------------------------------- |
+| CSS               | Inline `<style>` block in `<head>`         | No FOUC waiting for stylesheet to load      |
+| JavaScript        | Inline `<script>` block at end of `<body>` | Same file = no build step                   |
+| Fonts             | Google Fonts CDN                           | Free, fast, no license management           |
+| Animation library | GSAP via cdnjs CDN                         | 70KB minified; loads in <100ms on broadband |
+| Images / icons    | Inline SVG                                 | No image hosting; small icons fit inline    |
+| Hero shapes       | CSS gradients / shapes                     | No image dependencies                       |
 
 ## What's NOT Self-Contained (Allowed Externals)
 
@@ -41,12 +43,14 @@ That's it. No tracking scripts. No analytics. No third-party fonts. No icon libr
 ### Why these two specifically
 
 **Google Fonts:**
+
 - Free at any scale
 - Cached aggressively by browsers
 - Inter is exceptionally readable and fits dark mode
 - Self-hosting Inter would add ~100KB to the file size
 
 **GSAP CDN:**
+
 - The animation patterns require GSAP — recreating timeline + ScrollTrigger from scratch would be ~50KB of custom JS that the skill would need to maintain
 - cdnjs has 99.9% uptime; the failure mode (rare) is animations don't run — page still works as static content
 - 70KB gzipped; loads fast on broadband
@@ -68,6 +72,7 @@ That's it. No tracking scripts. No analytics. No third-party fonts. No icon libr
 ### Why NOT a build pipeline (Webpack, Vite, etc.)
 
 A build pipeline implies:
+
 - A `package.json`
 - A `node_modules/` (or `pnpm-lock.yaml` / `bun.lockb`)
 - A build command
@@ -82,13 +87,13 @@ If the user explicitly asks for "I want a React component version" → use the s
 
 There are cases where a single-file HTML page IS the wrong output:
 
-| Case | Use what instead |
-|---|---|
+| Case                                            | Use what instead                                   |
+| ----------------------------------------------- | -------------------------------------------------- |
 | Multi-page site (about, blog, pricing, contact) | Static site generator (Astro, 11ty) — out of scope |
-| Heavy interactivity (forms, auth, state) | React / Vue / Svelte app |
-| SEO-critical lead-gen with copy frameworks | `landing-page-generator` (Next.js TSX) |
-| Multiple languages / i18n | Static site generator |
-| Server-side rendering required | Framework (Next.js, Remix, SvelteKit) |
+| Heavy interactivity (forms, auth, state)        | React / Vue / Svelte app                           |
+| SEO-critical lead-gen with copy frameworks      | `landing-page-generator` (Next.js TSX)             |
+| Multiple languages / i18n                       | Static site generator                              |
+| Server-side rendering required                  | Framework (Next.js, Remix, SvelteKit)              |
 
 The landing skill is for the single-page, single-language, premium-visual case.
 
@@ -108,14 +113,14 @@ A single-file HTML page still needs:
 
 ## File Size Targets
 
-| Component | Target | Rationale |
-|---|---|---|
-| HTML file (uncompressed) | 30–80 KB | Markup + CSS + JS + inline SVG icons |
-| HTML file (gzip) | 8–20 KB | Most servers gzip automatically |
-| Google Fonts (Inter) | ~30 KB per weight | Cached after first visit |
-| GSAP + ScrollTrigger | ~70 KB combined | One-time download, cached |
-| Total first-visit | <200 KB | Loads in <1s on broadband |
-| Total cached return | <30 KB | Just the HTML file |
+| Component                | Target            | Rationale                            |
+| ------------------------ | ----------------- | ------------------------------------ |
+| HTML file (uncompressed) | 30–80 KB          | Markup + CSS + JS + inline SVG icons |
+| HTML file (gzip)         | 8–20 KB           | Most servers gzip automatically      |
+| Google Fonts (Inter)     | ~30 KB per weight | Cached after first visit             |
+| GSAP + ScrollTrigger     | ~70 KB combined   | One-time download, cached            |
+| Total first-visit        | <200 KB           | Loads in <1s on broadband            |
+| Total cached return      | <30 KB            | Just the HTML file                   |
 
 The HTML file's size is dominated by inline CSS. Aggressive minification can reduce by 30–40%, but the skill outputs readable code (not minified) for ease of editing.
 
@@ -148,11 +153,13 @@ The HTML file's size is dominated by inline CSS. Aggressive minification can red
 The single-file inline discipline trades:
 
 **Loss:**
+
 - Caching efficiency (separate CSS file would cache across pages)
 - Refactor-ability (large pages get unwieldy)
 - Team collaboration (multiple devs editing the same file)
 
 **Gain:**
+
 - One-step deploy (upload one file)
 - Zero build configuration
 - Zero supply-chain risk beyond Google + GSAP
@@ -166,9 +173,9 @@ For a landing page (single document, single deploy), the gains dominate. For a m
 
 1. **MDN Web Docs — Single Page Applications & Static Site Generation.** Reference for the "page as deliverable" pattern. https://developer.mozilla.org/
 
-2. **Heydon Pickering, *Inclusive Components* (2018).** Argues for accessibility-first single-page sites. Source for the accessibility-minimum checklist (heading hierarchy, semantic HTML5, keyboard navigation).
+2. **Heydon Pickering, _Inclusive Components_ (2018).** Argues for accessibility-first single-page sites. Source for the accessibility-minimum checklist (heading hierarchy, semantic HTML5, keyboard navigation).
 
-3. **Jeremy Keith, *Resilient Web Design* (2016).** Advocates for "no build step" simplicity where possible. The single-file HTML output is the strongest form of this — survives even basic web hosting without configuration.
+3. **Jeremy Keith, _Resilient Web Design_ (2016).** Advocates for "no build step" simplicity where possible. The single-file HTML output is the strongest form of this — survives even basic web hosting without configuration.
 
 4. **Adam Wathan, "On Building Websites in 2024" (adamwathan.me).** Argues that not every page needs a framework. Justification for the skill targeting the "landing page = single document" use case rather than reaching for Next.js by default.
 
@@ -176,4 +183,4 @@ For a landing page (single document, single deploy), the gains dominate. For a m
 
 6. **Brendan Eich's "Always Bet on JS" talks (2014+).** Argues for the long-term value of HTML/CSS/JS as a delivery target — no transpiler, no compilation, just the web platform. Aligns with the no-build discipline.
 
-7. **Robin Rendle, "The Web Is a Place" — *Static Self* (2024).** Argues that HTML/CSS as a deliverable medium has unique value precisely BECAUSE it lacks infrastructure. Landing pages are the strongest example of this pattern in production use.
+7. **Robin Rendle, "The Web Is a Place" — _Static Self_ (2024).** Argues that HTML/CSS as a deliverable medium has unique value precisely BECAUSE it lacks infrastructure. Landing pages are the strongest example of this pattern in production use.

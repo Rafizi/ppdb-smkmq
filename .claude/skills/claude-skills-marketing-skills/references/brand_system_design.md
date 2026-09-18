@@ -14,15 +14,15 @@ The default is **intentional**, not arbitrary. Three reasons:
 
 ```css
 :root {
-  --navy:       #0A1628;   /* primary bg */
-  --navy-mid:   #0D1F38;   /* section bg (slight elevation) */
-  --teal:       #00D4AA;   /* accent / CTA / highlights */
-  --teal-glow:  rgba(0, 212, 170, 0.12);   /* ambient glow behind CTA */
-  --amber:      #F5A623;   /* secondary accent (warnings, eyebrows occasionally) */
-  --off-white:  #F7F7F2;   /* text */
-  --text-muted: rgba(247, 247, 242, 0.68);  /* subtext */
-  --card-bg:    rgba(0, 212, 170, 0.06);    /* feature card bg */
-  --card-border:rgba(0, 212, 170, 0.15);    /* feature card border */
+  --navy: #0a1628; /* primary bg */
+  --navy-mid: #0d1f38; /* section bg (slight elevation) */
+  --teal: #00d4aa; /* accent / CTA / highlights */
+  --teal-glow: rgba(0, 212, 170, 0.12); /* ambient glow behind CTA */
+  --amber: #f5a623; /* secondary accent (warnings, eyebrows occasionally) */
+  --off-white: #f7f7f2; /* text */
+  --text-muted: rgba(247, 247, 242, 0.68); /* subtext */
+  --card-bg: rgba(0, 212, 170, 0.06); /* feature card bg */
+  --card-border: rgba(0, 212, 170, 0.15); /* feature card border */
 }
 ```
 
@@ -30,12 +30,12 @@ The default is **intentional**, not arbitrary. Three reasons:
 
 When user provides Q3 brand colors, the skill maps:
 
-| User input | Maps to | Notes |
-|---|---|---|
-| `primary` | `--navy` (also `--navy-mid` derived) | The dark bg color |
-| `accent` | `--teal` (also `--teal-glow` derived as rgba 0.12) | The pop color |
-| `bg` (optional) | `--navy-mid` override (otherwise derived 8% lighter than primary) | Slight elevation |
-| `text` (optional) | `--off-white` override (otherwise stays default) | If primary is light, text MUST darken |
+| User input        | Maps to                                                           | Notes                                 |
+| ----------------- | ----------------------------------------------------------------- | ------------------------------------- |
+| `primary`         | `--navy` (also `--navy-mid` derived)                              | The dark bg color                     |
+| `accent`          | `--teal` (also `--teal-glow` derived as rgba 0.12)                | The pop color                         |
+| `bg` (optional)   | `--navy-mid` override (otherwise derived 8% lighter than primary) | Slight elevation                      |
+| `text` (optional) | `--off-white` override (otherwise stays default)                  | If primary is light, text MUST darken |
 
 ## Algorithmic Derivation (When Only Partial Override)
 
@@ -81,12 +81,12 @@ where L is relative luminance:
 
 ### What to do on contrast failure
 
-| Failure | Fix |
-|---|---|
-| Body text on bg < 4.5:1 | Suggest darker bg OR lighter text. Auto-derive a passing variant. |
-| Large text on bg < 3:1 | Suggest darker bg OR lighter text. |
-| Text on card bg < 3:1 | Adjust `--card-bg` alpha (lower → more contrast since dark bg shows through). |
-| Accent on bg < 3:1 (for CTA visibility) | Suggest brighter accent OR add darker outline. |
+| Failure                                 | Fix                                                                           |
+| --------------------------------------- | ----------------------------------------------------------------------------- |
+| Body text on bg < 4.5:1                 | Suggest darker bg OR lighter text. Auto-derive a passing variant.             |
+| Large text on bg < 3:1                  | Suggest darker bg OR lighter text.                                            |
+| Text on card bg < 3:1                   | Adjust `--card-bg` alpha (lower → more contrast since dark bg shows through). |
+| Accent on bg < 3:1 (for CTA visibility) | Suggest brighter accent OR add darker outline.                                |
 
 ## Component-Specific Color Rules
 
@@ -113,13 +113,13 @@ where L is relative luminance:
 
 The reasons each rule exists:
 
-| Rule | Rationale |
-|---|---|
-| Dark mode default | Premium aesthetic + better screenshot photography + lower eye strain |
-| Teal accent (not blue) | Differentiates from "Silicon Valley default" without losing tech feel |
-| WCAG AA minimum | Legal requirement in many jurisdictions; ethical baseline; helps readers in suboptimal lighting |
-| Algorithmic derivation | Users rarely provide full palettes; one HEX should be enough to ship |
-| Component-level color rules | Prevents "color soup" where every element picks a different var |
+| Rule                        | Rationale                                                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------- |
+| Dark mode default           | Premium aesthetic + better screenshot photography + lower eye strain                            |
+| Teal accent (not blue)      | Differentiates from "Silicon Valley default" without losing tech feel                           |
+| WCAG AA minimum             | Legal requirement in many jurisdictions; ethical baseline; helps readers in suboptimal lighting |
+| Algorithmic derivation      | Users rarely provide full palettes; one HEX should be enough to ship                            |
+| Component-level color rules | Prevents "color soup" where every element picks a different var                                 |
 
 ## Anti-Patterns
 
@@ -151,7 +151,7 @@ The reasons each rule exists:
 
 4. **IBM Carbon Design System — Color Tokens (2020+).** Demonstrates the "scale of role" pattern — `--bg`, `--bg-mid`, `--text`, `--text-muted` — that the skill mirrors. Carbon also publishes contrast-verified palette pairings.
 
-5. **Geoffrey Crayola, "The Color of Brand: Why Tech Companies All Look Alike" — *Trends in Design Research* (2023).** Argues the "Silicon Valley blue" default is over-used. The skill's teal default + customization-friendly architecture is a direct response to this critique.
+5. **Geoffrey Crayola, "The Color of Brand: Why Tech Companies All Look Alike" — _Trends in Design Research_ (2023).** Argues the "Silicon Valley blue" default is over-used. The skill's teal default + customization-friendly architecture is a direct response to this critique.
 
 6. **Color & Vision Network, "Contrast Algorithm Updates for WCAG 3.0" — APCA proposal (2022+).** Newer perceptual-contrast algorithm. The skill uses WCAG 2.2 because it's currently the legal standard, but `brand_palette_validator.py` notes APCA as the forthcoming successor.
 

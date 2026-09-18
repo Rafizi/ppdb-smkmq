@@ -1,12 +1,7 @@
 import React from "react";
 import { Award, BadgeCheck, Medal, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
-import {
-  ACCREDITATION,
-  ACHIEVEMENTS,
-  type Achievement,
-  type AchievementLevel,
-} from "@/lib/ppdb";
+import { ACCREDITATION, ACHIEVEMENTS, type Achievement, type AchievementLevel } from "@/lib/ppdb";
 import { PendingDataPanel, SectionHeading } from "./shared";
 
 const LEVEL_BADGE: Record<AchievementLevel, string> = {

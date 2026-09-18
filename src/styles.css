@@ -88,10 +88,10 @@
   --navy-foreground: oklch(0.974 0.011 84.6);
 
   /* 10% — aksen */
-  --accent: #F5A623;
-  --accent-foreground: #0B3B2E;
-  --terracotta: #F5A623;
-  --terracotta-foreground: #0B3B2E;
+  --accent: #f5a623;
+  --accent-foreground: #0b3b2e;
+  --terracotta: #f5a623;
+  --terracotta-foreground: #0b3b2e;
 
   /* fungsional */
   --whatsapp: oklch(0.761 0.201 149.7);
@@ -131,10 +131,10 @@
   --muted-foreground: oklch(0.78 0.02 233.3);
   --navy: oklch(0.2 0.045 233.3);
   --navy-foreground: oklch(0.974 0.011 84.6);
-  --accent: #F5A623;
-  --accent-foreground: #0B3B2E;
-  --terracotta: #F5A623;
-  --terracotta-foreground: #0B3B2E;
+  --accent: #f5a623;
+  --accent-foreground: #0b3b2e;
+  --terracotta: #f5a623;
+  --terracotta-foreground: #0b3b2e;
   --whatsapp: oklch(0.761 0.201 149.7);
   --whatsapp-foreground: oklch(0.2 0.05 150);
   --border: oklch(1 0 0 / 12%);
@@ -143,32 +143,39 @@
 }
 
 @utility pattern-geo {
-  background-image:
-    radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
   background-size: 22px 22px;
 }
 
 /* Base hover utility */
 .hover-lift {
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
 }
 
 /* Unified CTA Button System */
 .btn-cta-primary {
-  background-color: #F5A623;
-  color: #0B3B2E;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f5a623;
+  color: #0b3b2e;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .btn-cta-primary:hover {
-  background-color: #E0961B;
+  background-color: #e0961b;
   box-shadow: 0 8px 20px -4px rgba(245, 166, 35, 0.4);
 }
 
 .btn-cta-secondary-light {
-  border: 1.5px solid #0B3B2E;
-  color: #0B3B2E;
+  border: 1.5px solid #0b3b2e;
+  color: #0b3b2e;
   background-color: transparent;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
 }
 .btn-cta-secondary-light:hover {
   background-color: rgba(11, 59, 46, 0.08);
@@ -179,7 +186,11 @@
   border: 1.5px solid rgba(255, 255, 255, 0.85);
   color: #ffffff;
   background-color: transparent;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
 }
 .btn-cta-secondary-dark:hover {
   background-color: rgba(255, 255, 255, 0.12);
@@ -193,7 +204,9 @@
   .reveal-up {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition:
+      opacity 0.5s ease-out,
+      transform 0.5s ease-out;
     will-change: opacity, transform;
   }
 
@@ -243,7 +256,8 @@
   }
 
   @keyframes pulseBadge {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.4;
       transform: scale(0.9);
     }
@@ -254,7 +268,8 @@
   }
 
   @keyframes breathe {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.92;
       transform: scale(1);
     }
@@ -285,7 +300,8 @@
   }
 
   @keyframes floatSlow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -365,7 +381,10 @@
 
 /* Accordion icon plus/cross rotation (300ms ease) */
 .accordion-icon-rotate {
-  transition: transform 300ms ease, background-color 0.2s ease, color 0.2s ease;
+  transition:
+    transform 300ms ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
   will-change: transform;
 }
 [data-state="open"] .accordion-icon-rotate,
@@ -444,4 +463,3 @@
     transition: none !important;
   }
 }
-

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Home,
-  Shirt,
-  Snowflake,
-  Trophy,
-  Utensils,
-  Wifi,
-  Landmark,
-} from "lucide-react";
+import { Home, Shirt, Snowflake, Trophy, Utensils, Wifi, Landmark } from "lucide-react";
 import futsalImage from "@/assets/ekskul/futsal.jpg";
 import diplomasiImage from "@/assets/ekskul/diplomasi.jpg";
 import karateImage from "@/assets/ekskul/karate.jpg";
@@ -83,9 +75,7 @@ export function Facilities() {
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary shadow-card">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
-                <span className="text-sm font-semibold text-navy">
-                  {facility.label}
-                </span>
+                <span className="text-sm font-semibold text-navy">{facility.label}</span>
               </div>
             );
           })}
@@ -99,7 +89,8 @@ export function Facilities() {
             Ajang Pembentukan Karakter &amp; Minat Murid
           </h3>
           <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
-            Melatih ketangkasan fisik, mental sportivitas, dan kepercayaan diri melalui pembinaan kegiatan yang seru dan terarah.
+            Melatih ketangkasan fisik, mental sportivitas, dan kepercayaan diri melalui pembinaan
+            kegiatan yang seru dan terarah.
           </p>
         </div>
 

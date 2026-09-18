@@ -24,8 +24,9 @@ export function FeeSummary() {
               </h2>
 
               <p className="max-w-2xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Biaya awal transparan mencakup seragam lengkap (3 set), jas almamater, dan uang pangkal.
-                Tersedia skema cicilan 2x dengan SPP bulanan terjangkau mulai {fullday.monthly}/bulan.
+                Biaya awal transparan mencakup seragam lengkap (3 set), jas almamater, dan uang
+                pangkal. Tersedia skema cicilan 2x dengan SPP bulanan terjangkau mulai{" "}
+                {fullday.monthly}/bulan.
               </p>
 
               {/* Tag ringkasan paket */}

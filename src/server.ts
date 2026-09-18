@@ -56,16 +56,35 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number; retr
 }
 
 // Garbage collection berkala setiap 5 menit agar memori tetap bersih
-setInterval(() => {
-  const now = Date.now();
-  for (const [ip, info] of rateLimitMap.entries()) {
-    if (now > info.resetTime) {
-      rateLimitMap.delete(ip);
+const gcTimer = setInterval(
+  () => {
+    const now = Date.now();
+    for (const [ip, info] of rateLimitMap.entries()) {
+      if (now > info.resetTime) {
+        rateLimitMap.delete(ip);
+      }
     }
-  }
-}, 5 * 60 * 1000);
+  },
+  5 * 60 * 1000,
+);
+
+// Pastikan timer tidak menahan event loop pada serverless function (Vercel / Node.js)
+if (
+  typeof gcTimer === "object" &&
+  gcTimer !== null &&
+  "unref" in gcTimer &&
+  typeof (gcTimer as { unref?: () => void }).unref === "function"
+) {
+  (gcTimer as { unref: () => void }).unref();
+}
 
 function getClientIp(request: Request): string {
+  const vercelIp =
+    request.headers.get("x-vercel-ip") || request.headers.get("x-vercel-forwarded-for");
+  if (vercelIp) {
+    const firstIp = vercelIp.split(",")[0]?.trim();
+    if (firstIp) return firstIp;
+  }
   const cfIp = request.headers.get("cf-connecting-ip");
   if (cfIp) return cfIp;
   const xForwarded = request.headers.get("x-forwarded-for");
@@ -135,14 +154,8 @@ function applySecurityHeaders(res: Response): Response {
   headers.set("X-Frame-Options", "DENY");
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-  headers.set(
-    "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
-  );
-  headers.set(
-    "Strict-Transport-Security",
-    "max-age=31536000; includeSubDomains; preload",
-  );
+  headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
+  headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
 
   // Hilangkan kebocoran teknologi (tech leak)

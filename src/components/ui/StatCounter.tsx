@@ -15,9 +15,7 @@ export function StatCounter({ value, suffix = "", className }: StatCounterProps)
     const el = spanRef.current;
     if (!el || animated) return;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       el.textContent = `${value}${suffix}`;

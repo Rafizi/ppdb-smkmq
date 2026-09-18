@@ -36,7 +36,10 @@ export function FormButton({
     >
       <FileText className="size-4 shrink-0" aria-hidden="true" />
       <span>{children}</span>
-      <ArrowRight className="size-4 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+      <ArrowRight
+        className="size-4 shrink-0 transition-transform group-hover:translate-x-1"
+        aria-hidden="true"
+      />
     </a>
   );
 }
@@ -98,12 +101,7 @@ export function SectionHeading({
   tone?: "default" | "inverse";
 }) {
   return (
-    <div
-      className={cn(
-        "max-w-3xl",
-        align === "center" ? "mx-auto text-center" : "text-left",
-      )}
-    >
+    <div className={cn("max-w-3xl", align === "center" ? "mx-auto text-center" : "text-left")}>
       {eyebrow ? (
         <span
           className={cn(
@@ -128,9 +126,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mt-4 text-base leading-relaxed",
-            tone === "inverse"
-              ? "text-primary-foreground/85"
-              : "text-muted-foreground",
+            tone === "inverse" ? "text-primary-foreground/85" : "text-muted-foreground",
           )}
         >
           {description}
@@ -160,10 +156,7 @@ export function PendingDataPanel({
 }) {
   return (
     <div
-      className={cn(
-        "rounded-2xl border border-dashed border-primary/35 bg-cream p-6",
-        className,
-      )}
+      className={cn("rounded-2xl border border-dashed border-primary/35 bg-cream p-6", className)}
     >
       <div className="flex items-center gap-3">
         <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">

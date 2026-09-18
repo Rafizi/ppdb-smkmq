@@ -21,14 +21,12 @@ export function CtaBanner() {
               Mulai Langkah Nyata Menjadi Ahli di Bidang Teknologi dan Berkarakter Islami
             </h2>
             <p className="mt-4 text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-              Kuota penerimaan murid dibatasi setiap tahunnya demi menjaga efektivitas belajar dan rasio murid-mentor yang ideal. Isi formulir pendaftaran Anda sekarang atau hubungi Admin PMB untuk konsultasi.
+              Kuota penerimaan murid dibatasi setiap tahunnya demi menjaga efektivitas belajar dan
+              rasio murid-mentor yang ideal. Isi formulir pendaftaran Anda sekarang atau hubungi
+              Admin PMB untuk konsultasi.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
-              <FormButton
-                size="lg"
-                variant="accent"
-                className="shadow-lift hover:shadow-xl"
-              >
+              <FormButton size="lg" variant="accent" className="shadow-lift hover:shadow-xl">
                 Isi Formulir Pendaftaran (5 Menit)
               </FormButton>
               <WhatsAppButton

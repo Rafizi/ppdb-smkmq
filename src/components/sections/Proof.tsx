@@ -6,10 +6,7 @@ import logoCisco from "@/assets/partners/cisco.png";
 import logoItc from "@/assets/partners/itc.png";
 import logoLsp from "@/assets/partners/lsp-media-informatika.png";
 
-const PARTNER_CONFIG: Record<
-  string,
-  { src: string; className: string }
-> = {
+const PARTNER_CONFIG: Record<string, { src: string; className: string }> = {
   "MikroTik Academy": {
     src: logoMikrotik,
     className: "max-h-10 sm:max-h-11 max-w-[135px]",
@@ -62,12 +59,8 @@ export function Proof() {
                   />
                 </div>
                 <div className="mt-3 flex flex-1 flex-col justify-between">
-                  <p className="font-display text-sm font-bold text-navy">
-                    {partner.name}
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {partner.note}
-                  </p>
+                  <p className="font-display text-sm font-bold text-navy">{partner.name}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{partner.note}</p>
                 </div>
               </li>
             );

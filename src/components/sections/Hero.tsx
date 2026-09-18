@@ -9,18 +9,14 @@ import { FormButton, WhatsAppButton } from "./shared";
 export function Hero() {
   const [remainingSeats, setRemainingSeats] = useState<number>(() => {
     if (typeof window !== "undefined") {
-      const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (prefersReducedMotion) return PPDB_QUOTA.remaining;
     }
     return 0;
   });
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) {
       setRemainingSeats(PPDB_QUOTA.remaining);
@@ -64,10 +60,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:py-20 xl:max-w-[1440px] xl:grid-cols-[1fr_1.1fr] xl:gap-16">
         <div>
           {/* Official School & PPDB Badge with Logo */}
-          <div
-            className="reveal-up"
-            style={{ "--i": 0 } as React.CSSProperties}
-          >
+          <div className="reveal-up" style={{ "--i": 0 } as React.CSSProperties}>
             <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3.5 py-1.5 backdrop-blur shadow-sm">
               <Logo size="xs" />
               <span className="text-xs font-bold tracking-wide text-white">
@@ -101,7 +94,9 @@ export function Hero() {
             className="reveal-up mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85"
             style={{ "--i": 3 } as React.CSSProperties}
           >
-            SMK Madinatulquran memadukan kurikulum kejuruan IT (TKJ & RPL) dengan lingkungan islami di Jonggol, Bogor. Dibekali sertifikasi internasional Cisco, MikroTik, dll; proyek nyata, serta target tahfidz 3 Juz Al-Qur'an.
+            SMK Madinatulquran memadukan kurikulum kejuruan IT (TKJ & RPL) dengan lingkungan islami
+            di Jonggol, Bogor. Dibekali sertifikasi internasional Cisco, MikroTik, dll; proyek
+            nyata, serta target tahfidz 3 Juz Al-Qur'an.
           </p>
 
           <div
@@ -136,9 +131,7 @@ export function Hero() {
               <span className="mt-0.5 text-xs font-semibold text-primary-foreground">
                 Pengalaman Mendidik
               </span>
-              <span className="text-[11px] text-primary-foreground/70">
-                Sejak 2015
-              </span>
+              <span className="text-[11px] text-primary-foreground/70">Sejak 2015</span>
             </div>
 
             <div className="flex flex-col">
@@ -160,15 +153,16 @@ export function Hero() {
               <span className="mt-0.5 text-xs font-semibold text-primary-foreground">
                 Target Tahfidz
               </span>
-              <span className="text-[11px] text-primary-foreground/70">
-                + Hadits Arba'in
-              </span>
+              <span className="text-[11px] text-primary-foreground/70">+ Hadits Arba'in</span>
             </div>
           </div>
         </div>
 
         <div className="relative flex items-center justify-center">
-          <div className="absolute -inset-6 rounded-[3rem] bg-accent/25 blur-3xl" aria-hidden="true" />
+          <div
+            className="absolute -inset-6 rounded-[3rem] bg-accent/25 blur-3xl"
+            aria-hidden="true"
+          />
           <AnimatedCardStack />
         </div>
       </div>

@@ -1,9 +1,6 @@
 import type { SVGProps } from "react";
 
-export function WhatsAppIcon({
-  className,
-  ...props
-}: SVGProps<SVGSVGElement>) {
+export function WhatsAppIcon({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
       role="img"

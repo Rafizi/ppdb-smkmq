@@ -6,10 +6,10 @@ Premium single-file HTML landing page generator. Outputs one polished `.html` fi
 
 This is **NOT** the same skill as the existing `landing-page-generator` in `product-team/`. They serve different needs:
 
-| Skill | Output format | Optimization target | Animation approach | When to use |
-|---|---|---|---|---|
-| **`marketing/landing/`** (this skill) | Single self-contained `.html` file | **Visual premium / one-pager** | GSAP 3D + mouse parallax + scroll-trigger | Launch page, product showcase, brand site where the page IS the experience |
-| **`product-team/skills/landing-page-generator/`** | Next.js TSX components + Tailwind | **Conversion / lead-gen** | Static, copy-framework-driven (PAS / AIDA / BAB) | Lead capture, A/B test variants, campaign pages where conversion rate is the goal |
+| Skill                                             | Output format                      | Optimization target            | Animation approach                               | When to use                                                                       |
+| ------------------------------------------------- | ---------------------------------- | ------------------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------- |
+| **`marketing/landing/`** (this skill)             | Single self-contained `.html` file | **Visual premium / one-pager** | GSAP 3D + mouse parallax + scroll-trigger        | Launch page, product showcase, brand site where the page IS the experience        |
+| **`product-team/skills/landing-page-generator/`** | Next.js TSX components + Tailwind  | **Conversion / lead-gen**      | Static, copy-framework-driven (PAS / AIDA / BAB) | Lead capture, A/B test variants, campaign pages where conversion rate is the goal |
 
 If you want the prospect to **convert** → use `landing-page-generator`.
 If you want the prospect to **be impressed** → use `landing`.
